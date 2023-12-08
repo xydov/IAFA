@@ -1,0 +1,98 @@
+Kunze Tarek
+
+réseau1
+
+TP1:
+
+2.1
+Protocole:
+Ensemble de règles et de formats déterminant le comportement de communication d'entités
+
+
+2.2:
+La commande utilisé par le client et la commande GET
+
+
+2.3
+- La taille en octet de la première requete (uniquement la partie http) est de 322 octets (ou 322 bytes). 
+- licinfio.deptinfo.fr
+
+
+2.4
+- 33 673 octets
+- Le texte décrit en html correspond à la page demandé par l'utilisateur.
+
+2.5
+
+client		   émetteur	serv
+HTTP/1.1/GET	--->		
+			<---	HTTP/1.1 200 OK (text/html)
+HTTP/GET	--->		
+			<---	HTTP/1.1 200 ok (text/html)
+HTTP/GET	--->		
+			<---	HTTP/1.1 200 OK (text/javascript)
+HTTP/GET	--->		
+			<---	HTTP/1.1 200 OK (text/javascript)
+HTTP/GET	--->
+			<---	HTTP/1.1 204 No Content
+HTTP/GET	--->
+			<---	HTTP/1.1 404 Not Found (text/html)
+
+
+3.1
+Définition du concept de couche:
+Chaque couche du modèle OSI communique avec les couches N+1 et N-1 pouiir transmettre les informations
+
+
+3.2
+--Trame n°7--
+Ethernet 	14 octets		2 Liaison
+IPv4		20 octets		3 Réseau
+TCP		32 octets		4 Transport
+HTTP		322 octets		7 Application
+
+somme taille:	388
+Frame 7:	388 octets
+
+
+3.3
+--Trame n°96--
+Ethernet	14 octets		2 Liaison
+IPv4		20 octets		3 Réseau
+UDP		8 octets		4 Transport
+DNS		31 octets		7 Application (? présentation)
+
+somme taille	73
+Frame 96:	73 octets
+
+
+--Trame n°797--
+Ethernet	32 octets		2 Liaison
+ARP		28 octets		2 Liaison
+
+somme taille:	60 
+Frame 797:	60 octets
+
+
+4.1
+Lidentifiant du point d'accès au service de la couche transport (T-SAP) est un numéro de port.
+- Port: 80 (74.125.230.247)
+- Port: 37574 (141.115.64.47)
+
+
+4.2
+Frame n°207
+Transport - Réseau 	: 141.115.64.47:37574 (IPv4:Port)
+Réseau - Liaison	: Source: HewlettP_21:2d:eb (00:24:81:21:2d:eb) (adresse mac source)
+
+
+
+
+
+
+
+
+
+
+
+

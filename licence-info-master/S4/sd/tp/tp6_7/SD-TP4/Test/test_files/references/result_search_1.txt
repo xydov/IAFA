@@ -1,0 +1,28 @@
+1 -> true
+2 -> true
+5 -> true
+8 -> true
+9 -> true
+19 -> false
+18 -> true
+3 -> true
+17 -> false
+4 -> true
+16 -> false
+15 -> false
+0 -> true
+14 -> false
+13 -> false
+12 -> true
+7 -> true
+11 -> true
+10 -> false
+6 -> true
+Statistics : 
+	Size of the list : 13
+Search 20 values :
+	Found 13
+	Not found 7
+	Min number of operations : 1
+	Max number of operations : 8
+	Mean number of operations : 4

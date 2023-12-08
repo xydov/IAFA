@@ -1,0 +1,28 @@
+Tarek Kunze
+TPA52
+
+
+1.1:
+void computeExpressions(FILE *input)
+{
+	/* line that is being read */
+	char *line;
+	size_t len = 0;
+	ssize_t read;
+
+	while ((read = getline(&line, &len, input)) != -1)
+	{
+		if (read > 1)
+		{
+			fprintf(stdout, "Input	: %s", line);
+			
+			/* fprintf(stdout, "Recepition ligne de lg %zu \n", read); */
+		}
+	}
+	if (line)
+	{
+		free(line);
+	}
+}
+
+2.2

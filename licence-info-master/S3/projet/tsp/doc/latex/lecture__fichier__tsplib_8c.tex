@@ -1,0 +1,90 @@
+\hypertarget{lecture__fichier__tsplib_8c}{}\section{Référence du fichier lib/lecture\+\_\+fichier\+\_\+tsplib.c}
+\label{lecture__fichier__tsplib_8c}\index{lib/lecture\+\_\+fichier\+\_\+tsplib.\+c@{lib/lecture\+\_\+fichier\+\_\+tsplib.\+c}}
+
+
+lecture des fichiers .tsp  
+
+
+{\ttfamily \#include \char`\"{}lecture\+\_\+fichier\+\_\+tsplib.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de lecture\+\_\+fichier\+\_\+tsplib.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{lecture__fichier__tsplib_8c_a718259aa97e1f125fc99706045ce0461}{prefix} (char $\ast$motif, char $\ast$buf)
+\item 
+void \hyperlink{lecture__fichier__tsplib_8c_acd87be6587d34c1aa696868329770789}{get\+\_\+first\+\_\+word} (char $\ast$line, char $\ast$first\+\_\+word)
+\item 
+void \hyperlink{lecture__fichier__tsplib_8c_ab5066dd0e1d2009c135dbc73aa2268b4}{get\+\_\+field\+\_\+value} (char $\ast$line, char $\ast$field\+\_\+value)
+\item 
+int \hyperlink{lecture__fichier__tsplib_8c_a3c893f0b238bc9bbc7a5de5b9480b760}{lecture\+\_\+fichier} (char $\ast$filename, \hyperlink{structinstance__s}{instance\+\_\+t} $\ast$instance)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+lecture des fichiers .tsp 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{lecture__fichier__tsplib_8c_ab5066dd0e1d2009c135dbc73aa2268b4}\label{lecture__fichier__tsplib_8c_ab5066dd0e1d2009c135dbc73aa2268b4}} 
+\index{lecture\+\_\+fichier\+\_\+tsplib.\+c@{lecture\+\_\+fichier\+\_\+tsplib.\+c}!get\+\_\+field\+\_\+value@{get\+\_\+field\+\_\+value}}
+\index{get\+\_\+field\+\_\+value@{get\+\_\+field\+\_\+value}!lecture\+\_\+fichier\+\_\+tsplib.\+c@{lecture\+\_\+fichier\+\_\+tsplib.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+field\+\_\+value()}{get\_field\_value()}}
+{\footnotesize\ttfamily void get\+\_\+field\+\_\+value (\begin{DoxyParamCaption}\item[{char $\ast$}]{line,  }\item[{char $\ast$}]{field\+\_\+value }\end{DoxyParamCaption})}
+
+récupère la valeur d\textquotesingle{}un champ 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em line} & \+: ligne \\
+\hline
+\mbox{\tt in,out}  & {\em field\+\_\+value} & \+: poiteur sur le tableau contenant le champ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lecture__fichier__tsplib_8c_acd87be6587d34c1aa696868329770789}\label{lecture__fichier__tsplib_8c_acd87be6587d34c1aa696868329770789}} 
+\index{lecture\+\_\+fichier\+\_\+tsplib.\+c@{lecture\+\_\+fichier\+\_\+tsplib.\+c}!get\+\_\+first\+\_\+word@{get\+\_\+first\+\_\+word}}
+\index{get\+\_\+first\+\_\+word@{get\+\_\+first\+\_\+word}!lecture\+\_\+fichier\+\_\+tsplib.\+c@{lecture\+\_\+fichier\+\_\+tsplib.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+first\+\_\+word()}{get\_first\_word()}}
+{\footnotesize\ttfamily void get\+\_\+first\+\_\+word (\begin{DoxyParamCaption}\item[{char $\ast$}]{line,  }\item[{char $\ast$}]{first\+\_\+word }\end{DoxyParamCaption})}
+
+récupère le 1er mot d\textquotesingle{}une ligne 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em line} & \+: ligne \\
+\hline
+\mbox{\tt in,out}  & {\em first\+\_\+word} & \+: poiteur sur le tableau contenant le mot \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lecture__fichier__tsplib_8c_a3c893f0b238bc9bbc7a5de5b9480b760}\label{lecture__fichier__tsplib_8c_a3c893f0b238bc9bbc7a5de5b9480b760}} 
+\index{lecture\+\_\+fichier\+\_\+tsplib.\+c@{lecture\+\_\+fichier\+\_\+tsplib.\+c}!lecture\+\_\+fichier@{lecture\+\_\+fichier}}
+\index{lecture\+\_\+fichier@{lecture\+\_\+fichier}!lecture\+\_\+fichier\+\_\+tsplib.\+c@{lecture\+\_\+fichier\+\_\+tsplib.\+c}}
+\subsubsection{\texorpdfstring{lecture\+\_\+fichier()}{lecture\_fichier()}}
+{\footnotesize\ttfamily int lecture\+\_\+fichier (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$}]{instance }\end{DoxyParamCaption})}
+
+lis le fichier de nom filename 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em filename} & \+: nom du fichier a lire \\
+\hline
+\mbox{\tt in,out}  & {\em instance} & \+: isntance du problème \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si fichier bien lu 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lecture__fichier__tsplib_8c_a718259aa97e1f125fc99706045ce0461}\label{lecture__fichier__tsplib_8c_a718259aa97e1f125fc99706045ce0461}} 
+\index{lecture\+\_\+fichier\+\_\+tsplib.\+c@{lecture\+\_\+fichier\+\_\+tsplib.\+c}!prefix@{prefix}}
+\index{prefix@{prefix}!lecture\+\_\+fichier\+\_\+tsplib.\+c@{lecture\+\_\+fichier\+\_\+tsplib.\+c}}
+\subsubsection{\texorpdfstring{prefix()}{prefix()}}
+{\footnotesize\ttfamily bool prefix (\begin{DoxyParamCaption}\item[{char $\ast$}]{motif,  }\item[{char $\ast$}]{buf }\end{DoxyParamCaption})}
+
+teste si le motif = le buffer avec strcmp() 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em motif} & \+: motif \\
+\hline
+\mbox{\tt in,out}  & {\em buf} & \+: buffer \\
+\hline
+\end{DoxyParams}

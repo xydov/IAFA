@@ -1,0 +1,63 @@
+TP2
+KUNZE Tarek
+
+1.1
+- Le protocole utilisé par la couche liaison de données est le protocole Ethernet II
+- liaison de données:
+		Source: AsustekC_23:f0:94 (00:1b:fc:23:f0:94)
+		Destination: FreeboxS_3e:fd:73 (00:07:cb:3e:fd:73)
+- 6 octets par adresse soit 12 au total puis 2 octets pour le type IPv4 soit 14 au total
+- 6 octets soit (2⁸)⁶ octets = 2⁴⁸ [2exp48]
+
+1.2
+- Le protocole utilisé par la couche réseau est l'IPv4
+- Adresses:
+	Source: 192.168.0.10
+	Destination: 212.27.40.240
+- Taille des adresses: 4 octets par adresse
+- 4 octets soit (2⁸)⁴ soit 2³² [2exp32]
+
+
+1.3
+Le même 'appareil' fait 2 requetes sur 2 serveur différent d'où les adresses de destinations différentes
+
+1.4
+Cette adresse de laison est différente car elle sert à envoyer un 'message' par diffusion à toute les machines du réseau local
+
+
+2.1
+- adresse Ethernet (MAC) de la machine:
+	b8:85:84:a1:e4:ec = Dell
+
+2.2
+- adresse IP de la machine:
+	130.120.8.85
+
+	netmask: 255.255.252.0  (@sous-réseau)
+	equipement mask = 0.0.3.255 (@hote)
+
+	réseau: 130.120.8.0
+	équipement: 0.0.0.85
+
+3.1
+	- ARIN 		Canada, USA, quelqu'es îles des Caraïbes
+	- LACNIC 	Amerique Latine, ïles des caraibes
+	- AFRINIC 	Afrique
+	- RIPE NCC	Europe, Moyen-Orient, Asie centrale
+	- APNIC		Asie, région du pacifique
+
+3.2
+193.48.251.195 
+	- RIPE NCC
+	- TELECOM Lille1
+64.248.129.75
+	- ARIN
+	- MegaPath Networks Inc.
+202.56.176.26
+	- APNIC
+	- Ceretechs
+
+3.3
+	- ARIN
+	- Cette plage d'adresse est utilisé par RIPE NCC
+	- RIPE Network Coordination Centre (RIPE)

@@ -1,0 +1,65 @@
+\hypertarget{ppv_8c}{}\section{Référence du fichier lib/ppv.c}
+\label{ppv_8c}\index{lib/ppv.\+c@{lib/ppv.\+c}}
+
+
+implementation de l\textquotesingle{}algo de ppv  
+
+
+{\ttfamily \#include \char`\"{}ppv.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de ppv.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{ppv_8c_a8e2b65158646900e3e7040f6e42ba97f}{next\+\_\+v} (\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$instance, int $\ast$nodes, int zeiger)
+\item 
+double \hyperlink{ppv_8c_a34d6f9d0d181f0b1a5cc1d64f8a04d17}{ppv} (\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$inst, int $\ast$nodes)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+implementation de l\textquotesingle{}algo de ppv 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{ppv_8c_a8e2b65158646900e3e7040f6e42ba97f}\label{ppv_8c_a8e2b65158646900e3e7040f6e42ba97f}} 
+\index{ppv.\+c@{ppv.\+c}!next\+\_\+v@{next\+\_\+v}}
+\index{next\+\_\+v@{next\+\_\+v}!ppv.\+c@{ppv.\+c}}
+\subsubsection{\texorpdfstring{next\+\_\+v()}{next\_v()}}
+{\footnotesize\ttfamily int next\+\_\+v (\begin{DoxyParamCaption}\item[{\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$}]{instance,  }\item[{int $\ast$}]{nodes,  }\item[{int}]{zeiger }\end{DoxyParamCaption})}
+
+lis le fichier de nom filename 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em instance} & \+: isntance du problème \\
+\hline
+\mbox{\tt in,out}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\mbox{\tt in}  & {\em zeiger} & \+: indice de l\textquotesingle{}élément a ne pas traiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+le meuilleur noeud, le plus proche voisin 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ppv_8c_a34d6f9d0d181f0b1a5cc1d64f8a04d17}\label{ppv_8c_a34d6f9d0d181f0b1a5cc1d64f8a04d17}} 
+\index{ppv.\+c@{ppv.\+c}!ppv@{ppv}}
+\index{ppv@{ppv}!ppv.\+c@{ppv.\+c}}
+\subsubsection{\texorpdfstring{ppv()}{ppv()}}
+{\footnotesize\ttfamily double ppv (\begin{DoxyParamCaption}\item[{\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$}]{inst,  }\item[{int $\ast$}]{nodes }\end{DoxyParamCaption})}
+
+exécute l\textquotesingle{}algo du ppv 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em instance} & \+: isntance du problème \\
+\hline
+\mbox{\tt in,out}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la distance trouvée 
+\end{DoxyReturn}

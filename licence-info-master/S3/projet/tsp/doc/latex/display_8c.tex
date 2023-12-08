@@ -1,0 +1,169 @@
+\hypertarget{display_8c}{}\section{Référence du fichier lib/display.c}
+\label{display_8c}\index{lib/display.\+c@{lib/display.\+c}}
+
+
+affichage a l\textquotesingle{}ecran  
+
+
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de display.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{display_8c_aee4048b895a0d858dcca2035d89574f8}{to\+\_\+csv\+\_\+file} (char $\ast$filename, \hyperlink{structinstance__s}{instance\+\_\+t} instance)
+\item 
+void \hyperlink{display_8c_a9066067adf630336f8cdcc0727ed38f0}{print\+\_\+entete} (\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$instance, char $\ast$filename)
+\item 
+void \hyperlink{display_8c_a0799ee626614539077a042fcc13bb386}{print\+\_\+instance\+\_\+csv} (\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$instance)
+\item 
+void \hyperlink{display_8c_ad778e48b1433a5211cfaace2c152bdb2}{print\+\_\+methode} (bool $\ast$al\+\_\+an, char $\ast$m\+\_\+name, double final\+\_\+length, double time, int $\ast$final\+\_\+nodes, int dimension)
+\item 
+void \hyperlink{display_8c_a27e8d07e804b234b3689ce2450db4176}{print\+\_\+methode\+\_\+csv\+\_\+file} (bool $\ast$al\+\_\+an, char $\ast$m\+\_\+name, double final\+\_\+length, double time, int $\ast$final\+\_\+nodes, int dimension, char $\ast$filename)
+\item 
+void \hyperlink{display_8c_a47a1e84d306b462e78308e246eb7f5c7}{print\+\_\+bf} (bool $\ast$al\+\_\+an, double final\+\_\+length, double time, int $\ast$final\+\_\+nodes, int $\ast$worst\+\_\+nodes, int dimension, \hyperlink{structinstance__s}{instance\+\_\+t} inst)
+\item 
+void \hyperlink{display_8c_a37c7dc8a4f218104b1a675d22e91386f}{print\+\_\+bf\+\_\+csv\+\_\+file} (bool $\ast$al\+\_\+an, double final\+\_\+length, double time, int $\ast$final\+\_\+nodes, int $\ast$worst\+\_\+nodes, int dimension, char $\ast$filename, \hyperlink{structinstance__s}{instance\+\_\+t} inst)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+affichage a l\textquotesingle{}ecran 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{display_8c_a47a1e84d306b462e78308e246eb7f5c7}\label{display_8c_a47a1e84d306b462e78308e246eb7f5c7}} 
+\index{display.\+c@{display.\+c}!print\+\_\+bf@{print\+\_\+bf}}
+\index{print\+\_\+bf@{print\+\_\+bf}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+bf()}{print\_bf()}}
+{\footnotesize\ttfamily void print\+\_\+bf (\begin{DoxyParamCaption}\item[{bool $\ast$}]{al\+\_\+an,  }\item[{double}]{final\+\_\+length,  }\item[{double}]{time,  }\item[{int $\ast$}]{final\+\_\+nodes,  }\item[{int $\ast$}]{worst\+\_\+nodes,  }\item[{int}]{dimension,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{inst }\end{DoxyParamCaption})}
+
+écrit les résultats de la methode bruteforce à l\textquotesingle{}écran 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em final\+\_\+length} & \+: longeur finale de la méthode \\
+\hline
+\mbox{\tt in}  & {\em time} & \+: temps qu\textquotesingle{}a pris la fonction a s\textquotesingle{}exécuter \\
+\hline
+\mbox{\tt in}  & {\em final\+\_\+nodes} & \+: tableau des noeuds \\
+\hline
+\mbox{\tt in}  & {\em worst\+\_\+nodes} & \+: tableau des pire noeuds \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau de noeuds \\
+\hline
+\mbox{\tt in}  & {\em inst} & \+: instance de référence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8c_a37c7dc8a4f218104b1a675d22e91386f}\label{display_8c_a37c7dc8a4f218104b1a675d22e91386f}} 
+\index{display.\+c@{display.\+c}!print\+\_\+bf\+\_\+csv\+\_\+file@{print\+\_\+bf\+\_\+csv\+\_\+file}}
+\index{print\+\_\+bf\+\_\+csv\+\_\+file@{print\+\_\+bf\+\_\+csv\+\_\+file}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+bf\+\_\+csv\+\_\+file()}{print\_bf\_csv\_file()}}
+{\footnotesize\ttfamily void print\+\_\+bf\+\_\+csv\+\_\+file (\begin{DoxyParamCaption}\item[{bool $\ast$}]{al\+\_\+an,  }\item[{double}]{final\+\_\+length,  }\item[{double}]{time,  }\item[{int $\ast$}]{final\+\_\+nodes,  }\item[{int $\ast$}]{worst\+\_\+nodes,  }\item[{int}]{dimension,  }\item[{char $\ast$}]{filename,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{inst }\end{DoxyParamCaption})}
+
+écrit les résultats de la methode bruteforce dans le fichier de nom filename 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em final\+\_\+length} & \+: longeur finale de la méthode \\
+\hline
+\mbox{\tt in}  & {\em time} & \+: temps qu\textquotesingle{}a pris la fonction a s\textquotesingle{}exécuter \\
+\hline
+\mbox{\tt in}  & {\em final\+\_\+nodes} & \+: tableau des noeuds \\
+\hline
+\mbox{\tt in}  & {\em worst\+\_\+nodes} & \+: tableau des pire noeuds \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau de noeuds \\
+\hline
+\mbox{\tt in}  & {\em filename} & \+: nom du fichier csv \\
+\hline
+\mbox{\tt in}  & {\em inst} & \+: instance de référence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8c_a9066067adf630336f8cdcc0727ed38f0}\label{display_8c_a9066067adf630336f8cdcc0727ed38f0}} 
+\index{display.\+c@{display.\+c}!print\+\_\+entete@{print\+\_\+entete}}
+\index{print\+\_\+entete@{print\+\_\+entete}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+entete()}{print\_entete()}}
+{\footnotesize\ttfamily void print\+\_\+entete (\begin{DoxyParamCaption}\item[{\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$}]{instance,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+affiche l\textquotesingle{}en tete 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em inst} & \+: instance du problème \\
+\hline
+\mbox{\tt in}  & {\em filename} & \+: nom du fichier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8c_a0799ee626614539077a042fcc13bb386}\label{display_8c_a0799ee626614539077a042fcc13bb386}} 
+\index{display.\+c@{display.\+c}!print\+\_\+instance\+\_\+csv@{print\+\_\+instance\+\_\+csv}}
+\index{print\+\_\+instance\+\_\+csv@{print\+\_\+instance\+\_\+csv}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+instance\+\_\+csv()}{print\_instance\_csv()}}
+{\footnotesize\ttfamily void print\+\_\+instance\+\_\+csv (\begin{DoxyParamCaption}\item[{\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$}]{instance }\end{DoxyParamCaption})}
+
+affiche les resultats sous forme csv 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em inst} & \+: instance du problème \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8c_ad778e48b1433a5211cfaace2c152bdb2}\label{display_8c_ad778e48b1433a5211cfaace2c152bdb2}} 
+\index{display.\+c@{display.\+c}!print\+\_\+methode@{print\+\_\+methode}}
+\index{print\+\_\+methode@{print\+\_\+methode}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+methode()}{print\_methode()}}
+{\footnotesize\ttfamily void print\+\_\+methode (\begin{DoxyParamCaption}\item[{bool $\ast$}]{al\+\_\+an,  }\item[{char $\ast$}]{m\+\_\+name,  }\item[{double}]{final\+\_\+length,  }\item[{double}]{time,  }\item[{int $\ast$}]{final\+\_\+nodes,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+écrit les résultats de la methode a l\textquotesingle{}écran en format csv 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em al\+\_\+an} & \+: si cette chaine de caractére a déjà été affiché \\
+\hline
+\mbox{\tt in}  & {\em m\+\_\+name} & \+: nom de la méthode \\
+\hline
+\mbox{\tt in}  & {\em final\+\_\+length} & \+: longeur finale de la méthode \\
+\hline
+\mbox{\tt in}  & {\em time} & \+: temps qu\textquotesingle{}a pris la fonction a s\textquotesingle{}exécuter \\
+\hline
+\mbox{\tt in}  & {\em final\+\_\+nodes} & \+: tableau des noeuds \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau de noeuds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8c_a27e8d07e804b234b3689ce2450db4176}\label{display_8c_a27e8d07e804b234b3689ce2450db4176}} 
+\index{display.\+c@{display.\+c}!print\+\_\+methode\+\_\+csv\+\_\+file@{print\+\_\+methode\+\_\+csv\+\_\+file}}
+\index{print\+\_\+methode\+\_\+csv\+\_\+file@{print\+\_\+methode\+\_\+csv\+\_\+file}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+methode\+\_\+csv\+\_\+file()}{print\_methode\_csv\_file()}}
+{\footnotesize\ttfamily void print\+\_\+methode\+\_\+csv\+\_\+file (\begin{DoxyParamCaption}\item[{bool $\ast$}]{al\+\_\+an,  }\item[{char $\ast$}]{m\+\_\+name,  }\item[{double}]{final\+\_\+length,  }\item[{double}]{time,  }\item[{int $\ast$}]{final\+\_\+nodes,  }\item[{int}]{dimension,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+écrit les résultats de la methode dans le fichier csv 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em al\+\_\+an} & \+: si cette chaine de caractére a déjà été affiché \\
+\hline
+\mbox{\tt in}  & {\em m\+\_\+name} & \+: nom de la méthode \\
+\hline
+\mbox{\tt in}  & {\em final\+\_\+length} & \+: longeur finale de la méthode \\
+\hline
+\mbox{\tt in}  & {\em time} & \+: temps qu\textquotesingle{}a pris la fonction a s\textquotesingle{}exécuter \\
+\hline
+\mbox{\tt in}  & {\em final\+\_\+nodes} & \+: tableau des noeuds \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau de noeuds \\
+\hline
+\mbox{\tt in}  & {\em filename} & \+: nom du fichier csv \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{display_8c_aee4048b895a0d858dcca2035d89574f8}\label{display_8c_aee4048b895a0d858dcca2035d89574f8}} 
+\index{display.\+c@{display.\+c}!to\+\_\+csv\+\_\+file@{to\+\_\+csv\+\_\+file}}
+\index{to\+\_\+csv\+\_\+file@{to\+\_\+csv\+\_\+file}!display.\+c@{display.\+c}}
+\subsubsection{\texorpdfstring{to\+\_\+csv\+\_\+file()}{to\_csv\_file()}}
+{\footnotesize\ttfamily int to\+\_\+csv\+\_\+file (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{instance }\end{DoxyParamCaption})}
+
+écrit les résultats dans un fichiers 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em filename} & \+: nom du fichier \\
+\hline
+\mbox{\tt in}  & {\em inst} & \+: instance du problème \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+si le fichier a bien été créer 
+\end{DoxyReturn}

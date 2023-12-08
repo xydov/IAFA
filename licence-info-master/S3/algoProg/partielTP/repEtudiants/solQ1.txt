@@ -1,0 +1,1100 @@
+Sudoku 0:
+	max region 0 = 8
+	max region 1 = 6
+	max region 2 = 8
+	max region 3 = 8
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 7
+
+Sudoku 1:
+	max region 0 = 9
+	max region 1 = 7
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 2:
+	max region 0 = 9
+	max region 1 = 7
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 7
+	max region 6 = 6
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 3:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 7
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 7
+	max region 7 = 7
+	max region 8 = 8
+
+Sudoku 4:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 8
+	max region 4 = 8
+	max region 5 = 5
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 5:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 5
+
+Sudoku 6:
+	max region 0 = 9
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 7:
+	max region 0 = 8
+	max region 1 = 7
+	max region 2 = 9
+	max region 3 = 7
+	max region 4 = 8
+	max region 5 = 7
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 8:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 9:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 10:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 7
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 6
+	max region 6 = 7
+	max region 7 = 3
+	max region 8 = 9
+
+Sudoku 11:
+	max region 0 = 9
+	max region 1 = 7
+	max region 2 = 8
+	max region 3 = 7
+	max region 4 = 9
+	max region 5 = 6
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 12:
+	max region 0 = 9
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 7
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 8
+
+Sudoku 13:
+	max region 0 = 9
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 14:
+	max region 0 = 6
+	max region 1 = 8
+	max region 2 = 6
+	max region 3 = 1
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 15:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 16:
+	max region 0 = 9
+	max region 1 = 7
+	max region 2 = 7
+	max region 3 = 9
+	max region 4 = 7
+	max region 5 = 7
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 17:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 4
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 6
+
+Sudoku 18:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 6
+	max region 3 = 7
+	max region 4 = 7
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 19:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 7
+	max region 3 = 8
+	max region 4 = 7
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 7
+
+Sudoku 20:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 7
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 21:
+	max region 0 = 9
+	max region 1 = 7
+	max region 2 = 9
+	max region 3 = 8
+	max region 4 = 8
+	max region 5 = 7
+	max region 6 = 4
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 22:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 5
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 23:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 7
+	max region 4 = 7
+	max region 5 = 8
+	max region 6 = 7
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 24:
+	max region 0 = 8
+	max region 1 = 8
+	max region 2 = 6
+	max region 3 = 7
+	max region 4 = 6
+	max region 5 = 6
+	max region 6 = 7
+	max region 7 = 9
+	max region 8 = 7
+
+Sudoku 25:
+	max region 0 = 8
+	max region 1 = 0
+	max region 2 = 7
+	max region 3 = 6
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 26:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 27:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 7
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 28:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 8
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 6
+
+Sudoku 29:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 7
+	max region 3 = 7
+	max region 4 = 8
+	max region 5 = 6
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 30:
+	max region 0 = 8
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 7
+	max region 4 = 7
+	max region 5 = 7
+	max region 6 = 9
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 31:
+	max region 0 = 6
+	max region 1 = 8
+	max region 2 = 6
+	max region 3 = 8
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 7
+	max region 8 = 8
+
+Sudoku 32:
+	max region 0 = 7
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 6
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 33:
+	max region 0 = 8
+	max region 1 = 7
+	max region 2 = 5
+	max region 3 = 9
+	max region 4 = 7
+	max region 5 = 8
+	max region 6 = 3
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 34:
+	max region 0 = 5
+	max region 1 = 7
+	max region 2 = 8
+	max region 3 = 7
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 6
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 35:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 4
+	max region 3 = 9
+	max region 4 = 7
+	max region 5 = 6
+	max region 6 = 5
+	max region 7 = 8
+	max region 8 = 7
+
+Sudoku 36:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 2
+	max region 3 = 6
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 37:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 7
+	max region 3 = 9
+	max region 4 = 7
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 3
+	max region 8 = 8
+
+Sudoku 38:
+	max region 0 = 7
+	max region 1 = 7
+	max region 2 = 9
+	max region 3 = 7
+	max region 4 = 7
+	max region 5 = 6
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 8
+
+Sudoku 39:
+	max region 0 = 6
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 8
+	max region 4 = 7
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 40:
+	max region 0 = 8
+	max region 1 = 6
+	max region 2 = 8
+	max region 3 = 8
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 7
+
+Sudoku 41:
+	max region 0 = 7
+	max region 1 = 8
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 42:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 7
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 43:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 7
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 44:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 6
+	max region 4 = 8
+	max region 5 = 6
+	max region 6 = 9
+	max region 7 = 6
+	max region 8 = 7
+
+Sudoku 45:
+	max region 0 = 9
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 5
+	max region 8 = 8
+
+Sudoku 46:
+	max region 0 = 9
+	max region 1 = 5
+	max region 2 = 5
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 5
+
+Sudoku 47:
+	max region 0 = 8
+	max region 1 = 8
+	max region 2 = 7
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 7
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 48:
+	max region 0 = 5
+	max region 1 = 8
+	max region 2 = 8
+	max region 3 = 6
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 2
+	max region 8 = 9
+
+Sudoku 49:
+	max region 0 = 9
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 7
+	max region 6 = 7
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 50:
+	max region 0 = 8
+	max region 1 = 7
+	max region 2 = 8
+	max region 3 = 7
+	max region 4 = 8
+	max region 5 = 7
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 51:
+	max region 0 = 7
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 8
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 52:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 7
+	max region 4 = 9
+	max region 5 = 6
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 53:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 7
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 54:
+	max region 0 = 9
+	max region 1 = 4
+	max region 2 = 8
+	max region 3 = 7
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 55:
+	max region 0 = 7
+	max region 1 = 8
+	max region 2 = 6
+	max region 3 = 6
+	max region 4 = 7
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 56:
+	max region 0 = 8
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 57:
+	max region 0 = 9
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 7
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 6
+
+Sudoku 58:
+	max region 0 = 7
+	max region 1 = 6
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 7
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 59:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 8
+	max region 3 = 8
+	max region 4 = 6
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 60:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 6
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 61:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 8
+	max region 7 = 4
+	max region 8 = 9
+
+Sudoku 62:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 7
+	max region 5 = 7
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 63:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 5
+	max region 7 = 9
+	max region 8 = 7
+
+Sudoku 64:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 6
+	max region 5 = 6
+	max region 6 = 8
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 65:
+	max region 0 = 9
+	max region 1 = 5
+	max region 2 = 9
+	max region 3 = 4
+	max region 4 = 8
+	max region 5 = 6
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 8
+
+Sudoku 66:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 5
+	max region 3 = 6
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 67:
+	max region 0 = 8
+	max region 1 = 8
+	max region 2 = 8
+	max region 3 = 7
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 7
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 68:
+	max region 0 = 7
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 8
+	max region 4 = 7
+	max region 5 = 8
+	max region 6 = 8
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 69:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 6
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 70:
+	max region 0 = 7
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 7
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 7
+	max region 8 = 7
+
+Sudoku 71:
+	max region 0 = 8
+	max region 1 = 6
+	max region 2 = 8
+	max region 3 = 7
+	max region 4 = 7
+	max region 5 = 8
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 72:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 6
+	max region 5 = 6
+	max region 6 = 8
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 73:
+	max region 0 = 6
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 8
+	max region 4 = 7
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 74:
+	max region 0 = 9
+	max region 1 = 7
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 7
+	max region 5 = 9
+	max region 6 = 7
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 75:
+	max region 0 = 8
+	max region 1 = 8
+	max region 2 = 6
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 6
+	max region 7 = 8
+	max region 8 = 8
+
+Sudoku 76:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 7
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 5
+	max region 8 = 9
+
+Sudoku 77:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 7
+	max region 3 = 8
+	max region 4 = 8
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 78:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 7
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 79:
+	max region 0 = 8
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 80:
+	max region 0 = 7
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 7
+	max region 7 = 8
+	max region 8 = 8
+
+Sudoku 81:
+	max region 0 = 8
+	max region 1 = 7
+	max region 2 = 9
+	max region 3 = 8
+	max region 4 = 8
+	max region 5 = 8
+	max region 6 = 8
+	max region 7 = 9
+	max region 8 = 7
+
+Sudoku 82:
+	max region 0 = 9
+	max region 1 = 7
+	max region 2 = 9
+	max region 3 = 6
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 83:
+	max region 0 = 7
+	max region 1 = 4
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 3
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 84:
+	max region 0 = 3
+	max region 1 = 7
+	max region 2 = 7
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 85:
+	max region 0 = 9
+	max region 1 = 6
+	max region 2 = 8
+	max region 3 = 4
+	max region 4 = 7
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 86:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 8
+	max region 3 = 8
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 6
+	max region 8 = 8
+
+Sudoku 87:
+	max region 0 = 9
+	max region 1 = 5
+	max region 2 = 8
+	max region 3 = 8
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 7
+	max region 8 = 9
+
+Sudoku 88:
+	max region 0 = 7
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 6
+	max region 8 = 7
+
+Sudoku 89:
+	max region 0 = 8
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 90:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 7
+	max region 3 = 8
+	max region 4 = 9
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 91:
+	max region 0 = 9
+	max region 1 = 7
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 1
+	max region 8 = 7
+
+Sudoku 92:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 4
+	max region 6 = 9
+	max region 7 = 7
+	max region 8 = 8
+
+Sudoku 93:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 8
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 94:
+	max region 0 = 9
+	max region 1 = 9
+	max region 2 = 9
+	max region 3 = 6
+	max region 4 = 6
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 95:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 8
+	max region 5 = 8
+	max region 6 = 7
+	max region 7 = 8
+	max region 8 = 9
+
+Sudoku 96:
+	max region 0 = 3
+	max region 1 = 7
+	max region 2 = 9
+	max region 3 = 6
+	max region 4 = 8
+	max region 5 = 8
+	max region 6 = 7
+	max region 7 = 9
+	max region 8 = 9
+
+Sudoku 97:
+	max region 0 = 9
+	max region 1 = 8
+	max region 2 = 8
+	max region 3 = 9
+	max region 4 = 5
+	max region 5 = 9
+	max region 6 = 5
+	max region 7 = 8
+	max region 8 = 8
+
+Sudoku 98:
+	max region 0 = 8
+	max region 1 = 9
+	max region 2 = 7
+	max region 3 = 7
+	max region 4 = 8
+	max region 5 = 9
+	max region 6 = 6
+	max region 7 = 9
+	max region 8 = 8
+
+Sudoku 99:
+	max region 0 = 9
+	max region 1 = 6
+	max region 2 = 9
+	max region 3 = 9
+	max region 4 = 9
+	max region 5 = 9
+	max region 6 = 9
+	max region 7 = 8
+	max region 8 = 9
+

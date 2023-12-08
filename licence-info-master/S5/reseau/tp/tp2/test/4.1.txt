@@ -1,0 +1,9 @@
+-> ping 3
+ping to R3
+response from r3: msg_seq=0 ttl=32 time=0.00s
+-->ping 2
+response from r2: msg_seq=0 ttl=31 time=0.00s
+
+-> traceroute 2
+ 1 r3 0.00s
+ 2 r2 0.00s

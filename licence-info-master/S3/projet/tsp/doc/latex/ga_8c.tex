@@ -1,0 +1,146 @@
+\hypertarget{ga_8c}{}\section{Référence du fichier lib/ga.c}
+\label{ga_8c}\index{lib/ga.\+c@{lib/ga.\+c}}
+
+
+implementation de l\textquotesingle{}algo génétique  
+
+
+{\ttfamily \#include \char`\"{}ga.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de ga.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structtour__s}{tour\+\_\+t} $\ast$ \hyperlink{ga_8c_a0225df11108de0a22a7ae38e551d8208}{create\+\_\+array\+\_\+tour} (int dimension)
+\item 
+\hyperlink{structindices__s}{indices\+\_\+t} $\ast$ \hyperlink{ga_8c_a358759c716db958ff85b5858b3c6c301}{create\+\_\+array\+\_\+indices} (int dimension)
+\item 
+void \hyperlink{ga_8c_a8b93a0e33f9a241de566cb5e3c3441ec}{two\+\_\+random\+\_\+numbers} (int $\ast$a, int $\ast$b, int dimension)
+\item 
+void \hyperlink{ga_8c_ae2c40fa53dafddba3510ee8579de6a85}{edge\+\_\+destruction} (\hyperlink{structtour__s}{tour\+\_\+t} $\ast$t\+\_\+parent1, \hyperlink{structtour__s}{tour\+\_\+t} $\ast$t\+\_\+parent2, \hyperlink{structtour__s}{tour\+\_\+t} $\ast$tfille, int dimension)
+\item 
+void \hyperlink{ga_8c_af42675c3f2da818aad501e2158756136}{mutation} ()
+\item 
+void \hyperlink{ga_8c_ac38790df50beb56eacce4d70891efdb5}{dpx} (int $\ast$t\+\_\+parent1, int $\ast$t\+\_\+parent2, int $\ast$tfille, int $\ast$tfille\+\_\+fin, int dimension)
+\item 
+double \hyperlink{ga_8c_ac45f2b81bb097e519c7a886a31f6fbeb}{ga} (\hyperlink{structinstance__s}{instance\+\_\+t} instance, float taux\+\_\+mut, int n\+\_\+individus, int n\+\_\+generations)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+implementation de l\textquotesingle{}algo génétique 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{ga_8c_a358759c716db958ff85b5858b3c6c301}\label{ga_8c_a358759c716db958ff85b5858b3c6c301}} 
+\index{ga.\+c@{ga.\+c}!create\+\_\+array\+\_\+indices@{create\+\_\+array\+\_\+indices}}
+\index{create\+\_\+array\+\_\+indices@{create\+\_\+array\+\_\+indices}!ga.\+c@{ga.\+c}}
+\subsubsection{\texorpdfstring{create\+\_\+array\+\_\+indices()}{create\_array\_indices()}}
+{\footnotesize\ttfamily \hyperlink{structindices__s}{indices\+\_\+t}$\ast$ create\+\_\+array\+\_\+indices (\begin{DoxyParamCaption}\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+crée un tableau d\textquotesingle{} indices\+\_\+t 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau de retour \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+pointeur sur array de indices\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ga_8c_a0225df11108de0a22a7ae38e551d8208}\label{ga_8c_a0225df11108de0a22a7ae38e551d8208}} 
+\index{ga.\+c@{ga.\+c}!create\+\_\+array\+\_\+tour@{create\+\_\+array\+\_\+tour}}
+\index{create\+\_\+array\+\_\+tour@{create\+\_\+array\+\_\+tour}!ga.\+c@{ga.\+c}}
+\subsubsection{\texorpdfstring{create\+\_\+array\+\_\+tour()}{create\_array\_tour()}}
+{\footnotesize\ttfamily \hyperlink{structtour__s}{tour\+\_\+t}$\ast$ create\+\_\+array\+\_\+tour (\begin{DoxyParamCaption}\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+crée un tableau de tour\+\_\+t 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau de retour \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+pointeur sur array de tour\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ga_8c_ac38790df50beb56eacce4d70891efdb5}\label{ga_8c_ac38790df50beb56eacce4d70891efdb5}} 
+\index{ga.\+c@{ga.\+c}!dpx@{dpx}}
+\index{dpx@{dpx}!ga.\+c@{ga.\+c}}
+\subsubsection{\texorpdfstring{dpx()}{dpx()}}
+{\footnotesize\ttfamily void dpx (\begin{DoxyParamCaption}\item[{int $\ast$}]{t\+\_\+parent1,  }\item[{int $\ast$}]{t\+\_\+parent2,  }\item[{int $\ast$}]{tfille,  }\item[{int $\ast$}]{tfille\+\_\+fin,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+execute l\textquotesingle{}algo D\+PX 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em t\+\_\+parent1} & \+: tableau parent1 \\
+\hline
+\mbox{\tt in}  & {\em t\+\_\+parent2} & \+: tableau parent2 \\
+\hline
+\mbox{\tt in}  & {\em tfille} & \+: tableau fille \\
+\hline
+\mbox{\tt in}  & {\em tfille\+\_\+fin} & tableau fille\+\_\+fin \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ga_8c_ae2c40fa53dafddba3510ee8579de6a85}\label{ga_8c_ae2c40fa53dafddba3510ee8579de6a85}} 
+\index{ga.\+c@{ga.\+c}!edge\+\_\+destruction@{edge\+\_\+destruction}}
+\index{edge\+\_\+destruction@{edge\+\_\+destruction}!ga.\+c@{ga.\+c}}
+\subsubsection{\texorpdfstring{edge\+\_\+destruction()}{edge\_destruction()}}
+{\footnotesize\ttfamily void edge\+\_\+destruction (\begin{DoxyParamCaption}\item[{\hyperlink{structtour__s}{tour\+\_\+t} $\ast$}]{t\+\_\+parent1,  }\item[{\hyperlink{structtour__s}{tour\+\_\+t} $\ast$}]{t\+\_\+parent2,  }\item[{\hyperlink{structtour__s}{tour\+\_\+t} $\ast$}]{tfille,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+deconstruit le tableau initial en pls sous segments 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em t\+\_\+parent1} & \+: tableau parent1 \\
+\hline
+\mbox{\tt in}  & {\em t\+\_\+parent2} & \+: tableau parent2 \\
+\hline
+\mbox{\tt in}  & {\em tfille} & \+: tableau fille \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ga_8c_ac45f2b81bb097e519c7a886a31f6fbeb}\label{ga_8c_ac45f2b81bb097e519c7a886a31f6fbeb}} 
+\index{ga.\+c@{ga.\+c}!ga@{ga}}
+\index{ga@{ga}!ga.\+c@{ga.\+c}}
+\subsubsection{\texorpdfstring{ga()}{ga()}}
+{\footnotesize\ttfamily double ga (\begin{DoxyParamCaption}\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{instance,  }\item[{float}]{taux\+\_\+mut,  }\item[{int}]{n\+\_\+individus,  }\item[{int}]{n\+\_\+generations }\end{DoxyParamCaption})}
+
+execute l\textquotesingle{}algo genetique 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em instance} & \+: instance du problème \\
+\hline
+\mbox{\tt in}  & {\em taux\+\_\+mut} & \+: taux de mutation \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+individus} & \+: nombre d\textquotesingle{}individu \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+generations} & \+: nombre de générations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+longeur du problème trouvé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ga_8c_af42675c3f2da818aad501e2158756136}\label{ga_8c_af42675c3f2da818aad501e2158756136}} 
+\index{ga.\+c@{ga.\+c}!mutation@{mutation}}
+\index{mutation@{mutation}!ga.\+c@{ga.\+c}}
+\subsubsection{\texorpdfstring{mutation()}{mutation()}}
+{\footnotesize\ttfamily void mutation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+execute l\textquotesingle{}algo de mutation \mbox{\Hypertarget{ga_8c_a8b93a0e33f9a241de566cb5e3c3441ec}\label{ga_8c_a8b93a0e33f9a241de566cb5e3c3441ec}} 
+\index{ga.\+c@{ga.\+c}!two\+\_\+random\+\_\+numbers@{two\+\_\+random\+\_\+numbers}}
+\index{two\+\_\+random\+\_\+numbers@{two\+\_\+random\+\_\+numbers}!ga.\+c@{ga.\+c}}
+\subsubsection{\texorpdfstring{two\+\_\+random\+\_\+numbers()}{two\_random\_numbers()}}
+{\footnotesize\ttfamily void two\+\_\+random\+\_\+numbers (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{int $\ast$}]{b,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+crée 2 nombre aléatoire différent 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em a} & \+: pointeur sur entier \\
+\hline
+\mbox{\tt in,out}  & {\em b} & \+: pointeur sur entier \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: valeur max des nombres aléatoires \\
+\hline
+\end{DoxyParams}

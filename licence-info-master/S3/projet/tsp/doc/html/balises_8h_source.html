@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TSP Doc:  Fichier source de includes/balises.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TSP Doc
+   </div>
+   <div id="projectbrief">Implémentation de différent algorithme pour résoudre TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">balises.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BALISES_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BALISES_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;tspstat.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define NB_BALISES 12 // nombre max de balises de la ligne de commabde</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// liste des codes pour les balises</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define BAL_F 0     // -f</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define BAL_T 1     // -t</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define BAL_V 2     // -v</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define BAL_O 3     // -o</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define BAL_PPV 4   //-ppv</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define BAL_BF 5    // -bf</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define BAL_BFM 6   // -bfm</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#define BAL_RW 7    // -rw</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#define BAL_2OPT 8  // -2opt</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define BAL_GA 9    // -ga</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define BAL_H 10    //-h</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define BAL_ZERO 11 // -nz no zéro</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="balises_8c.html#a659e8f2d731e0cc30143ed7c15f04d1c">init_balises</a>(<span class="keywordtype">int</span> *balises);</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="balises_8c.html#a9700d471069f23b7fa6c5458b07e1e3f">anhiliation_bal</a>(<span class="keywordtype">int</span> ind_bal, <span class="keywordtype">int</span> *bal_arr);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="balises_8c.html#a402ea961bfc2ffeee61e3a7c330b1559">print_help</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> <a class="code" href="balises_8c.html#a6f1b9e3728335466359815fd45430600">recherche_chaine</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv, <span class="keywordtype">char</span> *ch);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="balises_8c.html#ae8c66bd957a3daa220cd3f2b2a036024">analyse_balises</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv, <span class="keywordtype">int</span> tab_arg[NB_BALISES]);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="balises_8c_html_ae8c66bd957a3daa220cd3f2b2a036024"><div class="ttname"><a href="balises_8c.html#ae8c66bd957a3daa220cd3f2b2a036024">analyse_balises</a></div><div class="ttdeci">void analyse_balises(int argc, char **argv, int tab_arg[NB_BALISES])</div><div class="ttdef"><b>Definition:</b> balises.c:69</div></div>
+<div class="ttc" id="balises_8c_html_a659e8f2d731e0cc30143ed7c15f04d1c"><div class="ttname"><a href="balises_8c.html#a659e8f2d731e0cc30143ed7c15f04d1c">init_balises</a></div><div class="ttdeci">void init_balises(int *balises)</div><div class="ttdef"><b>Definition:</b> balises.c:11</div></div>
+<div class="ttc" id="balises_8c_html_a6f1b9e3728335466359815fd45430600"><div class="ttname"><a href="balises_8c.html#a6f1b9e3728335466359815fd45430600">recherche_chaine</a></div><div class="ttdeci">int recherche_chaine(int argc, char **argv, char *ch)</div><div class="ttdef"><b>Definition:</b> balises.c:49</div></div>
+<div class="ttc" id="balises_8c_html_a9700d471069f23b7fa6c5458b07e1e3f"><div class="ttname"><a href="balises_8c.html#a9700d471069f23b7fa6c5458b07e1e3f">anhiliation_bal</a></div><div class="ttdeci">void anhiliation_bal(int ind_bal, int *bal_arr)</div><div class="ttdef"><b>Definition:</b> balises.c:21</div></div>
+<div class="ttc" id="balises_8c_html_a402ea961bfc2ffeee61e3a7c330b1559"><div class="ttname"><a href="balises_8c.html#a402ea961bfc2ffeee61e3a7c330b1559">print_help</a></div><div class="ttdeci">void print_help(void)</div><div class="ttdef"><b>Definition:</b> balises.c:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

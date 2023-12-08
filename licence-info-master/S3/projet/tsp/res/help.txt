@@ -1,0 +1,20 @@
+
+
+Usage :  ./tsp -f <file> [-t <tour>] [-v [<file>]] -<méthode> [-h]
+-f <file> : nom du fichier tsp (obligatoire)
+-t <file> : nom du fichier solution (optionnel)
+-v [<file>] : mode verbose (optionnel), écrit dans un fichier si présent
+-o <file> : export des résultats sans un fichier csv
+-h : help, affiche ce texte
+
+<méthode> : méthodes de calcul (cumulables) :
+
+-bf : brute force,
+-bfm : brute force en utilisant la matrice de distance,
+-ppv : plus proche voisin,
+-rw : random walk,
+-2opt : 2 optimisation. Si -ppv ou -rw ne sont pas présentes on utilise -rw,
+-ga <nombre d'individus> <nombre de générations> <taux de mutation> :
+    algorithme génétique, défaut = 20 individus, 200 générations, 0.3 mutation.
+-nz : néglige le point (0,0), pour respecter l’homogénéité avec TSPLIB.
+

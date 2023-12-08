@@ -1,0 +1,44 @@
+\hypertarget{main_8c}{}\section{Référence du fichier main.\+c}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+
+
+Main C file.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}balises.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tspstat.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lecture\+\_\+fichier\+\_\+tsplib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}bruteforce.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ppv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}random\+\_\+walk.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}2opt.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ga.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de main.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a3b6a923f2b57547a686bfcc45225d770}\label{main_8c_a3b6a923f2b57547a686bfcc45225d770}} 
+bool {\bfseries sans\+\_\+zero} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Main C file. 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TSP Doc:  Fichier source de includes/display.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TSP Doc
+   </div>
+   <div id="projectbrief">Implémentation de différent algorithme pour résoudre TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">display.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DISPLAY_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DISPLAY_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;tspstat.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;tools.h&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">int</span> <a class="code" href="display_8c.html#aee4048b895a0d858dcca2035d89574f8">to_csv_file</a>(<span class="keywordtype">char</span> *filename, <a class="code" href="structinstance__s.html">instance_t</a> instance);</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_8c.html#a9066067adf630336f8cdcc0727ed38f0">print_entete</a>(<a class="code" href="structinstance__s.html">instance_t</a> *instance, <span class="keywordtype">char</span> *filename);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_8c.html#a0799ee626614539077a042fcc13bb386">print_instance_csv</a>(<a class="code" href="structinstance__s.html">instance_t</a> *instance);</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_8c.html#ad778e48b1433a5211cfaace2c152bdb2">print_methode</a>(<span class="keywordtype">bool</span> *al_an, <span class="keywordtype">char</span> *m_name, <span class="keywordtype">double</span> final_length, <span class="keywordtype">double</span> time, <span class="keywordtype">int</span> *final_nodes, <span class="keywordtype">int</span> dimension);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_8c.html#a27e8d07e804b234b3689ce2450db4176">print_methode_csv_file</a>(<span class="keywordtype">bool</span> *al_an, <span class="keywordtype">char</span> *m_name, <span class="keywordtype">double</span> final_length, <span class="keywordtype">double</span> time, <span class="keywordtype">int</span> *final_nodes, <span class="keywordtype">int</span> dimension, <span class="keywordtype">char</span> *filename);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_8c.html#a47a1e84d306b462e78308e246eb7f5c7">print_bf</a>(<span class="keywordtype">bool</span> *al_an, <span class="keywordtype">double</span> final_length, <span class="keywordtype">double</span> time, <span class="keywordtype">int</span> *final_nodes, <span class="keywordtype">int</span> *worst_nodes, <span class="keywordtype">int</span> dimension, <a class="code" href="structinstance__s.html">instance_t</a> inst);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_8c.html#a37c7dc8a4f218104b1a675d22e91386f">print_bf_csv_file</a>(<span class="keywordtype">bool</span> *al_an, <span class="keywordtype">double</span> final_length, <span class="keywordtype">double</span> time, <span class="keywordtype">int</span> *final_nodes, <span class="keywordtype">int</span> *worst_nodes, <span class="keywordtype">int</span> dimension, <span class="keywordtype">char</span> *filename, <a class="code" href="structinstance__s.html">instance_t</a> inst);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="display_8c_html_a9066067adf630336f8cdcc0727ed38f0"><div class="ttname"><a href="display_8c.html#a9066067adf630336f8cdcc0727ed38f0">print_entete</a></div><div class="ttdeci">void print_entete(instance_t *instance, char *filename)</div><div class="ttdef"><b>Definition:</b> display.c:45</div></div>
+<div class="ttc" id="display_8c_html_aee4048b895a0d858dcca2035d89574f8"><div class="ttname"><a href="display_8c.html#aee4048b895a0d858dcca2035d89574f8">to_csv_file</a></div><div class="ttdeci">int to_csv_file(char *filename, instance_t instance)</div><div class="ttdef"><b>Definition:</b> display.c:8</div></div>
+<div class="ttc" id="display_8c_html_a37c7dc8a4f218104b1a675d22e91386f"><div class="ttname"><a href="display_8c.html#a37c7dc8a4f218104b1a675d22e91386f">print_bf_csv_file</a></div><div class="ttdeci">void print_bf_csv_file(bool *al_an, double final_length, double time, int *final_nodes, int *worst_nodes, int dimension, char *filename, instance_t inst)</div><div class="ttdef"><b>Definition:</b> display.c:222</div></div>
+<div class="ttc" id="structinstance__s_html"><div class="ttname"><a href="structinstance__s.html">instance_s</a></div><div class="ttdef"><b>Definition:</b> tspstat.h:18</div></div>
+<div class="ttc" id="display_8c_html_a47a1e84d306b462e78308e246eb7f5c7"><div class="ttname"><a href="display_8c.html#a47a1e84d306b462e78308e246eb7f5c7">print_bf</a></div><div class="ttdeci">void print_bf(bool *al_an, double final_length, double time, int *final_nodes, int *worst_nodes, int dimension, instance_t inst)</div><div class="ttdef"><b>Definition:</b> display.c:164</div></div>
+<div class="ttc" id="display_8c_html_a27e8d07e804b234b3689ce2450db4176"><div class="ttname"><a href="display_8c.html#a27e8d07e804b234b3689ce2450db4176">print_methode_csv_file</a></div><div class="ttdeci">void print_methode_csv_file(bool *al_an, char *m_name, double final_length, double time, int *final_nodes, int dimension, char *filename)</div><div class="ttdef"><b>Definition:</b> display.c:115</div></div>
+<div class="ttc" id="display_8c_html_ad778e48b1433a5211cfaace2c152bdb2"><div class="ttname"><a href="display_8c.html#ad778e48b1433a5211cfaace2c152bdb2">print_methode</a></div><div class="ttdeci">void print_methode(bool *al_an, char *m_name, double final_length, double time, int *final_nodes, int dimension)</div><div class="ttdef"><b>Definition:</b> display.c:79</div></div>
+<div class="ttc" id="display_8c_html_a0799ee626614539077a042fcc13bb386"><div class="ttname"><a href="display_8c.html#a0799ee626614539077a042fcc13bb386">print_instance_csv</a></div><div class="ttdeci">void print_instance_csv(instance_t *instance)</div><div class="ttdef"><b>Definition:</b> display.c:56</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

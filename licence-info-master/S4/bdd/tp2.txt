@@ -1,0 +1,73 @@
+-- Kunze
+-- Tarek
+-- 21810251
+-- TPA52
+
+
+-- Exercice 4.a.
+DELETE FROM MATERIEL
+WHERE TYPE='Raquette';
+SELECT * FROM MATERIEL;
+
+-----------------------
+-- Exercice 4.b.
+DELETE FROM SUIVRE
+WHERE NOA=1 and CODEC=3;
+SELECT * FROM SUIVRE;
+
+-----------------------
+-- Exercice 4.c.
+DELETE FROM COURS
+WHERE CODEC=2;
+
+-- Le problème rencontré cient du fait que la cours 2 et utilisé dans d'autre tables
+-- en temps que clé étrangère.
+-- Il faut supprimer toute occurence avant de la clé étrangère
+-- ainsi que la lien entre les deux tables (la contrainte)
+
+-----------------------
+-- Exercice 4.d.
+UPDATE ADHERENT
+SET ADRESSEA='23 route de Toulouse, Saint-Gaudens'
+WHERE NOA=1;
+SELECT * FROM ADHERENT;
+
+-----------------------
+-- Exercice 4.e.
+UPDATE MATERIEL
+SET PRIX= PRIX*1.1;
+SELECT * FROM MATERIEL;
+
+-----------------------
+-- Exercice 4.f.
+UPDATE MATERIEL
+SET QTEDISPO= QTEDISPO+2
+WHERE TYPE='Ski';
+SELECT * FROM MATERIEL;
+
+
+
+---------------------
+--      Partie 2   --
+
+-- Exercice 2.a.
+SELECT * FROM all_tables;
+WHERE OWNER='GILLES_HUBERT' and TABLE_NAME like 'TP2%';
+
+-- Exercice 2.b.
+
+SELECT * FROM GILLES_HUBERT.TP2_APPARTENIR;
+
+SELECT * FROM GILLES_HUBERT.TP2_CIRCUIT;
+
+SELECT * FROM GILLES_HUBERT.TP2_COURSE;
+
+SELECT * FROM GILLES_HUBERT.TP2_ECURIE;
+
+SELECT * FROM GILLES_HUBERT.TP2_EFFECTUER;
+
+SELECT * FROM GILLES_HUBERT.TP2_EFFECTUERQUALIFICATION;
+
+SELECT * FROM GILLES_HUBERT.TP2_PILOTE;
+
+-- Exercice 2.c

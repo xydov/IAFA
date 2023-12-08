@@ -1,0 +1,24 @@
+J'ouvre le fichier : Data/essai8_int.txt
+EOF
+EOF
+14 lignes lues
+
+*** Instance ***
+Nom de l'instance ; 
+Nb de villes (avec (0,0)) ; 9
+Type TSP
+Point ; Abs ; Ord
+   0 ;      0;     0
+   1 ;   1150;  1760
+   2 ;    630;  1660
+   3 ;     40;  2090
+   4 ;    750;  1100
+   5 ;    750;  2030
+   6 ;   1030;  2070
+   7 ;   1650;   650
+   8 ;   1490;  1630
+
+Méthode ; longueur ; Temps CPU (sec) ; Tour
+Meilleure tournée après le passage de la brute ;    7092.32 ;   0.01 ; [0,4,2,3,5,6,1,8,7]
+Pire tournée ;   13072.94 ;   0.01 ; [0,6,4,5,7,3,8,2,1]
+PPV ;    8515.68 ;   0.00 ; [0,4,2,5,6,1,8,7,3]

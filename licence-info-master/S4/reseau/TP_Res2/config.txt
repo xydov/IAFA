@@ -1,0 +1,16 @@
+# Parametres de configuration
+#------------------------------
+
+# Fichiers pour application
+#---------------------------
+FICHIER_IN ../fichiers/in.txt
+FICHIER_OUT ../fichiers/out.txt
+
+# Initialisation reseau
+#-----------------------
+# Emetteur
+PROBA_PERTE_E 0.2
+PROBA_ERREUR_E 0
+# Recepteur
+PROBA_PERTE_R 0
+PROBA_ERREUR_R 0

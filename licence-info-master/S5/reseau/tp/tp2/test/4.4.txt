@@ -1,0 +1,18 @@
+4.4.2 A -- Count to infinity : vecteur de distances v2
+make clean
+make test_topo1
+* Consulter log/R1.txt
+    * Vérifier qu'il y a "DV received from R2" avec uniquement 2 entrées : [Dest. 2, Metric 0], [Dest. 3, Metric 1]
+make clean
+make test_topo3
+* Tester ping et traceroute entre 1 et 2
+* Si traceroute R1 vers R2 passe par R3 (resp. R4) alors couper R3 (resp. R4)
+* Attendre un peu et vérifier qu'une nouvelle route vers R2 a été apprise via R4 (resp. R3) -- cf. tests 4.4.1
+* Vérifier bien "no route to destination" si depuis R1 ping/traceroute vers le routeur arrêté R3 (resp. R4)
+  (pas de route vers R3 (resp. R4) dans la table de routage de R1, ni de R2)
+make clean
+make test_topo5
+* Test similaire au précédent en arrêtant R6 par exemple.
+* Vérifier qu'il n'y a plus de référence à R6 dans les autres tables de routage et que la connectivité R5-R7
+  est rétablie (rq. temps de convergence un peu plus long car topologie plus importante, 30 à 40 sec max)
+

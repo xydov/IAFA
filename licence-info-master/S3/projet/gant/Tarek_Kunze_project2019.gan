@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Feuille de Route Projet Tarek Kunze" company="" webLink="" view-date="2019-09-29" view-index="0" gantt-divider-location="550" resource-divider-location="300" version="2.8.10" locale="fr">
+    <description>
+        <![CDATA[Feuille de Route Projet L2 2019:
+
+Kunze Tarek
+TPA12
+tarek.kunze@univ-tlse3.fr
+21810251
+
+Tuteur: Pierre Paccinini
+pierre.paccinini@univ-tlse3.fr]]>
+    </description>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="350" order="0"/>
+        <field id="tpd4" name="Date de début" width="101" order="1"/>
+        <field id="tpd5" name="Date de fin" width="97" order="2"/>
+        <option id="taskLabelUp" value="name"/>
+        <option id="taskLabelRight" value=""/>
+        <option id="color.recent">
+            <![CDATA[#ff3333 #00cc33 #ffcc00 #9999ff #e1e1e1]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="211" order="0"/>
+        <field id="1" name="Rôle par défaut" width="87" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="6" name="Etude du cahier des charges" color="#9999ff" meeting="false" start="2019-10-15" duration="32" complete="100" thirdDate="2019-11-15" thirdDate-constraint="0" expand="true">
+            <task id="22" name="Lecture et prise de note sur le cahier des charges" color="#9999ff" meeting="false" start="2019-10-15" duration="3" complete="100" thirdDate="2019-10-15" thirdDate-constraint="0" expand="true">
+                <depend id="26" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="26" name="Organisation des idées" color="#9999ff" meeting="false" start="2019-10-18" duration="6" complete="100" thirdDate="2019-10-18" thirdDate-constraint="0" expand="true">
+                <depend id="27" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" name="Recherche sur les structures de données nécessaires" color="#9999ff" meeting="false" start="2019-10-24" duration="6" complete="100" thirdDate="2019-10-24" thirdDate-constraint="0" expand="true">
+                <depend id="21" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="21" name="Réalisation du premier livrable" color="#9999ff" meeting="false" start="2019-10-30" duration="17" complete="100" thirdDate="2019-10-13" thirdDate-constraint="0" expand="true"/>
+        </task>
+        <task id="9" name="Programmation" color="#ffcc00" meeting="false" start="2019-11-13" duration="49" complete="1" thirdDate="2019-10-15" thirdDate-constraint="0" expand="true">
+            <task id="35" name="Structuration de la base de code" color="#ffcc00" meeting="false" start="2019-11-13" duration="2" complete="50" thirdDate="2019-10-13" thirdDate-constraint="0" expand="true">
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" name="Implémentation des balises" color="#ffcc00" meeting="false" start="2019-11-15" duration="4" complete="0" thirdDate="2019-10-15" thirdDate-constraint="0" expand="true">
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="15" name="Implémentation du programme de test avec tools.py" color="#ffcc00" meeting="false" start="2019-11-19" duration="3" complete="0" thirdDate="2019-10-15" thirdDate-constraint="0" expand="true">
+                <depend id="33" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="33" name="Initialisation des structures de données" color="#ffcc00" meeting="false" start="2019-11-22" duration="7" complete="0" thirdDate="2019-10-22" thirdDate-constraint="0" expand="true">
+                <depend id="42" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="42" name="Implementation algo de brute force" color="#ffcc00" meeting="false" start="2019-11-29" duration="4" complete="0" thirdDate="2019-11-29" thirdDate-constraint="0" expand="true">
+                <depend id="44" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="43" name="Algorithme de permutation lexicographique" color="#ffcc00" meeting="false" start="2019-12-01" duration="2" complete="0" thirdDate="2019-12-01" thirdDate-constraint="0" expand="true"/>
+            <task id="44" name="Implementation Brute Force avec les matrices" color="#ffcc00" meeting="false" start="2019-12-03" duration="4" complete="0" thirdDate="2019-12-03" thirdDate-constraint="0" expand="true">
+                <depend id="45" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="45" name="Implementation PPV random walk" color="#ffcc00" meeting="false" start="2019-12-07" duration="3" complete="0" thirdDate="2019-11-22" thirdDate-constraint="0" expand="true">
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="47" name="Implementation de la 2-optimisation" color="#ffcc00" meeting="false" start="2019-12-10" duration="5" complete="0" thirdDate="2019-12-10" thirdDate-constraint="0" expand="true">
+                <depend id="48" type="2" difference="0" hardness="Strong"/>
+                <depend id="51" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="48" name="Algorithme génétique" color="#ffcc00" meeting="false" start="2019-12-15" duration="17" complete="0" thirdDate="2019-12-15" thirdDate-constraint="0" expand="true"/>
+            <task id="51" name="Algorithme naif" color="#ffcc00" meeting="false" start="2019-12-15" duration="5" complete="0" thirdDate="2019-12-15" thirdDate-constraint="0" expand="true">
+                <depend id="52" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="52" name="DPX" color="#ffcc00" meeting="false" start="2019-12-20" duration="2" complete="0" thirdDate="2019-12-12" thirdDate-constraint="0" expand="true">
+                <depend id="54" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="54" name="Mutation" color="#ffcc00" meeting="false" start="2019-12-22" duration="1" complete="0" thirdDate="2019-12-22" thirdDate-constraint="0" expand="true">
+                <depend id="62" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="62" name="Optimisation globale" color="#ffcc00" meeting="false" start="2019-12-23" duration="9" complete="0" thirdDate="2019-12-15" thirdDate-constraint="0" expand="true">
+                <depend id="38" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="38" name="Vérification" color="#00cc33" meeting="false" start="2020-01-01" duration="10" complete="0" thirdDate="2019-11-03" thirdDate-constraint="0" expand="true"/>
+        <task id="80" name="Réalisation livrable de fin de projet" color="#ff3333" meeting="false" start="2019-12-01" duration="41" complete="0" thirdDate="2019-12-01" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles>
+        <role id="1" name=""/>
+    </roles>
+</project>

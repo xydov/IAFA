@@ -1,0 +1,33 @@
+1) On a 2 algos pour le parcours
+Chaque algo peut donner differents parcours, tous valides.
+
+En effet dans BSF, on a le choix du "frere" que l'on traite
+
+Dans DFS, on a le choix du fils que l'on va explorer.
+
+Donc chacun des algos peut donner differents resultats.
+
+BFS(G,s)=L ordonnee par la distance a s: d'abord les noeuds a distance 1, puis 2, puis etc....
+
+Si pas le chemin de s vers t , alors distance (s,t)=infini. L'algo BFS ne permet pas de passer a un sommet disconnecte du sommet de depart s.
+
+DFS(G)= L ordonnee par dateOut par exemple (c'est a dire data a laquelle le noeud est colorie en noir). Permet de sauter
+d'un composante connexe a une autre.
+
+2) TRI TOPO avec DFS
+
+Pour un graphe oriente donne, il y a en general plusieurs tris topologiques possibles puisque les contraintes
+imposees sur la liste finale sont tres laches. Si circuit, pas de tri topo possible!
+
+Par exemple pour G=({a,b,c}, {(a,c), (b,c)})
+a.b.c et b.a.c  sont 2 tris topologiques pour G.
+
+On imagine facilement que, lorsque l'on a plus de noeuds et d'arcs, le nombre de tris topos peut serieusement augmenter.
+
+2 methodes: 
+ - mise a niveau N0, N1, etc... ca permet aussi de detecter circuit
+ - DFS(G) et empiler le noeud des qu'il est traite - le depilage de la pile des sommets est un tri topo.
+ 
+ 
+ 3) CFC avec DFS
+On regarde l'exemple page 27

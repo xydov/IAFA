@@ -1,0 +1,9 @@
+4.4.2 B -- Count to infinity : limite du diamètre du réseau
+make clean
+make test_topo5
+* Tester ping et traceroute entre 3 et 1
+* Fermer la fenêtre de R1 (ou commande "exit")
+* Vérifier que sur la table de routage des autres routeurs, l'entrée vers R1 persiste avec la métrique qui augmente
+  (exemple sur R3 ou R4 : dest vers R1 avec métrique 6, 7, 8…)
+* Vérifier que l'entrée vers R1 est bien supprimée lorsqu'elle atteint la métrique MAX
+   (ce max est fonction de ce que l'étudiant aura mis comme valeur dans son code)

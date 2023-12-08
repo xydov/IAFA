@@ -1,0 +1,277 @@
+\hypertarget{tools_8c}{}\section{Référence du fichier lib/tools.c}
+\label{tools_8c}\index{lib/tools.\+c@{lib/tools.\+c}}
+
+
+fonctions diverses  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de tools.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+long $\ast$$\ast$ \hyperlink{tools_8c_a925d27b1258324aed37b8b57a648f10c}{create\+\_\+long\+\_\+mat} (int nb\+Rows, int nb\+Col)
+\item 
+void \hyperlink{tools_8c_a15e76c0911c70074505132e65ba794b0}{copy\+\_\+array} (int $\ast$array\+\_\+source, int $\ast$array\+\_\+destination, int dimension)
+\item 
+void \hyperlink{tools_8c_aec6c02d8a88d0b5a72893876394d06c7}{init\+\_\+array} (int $\ast$array, int dimension)
+\item 
+double \hyperlink{tools_8c_a96c356279caa57bb7de9d0ab19b9dcc0}{array\+\_\+distance} (int $\ast$node\+\_\+array, \hyperlink{structinstance__s}{instance\+\_\+t} reference\+\_\+instance)
+\item 
+double \hyperlink{tools_8c_a1368dd57d5a18da23884c30247673c15}{euclidean\+\_\+distance} (long x1, long y1, long x2, long y2)
+\item 
+int \hyperlink{tools_8c_a28e8ba06c713bb356cd53d46d756443e}{is\+\_\+in\+\_\+array} (int nb, int $\ast$array, int dimension)
+\item 
+void \hyperlink{tools_8c_aa7a739fe16637e9c88217a9935dba393}{swap\+\_\+2opt} (int $\ast$tab, int ind1, int ind2)
+\begin{DoxyCompactList}\small\item\em inverse le contenu de ind1 jusqu\textquotesingle{}a ind2 \end{DoxyCompactList}\item 
+bool \hyperlink{tools_8c_a6098231246a9a8edfd6a626c7e434ea2}{compare\+\_\+slices} (int $\ast$array\+\_\+1, int start\+\_\+1, int end\+\_\+1, int $\ast$array\+\_\+2, int start\+\_\+2, int end\+\_\+2, int dimension)
+\item 
+int $\ast$ \hyperlink{tools_8c_a2c89c6714bad6f71e50de7adf69b010c}{rev\+\_\+array} (int $\ast$array, int d, int f)
+\item 
+int $\ast$ \hyperlink{tools_8c_a9df113ac4b58584c0614965a01747549}{create\+\_\+array\+\_\+int} (int dimension)
+\item 
+void \hyperlink{tools_8c_a99211900ea59d15a5ad9bf8dabd72929}{erreur} (char $\ast$message)
+\item 
+\mbox{\Hypertarget{tools_8c_a9248ee8ac2f581c40995375a17dcad39}\label{tools_8c_a9248ee8ac2f581c40995375a17dcad39}} 
+int $\ast$$\ast$ {\bfseries creer\+\_\+mat\+\_\+int} (int nb\+Rows, int nb\+Col)
+\item 
+double $\ast$$\ast$ \hyperlink{tools_8c_a12a9139e75046c5227c24386151756ef}{creer\+\_\+mat\+\_\+dist} (int dimension)
+\item 
+void \hyperlink{tools_8c_aa89d92f4f79d394a4de0408be22907c9}{swap} (int $\ast$tab, int ind1, int ind2)
+\begin{DoxyCompactList}\small\item\em inverse le contenu des cases ind1 et ind2 dans tab \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+fonctions diverses 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{tools_8c_a96c356279caa57bb7de9d0ab19b9dcc0}\label{tools_8c_a96c356279caa57bb7de9d0ab19b9dcc0}} 
+\index{tools.\+c@{tools.\+c}!array\+\_\+distance@{array\+\_\+distance}}
+\index{array\+\_\+distance@{array\+\_\+distance}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{array\+\_\+distance()}{array\_distance()}}
+{\footnotesize\ttfamily double array\+\_\+distance (\begin{DoxyParamCaption}\item[{int $\ast$}]{node\+\_\+array,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{reference\+\_\+instance }\end{DoxyParamCaption})}
+
+calcule la distance cyclique d\textquotesingle{}un tableau de noeud 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em node\+\_\+array} & \+: tableau de noeud \\
+\hline
+\mbox{\tt in}  & {\em reference\+\_\+instance} & \+: instance du problème \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la distance du problème 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tools_8c_a6098231246a9a8edfd6a626c7e434ea2}\label{tools_8c_a6098231246a9a8edfd6a626c7e434ea2}} 
+\index{tools.\+c@{tools.\+c}!compare\+\_\+slices@{compare\+\_\+slices}}
+\index{compare\+\_\+slices@{compare\+\_\+slices}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{compare\+\_\+slices()}{compare\_slices()}}
+{\footnotesize\ttfamily bool compare\+\_\+slices (\begin{DoxyParamCaption}\item[{int $\ast$}]{array\+\_\+1,  }\item[{int}]{start\+\_\+1,  }\item[{int}]{end\+\_\+1,  }\item[{int $\ast$}]{array\+\_\+2,  }\item[{int}]{start\+\_\+2,  }\item[{int}]{end\+\_\+2,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+compare 2 tableau entre des bornes définies 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em array\+\_\+1} & \+: 1er tableau \\
+\hline
+\mbox{\tt in}  & {\em start\+\_\+1} & \+: début 1er tab \\
+\hline
+\mbox{\tt in}  & {\em end\+\_\+1} & \+: fin 1er tab \\
+\hline
+\mbox{\tt in}  & {\em array\+\_\+2} & \+: 2eme tableau \\
+\hline
+\mbox{\tt in}  & {\em start\+\_\+2} & \+: début 2eme tab \\
+\hline
+\mbox{\tt in}  & {\em end\+\_\+2} & \+: fin 2eme tab \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si tab 1 == tab 2 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tools_8c_a15e76c0911c70074505132e65ba794b0}\label{tools_8c_a15e76c0911c70074505132e65ba794b0}} 
+\index{tools.\+c@{tools.\+c}!copy\+\_\+array@{copy\+\_\+array}}
+\index{copy\+\_\+array@{copy\+\_\+array}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{copy\+\_\+array()}{copy\_array()}}
+{\footnotesize\ttfamily void copy\+\_\+array (\begin{DoxyParamCaption}\item[{int $\ast$}]{array\+\_\+source,  }\item[{int $\ast$}]{array\+\_\+destination,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+copy une array dans une seconde array de même dimension 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em array\+\_\+source} & \+: nombre de ligne \\
+\hline
+\mbox{\tt in}  & {\em array\+\_\+destination} & \+: nombre de colonne \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tools_8c_a9df113ac4b58584c0614965a01747549}\label{tools_8c_a9df113ac4b58584c0614965a01747549}} 
+\index{tools.\+c@{tools.\+c}!create\+\_\+array\+\_\+int@{create\+\_\+array\+\_\+int}}
+\index{create\+\_\+array\+\_\+int@{create\+\_\+array\+\_\+int}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{create\+\_\+array\+\_\+int()}{create\_array\_int()}}
+{\footnotesize\ttfamily int$\ast$ create\+\_\+array\+\_\+int (\begin{DoxyParamCaption}\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+crée une liste d\textquotesingle{}entier de facon sûre 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+pointeur sur tableau 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tools_8c_a925d27b1258324aed37b8b57a648f10c}\label{tools_8c_a925d27b1258324aed37b8b57a648f10c}} 
+\index{tools.\+c@{tools.\+c}!create\+\_\+long\+\_\+mat@{create\+\_\+long\+\_\+mat}}
+\index{create\+\_\+long\+\_\+mat@{create\+\_\+long\+\_\+mat}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{create\+\_\+long\+\_\+mat()}{create\_long\_mat()}}
+{\footnotesize\ttfamily long$\ast$$\ast$ create\+\_\+long\+\_\+mat (\begin{DoxyParamCaption}\item[{int}]{nb\+Rows,  }\item[{int}]{nb\+Col }\end{DoxyParamCaption})}
+
+crée une matrice de long 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em nb\+Rows} & \+: nombre de ligne \\
+\hline
+\mbox{\tt in}  & {\em nb\+Coltance} & \+: nombre de colonne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un pointeur de pointeur sur tableau de long 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tools_8c_a12a9139e75046c5227c24386151756ef}\label{tools_8c_a12a9139e75046c5227c24386151756ef}} 
+\index{tools.\+c@{tools.\+c}!creer\+\_\+mat\+\_\+dist@{creer\+\_\+mat\+\_\+dist}}
+\index{creer\+\_\+mat\+\_\+dist@{creer\+\_\+mat\+\_\+dist}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{creer\+\_\+mat\+\_\+dist()}{creer\_mat\_dist()}}
+{\footnotesize\ttfamily double$\ast$$\ast$ creer\+\_\+mat\+\_\+dist (\begin{DoxyParamCaption}\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+crée la matrice carrées des distances = tab dynamique triangulaire chaque ligne a une case de moins que la précédente \mbox{\Hypertarget{tools_8c_a99211900ea59d15a5ad9bf8dabd72929}\label{tools_8c_a99211900ea59d15a5ad9bf8dabd72929}} 
+\index{tools.\+c@{tools.\+c}!erreur@{erreur}}
+\index{erreur@{erreur}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{erreur()}{erreur()}}
+{\footnotesize\ttfamily void erreur (\begin{DoxyParamCaption}\item[{char $\ast$}]{message }\end{DoxyParamCaption})}
+
+imprime à l\textquotesingle{}écran un message d\textquotesingle{}erreur (chaîne de caractères) le message est sensé être composé du nom du sous-\/programme+\char`\"{} \+: \char`\"{}+message d\textquotesingle{}erreur 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em message} & \+: le message à imprimer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tools_8c_a1368dd57d5a18da23884c30247673c15}\label{tools_8c_a1368dd57d5a18da23884c30247673c15}} 
+\index{tools.\+c@{tools.\+c}!euclidean\+\_\+distance@{euclidean\+\_\+distance}}
+\index{euclidean\+\_\+distance@{euclidean\+\_\+distance}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{euclidean\+\_\+distance()}{euclidean\_distance()}}
+{\footnotesize\ttfamily double euclidean\+\_\+distance (\begin{DoxyParamCaption}\item[{long}]{x1,  }\item[{long}]{y1,  }\item[{long}]{x2,  }\item[{long}]{y2 }\end{DoxyParamCaption})}
+
+calcule la distance euclidienne entre 2 points de coord x, y 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em x1} & \+: x1 \\
+\hline
+\mbox{\tt in}  & {\em x2} & \+: x2 \\
+\hline
+\mbox{\tt in}  & {\em y1} & \+: y1 \\
+\hline
+\mbox{\tt in}  & {\em y2} & \+: y2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la distance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tools_8c_aec6c02d8a88d0b5a72893876394d06c7}\label{tools_8c_aec6c02d8a88d0b5a72893876394d06c7}} 
+\index{tools.\+c@{tools.\+c}!init\+\_\+array@{init\+\_\+array}}
+\index{init\+\_\+array@{init\+\_\+array}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+array()}{init\_array()}}
+{\footnotesize\ttfamily void init\+\_\+array (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+initialise une array avec les bon noud de départs 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em array} & \+: le tableau \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{tools_8c_a28e8ba06c713bb356cd53d46d756443e}\label{tools_8c_a28e8ba06c713bb356cd53d46d756443e}} 
+\index{tools.\+c@{tools.\+c}!is\+\_\+in\+\_\+array@{is\+\_\+in\+\_\+array}}
+\index{is\+\_\+in\+\_\+array@{is\+\_\+in\+\_\+array}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{is\+\_\+in\+\_\+array()}{is\_in\_array()}}
+{\footnotesize\ttfamily int is\+\_\+in\+\_\+array (\begin{DoxyParamCaption}\item[{int}]{nb,  }\item[{int $\ast$}]{array,  }\item[{int}]{dimension }\end{DoxyParamCaption})}
+
+regarde si un nombre existe dans un tableau 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em nb} & \+: nombre a chercher dans le tableau \\
+\hline
+\mbox{\tt in}  & {\em array} & \+: tableau de noeud \\
+\hline
+\mbox{\tt in}  & {\em dimension} & \+: dimension du tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si dans le tableau, 0 si non 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tools_8c_a2c89c6714bad6f71e50de7adf69b010c}\label{tools_8c_a2c89c6714bad6f71e50de7adf69b010c}} 
+\index{tools.\+c@{tools.\+c}!rev\+\_\+array@{rev\+\_\+array}}
+\index{rev\+\_\+array@{rev\+\_\+array}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{rev\+\_\+array()}{rev\_array()}}
+{\footnotesize\ttfamily int$\ast$ rev\+\_\+array (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{int}]{d,  }\item[{int}]{f }\end{DoxyParamCaption})}
+
+reverse le contenu du tableau entre les indices d et f 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em array} & \+: le tableau à modifier \\
+\hline
+\mbox{\tt in}  & {\em d} & \+: indice de début \\
+\hline
+\mbox{\tt in}  & {\em f} & \+: indice de fin \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+pointeur sur le tableau modifié 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tools_8c_aa89d92f4f79d394a4de0408be22907c9}\label{tools_8c_aa89d92f4f79d394a4de0408be22907c9}} 
+\index{tools.\+c@{tools.\+c}!swap@{swap}}
+\index{swap@{swap}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int $\ast$}]{tab,  }\item[{int}]{ind1,  }\item[{int}]{ind2 }\end{DoxyParamCaption})}
+
+
+
+inverse le contenu des cases ind1 et ind2 dans tab 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em tab} & \+: le tableau \\
+\hline
+\mbox{\tt in}  & {\em ind1} & \+: premier indice \\
+\hline
+\mbox{\tt in}  & {\em ind2} & \+: deuxième indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+$\ast$tab\mbox{[}ind1\mbox{]}=$\ast$\+T\+AB\mbox{[}ind2\mbox{]} \&\& $\ast$tab\mbox{[}ind2\mbox{]}=$\ast$\+T\+AB\mbox{[}ind1\mbox{]} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{tools_8c_aa7a739fe16637e9c88217a9935dba393}\label{tools_8c_aa7a739fe16637e9c88217a9935dba393}} 
+\index{tools.\+c@{tools.\+c}!swap\+\_\+2opt@{swap\+\_\+2opt}}
+\index{swap\+\_\+2opt@{swap\+\_\+2opt}!tools.\+c@{tools.\+c}}
+\subsubsection{\texorpdfstring{swap\+\_\+2opt()}{swap\_2opt()}}
+{\footnotesize\ttfamily void swap\+\_\+2opt (\begin{DoxyParamCaption}\item[{int $\ast$}]{tab,  }\item[{int}]{ind1,  }\item[{int}]{ind2 }\end{DoxyParamCaption})}
+
+
+
+inverse le contenu de ind1 jusqu\textquotesingle{}a ind2 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em tab} & \+: le tableau \\
+\hline
+\mbox{\tt in}  & {\em ind1} & \+: premier indice \\
+\hline
+\mbox{\tt in}  & {\em ind2} & \+: deuxième indice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+$\ast$tab\mbox{[}ind1\mbox{]}=$\ast$\+T\+AB\mbox{[}ind2\mbox{]} \&\& $\ast$tab\mbox{[}ind2\mbox{]}=$\ast$\+T\+AB\mbox{[}ind1\mbox{]} 
+\end{DoxyPostcond}
