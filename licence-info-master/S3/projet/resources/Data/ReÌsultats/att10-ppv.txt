@@ -1,0 +1,24 @@
+J'ouvre le fichier : Data/att10.tsp
+Commentaire  : 10 premiers de att48)+0
+EOF
+17 lignes lues
+
+*** Instance ***
+Nom de l'instance ; att10
+Nb de villes (avec (0,0)) ; 11
+Type TSP
+Point ; Abs ; Ord
+   0 ;      0;     0
+   1 ;   6734;  1453
+   2 ;   2233;    10
+   3 ;   5530;  1424
+   4 ;    401;   841
+   5 ;   3082;  1644
+   6 ;   7608;  4458
+   7 ;   7573;  3716
+   8 ;   7265;  1268
+   9 ;   6898;  1885
+  10 ;   1112;  2049
+
+Méthode ; longueur ; Temps CPU (sec) ; Tour
+PPV ;   24185.80 ;   0.00 ; [0,4,10,5,2,3,1,9,8,7,6]

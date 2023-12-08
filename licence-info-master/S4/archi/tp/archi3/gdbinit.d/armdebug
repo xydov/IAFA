@@ -1,0 +1,71 @@
+# Useful and OpenOCD reset macros for at91sam7x256 board
+
+# Infos sur le PIO/SPI
+define pioa
+    p/t *(AT91PS_PIO)0xFFFFF400
+end
+document pioa
+Print current status of PIOA
+end
+
+define piob
+    p/t *(AT91PS_PIO)0xFFFFF400
+end
+document piob
+Print current status of the PIOB
+end
+
+define spi
+    p/t *(AT91PS_SPI)0xFFFE0000
+end
+document spi
+Print current status of the SPI0
+end
+
+define aic
+    p/t *(AT91PS_AIC)     0xFFFFF000
+end
+document pioa
+Print current status of the advanced interrupt controller
+end
+
+define pmc
+    p/t *(AT91PS_PMC)     0xFFFFFC00
+end
+document pioa
+Print current status of the PMC
+end
+
+define connect
+    if $argc == 0
+    # target extended-remote localhost:8888
+    # target remote | openocd -s /usr/local/arm/share/openocd/scripts -f openocd.cfg
+    target remote | openocd -f openocd.cfg
+    end
+    if $argc == 1
+	target extended-remote $arg0:8888
+    end
+    if $argc == 2
+	target extended-remote $arg0:$arg1
+    end
+end
+document connect
+Connects to OpenOCD's gdbserver target. Defaults to localhost:3333
+Usage: connect [host] [port]
+end
+
+define reset
+    monitor reset
+    monitor arm core_state arm
+    monitor soft_reset_halt
+    monitor halt
+    load
+end
+document reset
+Resets the ARM core and loads executable in SRAM
+end
+
+# vim: filetype=gdb
+# Local Variables:
+# mode: gdb
+# End:

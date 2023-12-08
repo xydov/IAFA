@@ -1,0 +1,46 @@
+; Activité 1:
+
+Conception d'une application d'achat/vente de vêtements et d'accessoires de prêt à porter
+
+1. liste des actions:
+
+* recherche d'un article
+
+* acceder au panier des articles
+	* vider le panier
+	* modifier la quantité d'un article
+	* procéder au payement
+	* avec ou sans compte
+
+* se connecter / création d'un compte utilisateur / compte utilisateur
+	* page de création d'un compte utilisateur (acheteur ou vendeur)
+	* ajout des coordonnées banquaire à la création du compte
+	* si vendeur
+		*page ajout d'articles
+			* nom
+			* desc
+			* couleur
+			* taille
+			* nombre d'articles
+			* ajout des photos: galerie ou app photo si mobile
+			* validations de l'ajout
+
+* option de tris par type de vétements, taille, marques ...
+
+* visualiser les articles avec le prix / le nom / description du produit
+	* accés à la page détaillé du produit
+	* nom du produit
+	* description
+	* images permettant de visualiser le produit
+	* disponibilité du produit
+	* selection de la taille, couleur
+	* ajout du produit au panier
+	* commentaires et notes des utilisateurs
+
+// * logo/nom permettant de revenir à l'acceuil
+
+
+
+2. scénarios
+
+Un utilisateur ouvre la page web, cherche un article par son nom, ne le trouve pas, le cherche manuellement avec les options de tris, scrolle ver le bas jusqu'à le trouver, clique dessus pour voir s'il est disponible est l'ajoute au panier, va voir son panier puis procède au payement.

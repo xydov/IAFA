@@ -1,0 +1,12 @@
+4.2 -- Diffusion du vecteur de distances (v1)
+make clean (pour effacer les fichiers de log)
+make test_topo1
+* Consulter log/R2.txt
+    * Vérifier qu'il y a bien "DV received from R1" : [Dest. 1, Metric 0]
+    * Vérifier qu'il y a bien "DV received from R3" : [Dest. 3, Metric 0]
+* Consulter log/R1.txt
+    * Vérifier qu'il y a bien "DV received from R2" : [Dest. 2, Metric 0]
+    * Vérifier qu'il n'y a pas de message reçu de R3.
+* Consulter log/R3.txt
+    * Vérifier qu'il y a bien "DV received from R2" : [Dest. 2, Metric 0]
+    * Vérifier qu'il n'y a pas de message reçu de R1.

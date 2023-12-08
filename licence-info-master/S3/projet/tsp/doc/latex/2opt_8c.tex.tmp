@@ -1,0 +1,119 @@
+\hypertarget{2opt_8c}{}\section{Référence du fichier lib/2opt.c}
+\label{2opt_8c}\index{lib/2opt.\+c@{lib/2opt.\+c}}
+
+
+implementation de l\textquotesingle{}algo de 2-\/\+O\+PT  
+
+
+{\ttfamily \#include \char`\"{}2opt.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de 2opt.c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{2opt_8c_a4f397b032ff836949de2285c4bf96d3f}{on\+Segment} (int p, int q, int r, \hyperlink{structinstance__s}{instance\+\_\+t} inst, int $\ast$nodes)
+\item 
+long \hyperlink{2opt_8c_a59c936ebffd85dfc2569ba408cfe723c}{orientation} (int p, int q, int r, \hyperlink{structinstance__s}{instance\+\_\+t} inst, int $\ast$nodes)
+\item 
+bool \hyperlink{2opt_8c_a11dcd7222dfb219003854d13305027de}{do\+\_\+intersect} (int p1, int q1, int p2, int q2, \hyperlink{structinstance__s}{instance\+\_\+t} instance, int $\ast$nodes)
+\item 
+double \hyperlink{2opt_8c_a01f89fe4e4b1a3de250c1d9e5d9c64e0}{two\+\_\+opt} (int $\ast$nodes, \hyperlink{structinstance__s}{instance\+\_\+t} instance)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+implementation de l\textquotesingle{}algo de 2-\/\+O\+PT 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{2opt_8c_a11dcd7222dfb219003854d13305027de}\label{2opt_8c_a11dcd7222dfb219003854d13305027de}} 
+\index{2opt.\+c@{2opt.\+c}!do\+\_\+intersect@{do\+\_\+intersect}}
+\index{do\+\_\+intersect@{do\+\_\+intersect}!2opt.\+c@{2opt.\+c}}
+\subsubsection{\texorpdfstring{do\+\_\+intersect()}{do\_intersect()}}
+{\footnotesize\ttfamily bool do\+\_\+intersect (\begin{DoxyParamCaption}\item[{int}]{p1,  }\item[{int}]{q1,  }\item[{int}]{p2,  }\item[{int}]{q2,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{instance,  }\item[{int $\ast$}]{nodes }\end{DoxyParamCaption})}
+
+Cherche une chaine dans le tableau argv 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em p1} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em q1} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em p2} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em q2} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em inst} & \+: instance du problème \\
+\hline
+\mbox{\tt in}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si les segment p1q1 et p2q2 se croisent 
+\end{DoxyReturn}
+\mbox{\Hypertarget{2opt_8c_a4f397b032ff836949de2285c4bf96d3f}\label{2opt_8c_a4f397b032ff836949de2285c4bf96d3f}} 
+\index{2opt.\+c@{2opt.\+c}!on\+Segment@{on\+Segment}}
+\index{on\+Segment@{on\+Segment}!2opt.\+c@{2opt.\+c}}
+\subsubsection{\texorpdfstring{on\+Segment()}{onSegment()}}
+{\footnotesize\ttfamily bool on\+Segment (\begin{DoxyParamCaption}\item[{int}]{p,  }\item[{int}]{q,  }\item[{int}]{r,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{inst,  }\item[{int $\ast$}]{nodes }\end{DoxyParamCaption})}
+
+renvoie si un point est sur un segment 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em p} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em q} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em r} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em inst} & \+: instance du problème \\
+\hline
+\mbox{\tt in}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+si 1 le point q est sur le segment pr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{2opt_8c_a59c936ebffd85dfc2569ba408cfe723c}\label{2opt_8c_a59c936ebffd85dfc2569ba408cfe723c}} 
+\index{2opt.\+c@{2opt.\+c}!orientation@{orientation}}
+\index{orientation@{orientation}!2opt.\+c@{2opt.\+c}}
+\subsubsection{\texorpdfstring{orientation()}{orientation()}}
+{\footnotesize\ttfamily long orientation (\begin{DoxyParamCaption}\item[{int}]{p,  }\item[{int}]{q,  }\item[{int}]{r,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{inst,  }\item[{int $\ast$}]{nodes }\end{DoxyParamCaption})}
+
+Cherche une chaine dans le tableau argv 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em p} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em q} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em r} & \+: un point \\
+\hline
+\mbox{\tt in}  & {\em inst} & \+: instance du problème \\
+\hline
+\mbox{\tt in}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+si 0 si qpr collinéaire, 1 si l\textquotesingle{}ordre des noeuds est horaire et 2 si antihoraire 
+\end{DoxyReturn}
+\mbox{\Hypertarget{2opt_8c_a01f89fe4e4b1a3de250c1d9e5d9c64e0}\label{2opt_8c_a01f89fe4e4b1a3de250c1d9e5d9c64e0}} 
+\index{2opt.\+c@{2opt.\+c}!two\+\_\+opt@{two\+\_\+opt}}
+\index{two\+\_\+opt@{two\+\_\+opt}!2opt.\+c@{2opt.\+c}}
+\subsubsection{\texorpdfstring{two\+\_\+opt()}{two\_opt()}}
+{\footnotesize\ttfamily double two\+\_\+opt (\begin{DoxyParamCaption}\item[{int $\ast$}]{nodes,  }\item[{\hyperlink{structinstance__s}{instance\+\_\+t}}]{instance }\end{DoxyParamCaption})}
+
+effectue la 2 optimisation sur une instance du problème déjà initialisé 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\mbox{\tt in,out}  & {\em inst} & \+: instance du problème \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la longueur du nouveaux agencements de noeuds 
+\end{DoxyReturn}

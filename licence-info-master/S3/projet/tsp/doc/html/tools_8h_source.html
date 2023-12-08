@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TSP Doc:  Fichier source de includes/tools.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TSP Doc
+   </div>
+   <div id="projectbrief">Implémentation de différent algorithme pour résoudre TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_09e761304027c904456130627fd4dcf5.html">includes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">tools.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TOOLS_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TOOLS_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;tspstat.h&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">long</span> **<a class="code" href="tools_8c.html#a925d27b1258324aed37b8b57a648f10c">create_long_mat</a>(<span class="keywordtype">int</span> nbRows, <span class="keywordtype">int</span> nbCol);</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> <a class="code" href="tools_8c.html#a15e76c0911c70074505132e65ba794b0">copy_array</a>(<span class="keywordtype">int</span>* array_source, <span class="keywordtype">int</span>* array_destination, <span class="keywordtype">int</span> dimension);</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="tools_8c.html#aec6c02d8a88d0b5a72893876394d06c7">init_array</a>(<span class="keywordtype">int</span> *array, <span class="keywordtype">int</span> dimension);</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">double</span> <a class="code" href="tools_8c.html#a96c356279caa57bb7de9d0ab19b9dcc0">array_distance</a>(<span class="keywordtype">int</span> *node_array, <a class="code" href="structinstance__s.html">instance_t</a> reference_instance);</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">double</span> <a class="code" href="tools_8c.html#a1368dd57d5a18da23884c30247673c15">euclidean_distance</a>(<span class="keywordtype">long</span> x1, <span class="keywordtype">long</span> y1, <span class="keywordtype">long</span> x2, <span class="keywordtype">long</span> y2);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">int</span> <a class="code" href="tools_8c.html#a28e8ba06c713bb356cd53d46d756443e">is_in_array</a>(<span class="keywordtype">int</span> nb, <span class="keywordtype">int</span> *array, <span class="keywordtype">int</span> dimension);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="tools_8c.html#aa7a739fe16637e9c88217a9935dba393">swap_2opt</a>(<span class="keywordtype">int</span> *tab, <span class="keywordtype">int</span> ind1, <span class="keywordtype">int</span> ind2);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="tools_8c.html#a6098231246a9a8edfd6a626c7e434ea2">compare_slices</a>(<span class="keywordtype">int</span> *array_1, <span class="keywordtype">int</span> start_1, <span class="keywordtype">int</span> end_1, <span class="keywordtype">int</span> *array_2, <span class="keywordtype">int</span> start_2, <span class="keywordtype">int</span> end_2, <span class="keywordtype">int</span> dimension);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span> *<a class="code" href="tools_8c.html#a2c89c6714bad6f71e50de7adf69b010c">rev_array</a>(<span class="keywordtype">int</span> *array, <span class="keywordtype">int</span> d, <span class="keywordtype">int</span> f);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> *<a class="code" href="tools_8c.html#a9df113ac4b58584c0614965a01747549">create_array_int</a>(<span class="keywordtype">int</span> dimension);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="tools_8c.html#a99211900ea59d15a5ad9bf8dabd72929">erreur</a>(<span class="keywordtype">char</span> *message);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">double</span> **<a class="code" href="tools_8c.html#a12a9139e75046c5227c24386151756ef">creer_mat_dist</a>(<span class="keywordtype">int</span> dimension);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="tools_8c.html#aa89d92f4f79d394a4de0408be22907c9">swap</a>(<span class="keywordtype">int</span> *tab, <span class="keywordtype">int</span> ind1, <span class="keywordtype">int</span> ind2);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="tools_8c_html_a99211900ea59d15a5ad9bf8dabd72929"><div class="ttname"><a href="tools_8c.html#a99211900ea59d15a5ad9bf8dabd72929">erreur</a></div><div class="ttdeci">void erreur(char *message)</div><div class="ttdef"><b>Definition:</b> tools.c:190</div></div>
+<div class="ttc" id="tools_8c_html_a96c356279caa57bb7de9d0ab19b9dcc0"><div class="ttname"><a href="tools_8c.html#a96c356279caa57bb7de9d0ab19b9dcc0">array_distance</a></div><div class="ttdeci">double array_distance(int *node_array, instance_t reference_instance)</div><div class="ttdef"><b>Definition:</b> tools.c:60</div></div>
+<div class="ttc" id="tools_8c_html_a12a9139e75046c5227c24386151756ef"><div class="ttname"><a href="tools_8c.html#a12a9139e75046c5227c24386151756ef">creer_mat_dist</a></div><div class="ttdeci">double ** creer_mat_dist(int dimension)</div><div class="ttdef"><b>Definition:</b> tools.c:207</div></div>
+<div class="ttc" id="tools_8c_html_aec6c02d8a88d0b5a72893876394d06c7"><div class="ttname"><a href="tools_8c.html#aec6c02d8a88d0b5a72893876394d06c7">init_array</a></div><div class="ttdeci">void init_array(int *array, int dimension)</div><div class="ttdef"><b>Definition:</b> tools.c:49</div></div>
+<div class="ttc" id="tools_8c_html_a15e76c0911c70074505132e65ba794b0"><div class="ttname"><a href="tools_8c.html#a15e76c0911c70074505132e65ba794b0">copy_array</a></div><div class="ttdeci">void copy_array(int *array_source, int *array_destination, int dimension)</div><div class="ttdef"><b>Definition:</b> tools.c:37</div></div>
+<div class="ttc" id="structinstance__s_html"><div class="ttname"><a href="structinstance__s.html">instance_s</a></div><div class="ttdef"><b>Definition:</b> tspstat.h:18</div></div>
+<div class="ttc" id="tools_8c_html_aa7a739fe16637e9c88217a9935dba393"><div class="ttname"><a href="tools_8c.html#aa7a739fe16637e9c88217a9935dba393">swap_2opt</a></div><div class="ttdeci">void swap_2opt(int *tab, int ind1, int ind2)</div><div class="ttdoc">inverse le contenu de ind1 jusqu&amp;#39;a ind2 </div><div class="ttdef"><b>Definition:</b> tools.c:115</div></div>
+<div class="ttc" id="tools_8c_html_a9df113ac4b58584c0614965a01747549"><div class="ttname"><a href="tools_8c.html#a9df113ac4b58584c0614965a01747549">create_array_int</a></div><div class="ttdeci">int * create_array_int(int dimension)</div><div class="ttdef"><b>Definition:</b> tools.c:171</div></div>
+<div class="ttc" id="tools_8c_html_a925d27b1258324aed37b8b57a648f10c"><div class="ttname"><a href="tools_8c.html#a925d27b1258324aed37b8b57a648f10c">create_long_mat</a></div><div class="ttdeci">long ** create_long_mat(int nbRows, int nbCol)</div><div class="ttdef"><b>Definition:</b> tools.c:12</div></div>
+<div class="ttc" id="tools_8c_html_a2c89c6714bad6f71e50de7adf69b010c"><div class="ttname"><a href="tools_8c.html#a2c89c6714bad6f71e50de7adf69b010c">rev_array</a></div><div class="ttdeci">int * rev_array(int *array, int d, int f)</div><div class="ttdef"><b>Definition:</b> tools.c:154</div></div>
+<div class="ttc" id="tools_8c_html_a6098231246a9a8edfd6a626c7e434ea2"><div class="ttname"><a href="tools_8c.html#a6098231246a9a8edfd6a626c7e434ea2">compare_slices</a></div><div class="ttdeci">bool compare_slices(int *array_1, int start_1, int end_1, int *array_2, int start_2, int end_2, int dimension)</div><div class="ttdef"><b>Definition:</b> tools.c:133</div></div>
+<div class="ttc" id="tools_8c_html_a28e8ba06c713bb356cd53d46d756443e"><div class="ttname"><a href="tools_8c.html#a28e8ba06c713bb356cd53d46d756443e">is_in_array</a></div><div class="ttdeci">int is_in_array(int nb, int *array, int dimension)</div><div class="ttdef"><b>Definition:</b> tools.c:98</div></div>
+<div class="ttc" id="tools_8c_html_aa89d92f4f79d394a4de0408be22907c9"><div class="ttname"><a href="tools_8c.html#aa89d92f4f79d394a4de0408be22907c9">swap</a></div><div class="ttdeci">void swap(int *tab, int ind1, int ind2)</div><div class="ttdoc">inverse le contenu des cases ind1 et ind2 dans tab </div><div class="ttdef"><b>Definition:</b> tools.c:218</div></div>
+<div class="ttc" id="tools_8c_html_a1368dd57d5a18da23884c30247673c15"><div class="ttname"><a href="tools_8c.html#a1368dd57d5a18da23884c30247673c15">euclidean_distance</a></div><div class="ttdeci">double euclidean_distance(long x1, long y1, long x2, long y2)</div><div class="ttdef"><b>Definition:</b> tools.c:87</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

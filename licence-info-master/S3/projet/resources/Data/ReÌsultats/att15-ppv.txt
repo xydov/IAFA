@@ -1,0 +1,29 @@
+J'ouvre le fichier : Data/att15.tsp
+Commentaire  : 15 premiers de att48)
+EOF
+22 lignes lues
+
+*** Instance ***
+Nom de l'instance ; att15
+Nb de villes (avec (0,0)) ; 16
+Type TSP
+Point ; Abs ; Ord
+   0 ;      0;     0
+   1 ;   6734;  1453
+   2 ;   2233;    10
+   3 ;   5530;  1424
+   4 ;    401;   841
+   5 ;   3082;  1644
+   6 ;   7608;  4458
+   7 ;   7573;  3716
+   8 ;   7265;  1268
+   9 ;   6898;  1885
+  10 ;   1112;  2049
+  11 ;   5468;  2606
+  12 ;   5989;  2873
+  13 ;   4706;  2674
+  14 ;   4612;  2035
+  15 ;   6347;  2683
+
+Méthode ; longueur ; Temps CPU (sec) ; Tour
+PPV ;   25084.53 ;   0.00 ; [0,4,10,5,14,13,11,12,15,9,1,8,3,7,6,2]

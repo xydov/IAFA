@@ -1,0 +1,60 @@
+\hypertarget{bruteforce_8c}{}\section{Référence du fichier lib/bruteforce.c}
+\label{bruteforce_8c}\index{lib/bruteforce.\+c@{lib/bruteforce.\+c}}
+
+
+Bruteforce implementation lib.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}bruteforce.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de bruteforce.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{bruteforce_8c_a585ac92c706d0e86b5d72fb62e7210c2}{brute\+\_\+force\+\_\+tsp} (\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$instance, bool use\+\_\+mat, int $\ast$nodes, int $\ast$worst\+\_\+nodes)
+\item 
+bool \hyperlink{bruteforce_8c_a2fd83c582b1fcda2fb310a41248e6741}{next\+\_\+permutation} (int $\ast$array, int dim)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Bruteforce implementation lib. 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{bruteforce_8c_a585ac92c706d0e86b5d72fb62e7210c2}\label{bruteforce_8c_a585ac92c706d0e86b5d72fb62e7210c2}} 
+\index{bruteforce.\+c@{bruteforce.\+c}!brute\+\_\+force\+\_\+tsp@{brute\+\_\+force\+\_\+tsp}}
+\index{brute\+\_\+force\+\_\+tsp@{brute\+\_\+force\+\_\+tsp}!bruteforce.\+c@{bruteforce.\+c}}
+\subsubsection{\texorpdfstring{brute\+\_\+force\+\_\+tsp()}{brute\_force\_tsp()}}
+{\footnotesize\ttfamily double brute\+\_\+force\+\_\+tsp (\begin{DoxyParamCaption}\item[{\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$}]{instance,  }\item[{bool}]{use\+\_\+mat,  }\item[{int $\ast$}]{nodes,  }\item[{int $\ast$}]{worst\+\_\+nodes }\end{DoxyParamCaption})}
+
+considère toute les permutations de la tournée initiale et garde la plus courte et la pire, le point n°1 est fixe 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em instance} & \+: pour les points et coordonées \\
+\hline
+\mbox{\tt in}  & {\em use\+\_\+mat} & \+: flag pour indiquer si on veut utiliser la matrices des distances \\
+\hline
+\mbox{\tt in}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{bruteforce_8c_a2fd83c582b1fcda2fb310a41248e6741}\label{bruteforce_8c_a2fd83c582b1fcda2fb310a41248e6741}} 
+\index{bruteforce.\+c@{bruteforce.\+c}!next\+\_\+permutation@{next\+\_\+permutation}}
+\index{next\+\_\+permutation@{next\+\_\+permutation}!bruteforce.\+c@{bruteforce.\+c}}
+\subsubsection{\texorpdfstring{next\+\_\+permutation()}{next\_permutation()}}
+{\footnotesize\ttfamily bool next\+\_\+permutation (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{int}]{dim }\end{DoxyParamCaption})}
+
+Computes the next lexicographical permutation of the specified array of integers in place, returning a Boolean to indicate whether a next permutation existed. (Returns false when the argument is already the last possible permutation.) 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em array} & \+: tableau des noeuds \\
+\hline
+\mbox{\tt in}  & {\em dim} & \+: dimension du tableau \\
+\hline
+\end{DoxyParams}

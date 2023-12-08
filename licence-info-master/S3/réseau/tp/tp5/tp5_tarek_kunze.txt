@@ -1,0 +1,79 @@
+Réseau
+tp5
+kunze tarek
+
+2.2
+Unicast: 	D'une source vers une destination
+
+broadcast:	D'une source vers toute les destinations possibles
+
+2.3
+La station 3 n'est pas la seule a recevoir la trame, toute les stations recoivent la trame (st1, st2, st3, st4), station émettrice incluse.
+
+2.4
+non le concentrateur n'interprete pas les adresses de liaison (MAC).
+Le concentrateur distribue les trames recut a tout les postes auxquel il est connecté.
+
+2.5
+Même comportement pour la trame de tye broadcast
+
+3.1
+ok
+
+3.2
+Oui la station 3 est la seule station à recevoir la trame.
+Idem pour st2 vers st4.
+
+3.3
+Toute les stations recoivent la trame sauf la station émettrice.
+
+3.4
+Le commutateur interprete les adresses liaison (MAC)
+Le commutatuer filtre les trames et ne les envoie uniquement à son destinataire définie par l'adresse liaison.
+
+3.5
+Toute les stations recoivent la trame sauf l'émettrice.
+La table d'adressage, qui à un port attribue son adresse mac étant vide, le commutateur est donc contraint d'envoyer le paquet à tout les équipements.
+
+3.6
+Uniquement la station 1 reçoit la trame.
+Le résultat est différent car la table d'addressage est partiellement définie
+
+3.7
+Même réponse qu'au dessus
+
+3.8
+ok
+
+
+
+4.1
+ok
+
+4.2
+Non le routeur R02 et les stations 4, 5, 6 ne reçoivent pas les trames.
+Un routeur ne propage donc pas le domaine de diffusion de niveau 2.
+
+4.3
+La station 2 reçoit bien le paquet et renvoie une réponse.
+
+Le routeur R01 reçoit bien le paquet et renvoie bien un réponse.
+
+4.4
+L'hôte n'est pas joignable, il est impossible d'envoyer un ping à cette adresse.
+Les sous-réseaux sont isolés.
+
+4.5
+Oui il y a eu ub changement, le aquet du ping passe par le hub vers le R1 mais le R1 ne renvoie pas de réponse, on un le temps q'attente qui est dépassé.
+
+4.6
+Le ping atteint son destinataire ne transitant par les 2 routeurs mais la station 5 ne renvoie pas de réponse : délai d'attente dépassé.
+
+4.7
+
+tables de routage de R02:
+destination: 192.168.10.0	masques: 255.255.255.0	passerelle: 10.0.0.1	interface: 10.0.0.2
+
+passerelle station 5: 192.168.11.1
+
+Avec ces modifications, le ping est bine reçut et renvoyé par la station 5. 

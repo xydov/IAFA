@@ -1,0 +1,35 @@
+ Tarek Kunze
+TP4 Système
+
+Exercice 14:
+
+#! /bin/sh
+
+while [ $1 ]
+# $# -gt 0
+do
+    if [ -r $1]
+    then
+        echo "$1 inaccessible"
+        exit 1
+    else
+        cat $1
+        shift
+    fi
+    # $#=expr $# - 1
+
+done
+
+
+Exercice 15:
+
+
+Exercice 16:
+
+Afficher menu
+lire commande
+en fct de commande:
+    * relancer nbr
+    * fin
+
+boucle de tt ca

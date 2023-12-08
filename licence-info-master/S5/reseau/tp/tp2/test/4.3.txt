@@ -1,0 +1,9 @@
+4.3 -- Mise à jour de la table de routage (v1)
+make clean
+make test_topo4
+* Tester ping et traceroute entre 1 et 5
+    * Vérifier que le TTL est bien à 29 dans la réponse du ping
+    * Vérifier que le chemin du traceroute passe par R2, R3 et R4 (et non R2, R6, R7, R4)
+* Vérifier que la colonne LifeTime dans  "show ip route" est bien réinitialisée après 10 sec (cf. BROADCAST_PERIOD) 
+* Tester ping et traceroute entre 1 et 7
+    * Vérifier que le chemin du traceroute passe par R2 et R6

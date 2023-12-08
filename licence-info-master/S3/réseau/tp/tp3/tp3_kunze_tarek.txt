@@ -1,0 +1,166 @@
+TP3
+Réseau
+
+Kunze Tarek
+
+
+1.1
+Le protocole DNS appartient à la couche n°7 (application) du modèle OSI.
+
+Client			Serveur
+--DNS Query--------------->
+(UDP, univ-tlse3) 
+
+<-----------------DNS Reply--
+		(UDP, IP_adress)
+
+1.2
+Le client effectue une requête DNS au différent serveur DNS (130.120.8.15 | 130.120.8.19 | 130.120.8.20) contenant dans la requête l'adresse tapée par l'utilisateur.
+Le serveur répond avec l'adresse ip correspondant à l'URL tapé par l'utilisateur et le client se connecte automatiquement au site web correspondant à l'adresse ip.
+
+
+1.3
+
+
+1.4
+www.licinfo.ups-tlse.fr
+	-> Host www.licinfo.ups-tlse.fr not found: 3(NXDOMAIN)
+
+www.univ-tlse3.fr
+	-> 195.220.43.53
+Oui l'adresse ip que renvoie la requête DNS correspond à celle renvoyé par 'host univ-tls3.fr'
+
+
+2.1
+Un nom de domaine est constitué de cette façon:
+www. 		est un sous-domaine
+univ-tlse3.fr  	correspond au nom de domaine
+.fr 		est une extension ou plus précisément le TLD
+
+gTLD 	sont de type générique (par exemple .com .net .org ...)
+ccTLD 	sont les nom suivant la norme ISO 3166-1 (.fr .be .de ...)
+sTLD 	Correspondent au TLD sponsorisés
+
+2.2
+
+Royaume-Uni	: Nominet UK (.uk)
+Grèce		: ICS-FORTH GR (.gr)
+Japon		: Japan Registry Services Co., Ltd. (.jp)
+
+2.3
+.fr	: Afnic
+Oui il y des restrictions:
+	uniquement des caractères alphanumériques constitués de l'alphabet francais, des chiffres 0-9 et du tirete '-'
+	Le nom de domaine ne peu commencer par un tiret '-'
+
+https://www.afnic.fr/medias/documents/Cadre_legal/Charte_de_nommage_25052018_VF.pdf
+
+
+2.4
+Un bureau d'enregistrement est l'intermédiaire entre le client qui cherche à acheter un nom de domaine, et l'afnic qui les régule et les attribue.
+
+kunze.fr est déjà pris.
+
+
+3.1
+HTTP 	:80
+HTTPS 	:443
+
+FTP 	:21
+SSH	:22
+SMTP	:25
+
+3.2
+URL
+L'URL est une chaine de caractère permettant d'identifier une ressource sur internet (résolu par un DNS en adresse IP).
+
+http, ftp		Protocole utilisé
+:			séparateur obligatoire si le protocole est précisée
+//			chaine de caractère pour les protocoles dont la requête comprend un chemin d'accés (ftp, http)
+www.univ-tlse3.fr	nom de domaine
+:			indique qu'un numéro de port est précisée (dans le cas ou ce n'est pas un port standart)
+8080			n° de port
+/chemin/de/la/ressource/demandé
+
+
+exemple dans le cas HTTP
+
+3.3
+http://www.univ-toulouse.fr
+	1. Protocole applicatif utilisé: DNS pour la résolution du nom de domaine
+	2. Protocole applicatif utilisé: HTTP pour le transfert de données
+	3. Adresse IP destinataire et n° de port: 193.50.45.132:80
+
+http://mars.univ-toulouse.fr
+	1. Protocole applicatif utilisé: DNS pour la résolution du nom de domaine
+	2. Protocole applicatif utilisé: HTTP pour le transfert de données
+	3. Erreur dans la résolution du nom de domaine, l'URL ne résout à aucune adress ip, le site n'existe pas ou n'est pas bien configuré
+
+http://www.irit.fr
+	1. Idem
+	2. Idem
+	3. 141.115.28.2:80
+
+http://141.115.28.2
+	1. Connexion directe au serveur, donc pas de passage par un DNS
+	2. Protocole applicatif utilisé: HTTP pour le transfert de données
+	3. 141.115.28.2:80
+
+
+http://licinfo.deptinfo.fr/
+http://licinfo.deptinfo.fr:80/
+http://licinfo.deptinfo.fr:143/
+	1. Protocole applicatif utilisé: DNS pour la résolution du nom de domaine
+	2. Protocole applicatif utilisé: HTTP pour le transfert de données
+	3. Erreur dans la résolution du nom de domaine, l'URL ne résout à aucune adress ip, le site n'existe pas ou n'est pas bien configuré
+
+http://ftp.lip6.fr/
+	1. Protocole applicatif utilisé: DNS pour la résolution du nom de domaine
+	2. Protocole applicatif utilisé: HTTP pour le transfert de données
+	3. 195.83.118.1:80
+	/!\ Ici ftp. est un sous-nom de domaine et non le protocole utilisé au niveau applicatif
+
+
+ftp://ftp.lip6.fr/
+	1. Protocole applicatif utilisé: DNS pour la résolution du nom de domaine
+	2. Protocole applicatif utilisé: FTP pour le transfert de fichiers
+	3. 195.83.118.1:21
+
+
+ftp://ftp.lip6.fr:80
+	1. Protocole applicatif utilisé: DNS pour la résolution du nom de domaine
+	2. Protocole applicatif utilisé: FTP pour le transfert de fichiers
+	3. pas de réponse du serveur
+	/!\ Ici on spécifie un port alors que le port de base est le port 21, il y a donc un conflit.
+	On ne peux acceder au port gérant le servce HTTP avec un protocole FTP
+
+ftp://ftp.lip6.fr:21/
+	1. Protocole applicatif utilisé: DNS pour la résolution du nom de domaine
+	2. Protocole applicatif utilisé: FTP pour le transfert de fichiers
+	3. 195.83.118.1:21
+	/!\ spécification du port 21 inutile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

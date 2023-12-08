@@ -1,0 +1,65 @@
+\hypertarget{random__walk_8c}{}\section{Référence du fichier lib/random\+\_\+walk.c}
+\label{random__walk_8c}\index{lib/random\+\_\+walk.\+c@{lib/random\+\_\+walk.\+c}}
+
+
+implementation de l\textquotesingle{}algo de random walk  
+
+
+{\ttfamily \#include \char`\"{}random\+\_\+walk.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de random\+\_\+walk.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{random__walk_8c_a48de508c33715760ad17ea795f0b5f68}{next\+\_\+random} (\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$instance, int $\ast$nodes, int zeiger)
+\item 
+double \hyperlink{random__walk_8c_ab445e139eebe0217453d31c9908f662c}{random\+\_\+walk} (\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$inst, int $\ast$nodes)
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+implementation de l\textquotesingle{}algo de random walk 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{random__walk_8c_a48de508c33715760ad17ea795f0b5f68}\label{random__walk_8c_a48de508c33715760ad17ea795f0b5f68}} 
+\index{random\+\_\+walk.\+c@{random\+\_\+walk.\+c}!next\+\_\+random@{next\+\_\+random}}
+\index{next\+\_\+random@{next\+\_\+random}!random\+\_\+walk.\+c@{random\+\_\+walk.\+c}}
+\subsubsection{\texorpdfstring{next\+\_\+random()}{next\_random()}}
+{\footnotesize\ttfamily int next\+\_\+random (\begin{DoxyParamCaption}\item[{\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$}]{instance,  }\item[{int $\ast$}]{nodes,  }\item[{int}]{zeiger }\end{DoxyParamCaption})}
+
+génère un nombre random, différent de celui de la liste des noeuds 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em instance} & \+: instance du problème \\
+\hline
+\mbox{\tt in,out}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\mbox{\tt in}  & {\em zeiger} & \+: indice de l\textquotesingle{}élément a ne pas traiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un nombre random 
+\end{DoxyReturn}
+\mbox{\Hypertarget{random__walk_8c_ab445e139eebe0217453d31c9908f662c}\label{random__walk_8c_ab445e139eebe0217453d31c9908f662c}} 
+\index{random\+\_\+walk.\+c@{random\+\_\+walk.\+c}!random\+\_\+walk@{random\+\_\+walk}}
+\index{random\+\_\+walk@{random\+\_\+walk}!random\+\_\+walk.\+c@{random\+\_\+walk.\+c}}
+\subsubsection{\texorpdfstring{random\+\_\+walk()}{random\_walk()}}
+{\footnotesize\ttfamily double random\+\_\+walk (\begin{DoxyParamCaption}\item[{\hyperlink{structinstance__s}{instance\+\_\+t} $\ast$}]{inst,  }\item[{int $\ast$}]{nodes }\end{DoxyParamCaption})}
+
+exécute l\textquotesingle{}algo de random walk 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em inst} & \+: instance du problème \\
+\hline
+\mbox{\tt in,out}  & {\em nodes} & \+: tableau des noeuds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la distance trouvée 
+\end{DoxyReturn}

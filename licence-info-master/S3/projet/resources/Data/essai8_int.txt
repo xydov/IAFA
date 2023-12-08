@@ -1,0 +1,14 @@
+﻿NAME : essai petit
+TYPE : TSP
+DIMENSION : 8
+EDGE_WEIGHT_TYPE : EUC_2D
+NODE_COORD_SECTION
+   1    1150  1760
+   2     630  1660
+   3      40  2090
+   4     750  1100
+   5     750  2030
+   6    1030  2070
+   7    1650   650
+   8    1490  1630
+EOF

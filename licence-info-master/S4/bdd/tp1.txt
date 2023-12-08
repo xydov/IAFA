@@ -1,0 +1,157 @@
+DROP TABLE "LOUER" CASCADE CONSTRAINTS;
+DROP TABLE "SUIVRE" CASCADE CONSTRAINTS;
+DROP TABLE "COURS" CASCADE CONSTRAINTS;
+DROP TABLE "MATERIEL" CASCADE CONSTRAINTS;
+DROP TABLE "ADHERENT" CASCADE CONSTRAINTS;
+DROP TABLE "SPECIALITE" CASCADE CONSTRAINTS;
+DROP TABLE "MONITEUR" CASCADE CONSTRAINTS;
+
+
+
+
+
+CREATE TABLE Moniteur
+    (noM    Number(3),
+    nomM    VARCHAR2(30),
+    prenomM VARCHAR2(30),
+    adresse VARCHAR2(100),
+    dateNaiss DATE,
+    CONSTRAINT pk_moniteur PRIMARY KEY(noM)
+    );
+
+CREATE TABLE Specialite
+    (idSpecialite   NUMBER(3),
+    nomS            VARCHAR2(30),
+    CONSTRAINT pk_specialite PRIMARY KEY(idSpecialite),
+    CONSTRAINT ck_noms CHECK(nomS IN ('ski', 'snowboard', 'monoski', 'raquette'))
+    );
+
+CREATE TABLE Adherent
+    (noA    NUMBER(3),
+    nomA        VARCHAR2(30),
+    prenomA     VARCHAR2(30),
+    adresseA    VARCHAR2(100),
+    telA        NUMBER(15),
+    ageA        NUMBER(3),
+    CONSTRAINT pk_adherent PRIMARY KEY(noA),
+    CONSTRAINT ck_ageA CHECK (ageA>12 and ageA<100)
+    );
+
+CREATE TABLE Materiel
+    (codeM      NUMBER(3),
+    type        VARCHAR2(30),
+    marque      VARCHAR2(30),
+    prix        NUMBER(5),
+    qteDispo    NUMBER(3),
+    CONSTRAINT pk_materiel PRIMARY KEY(codeM),
+    CONSTRAINT ck_qteDispo CHECK (qteDispo>0),
+    CONSTRAINT ck_prix CHECK (prix>0) 
+    );
+
+    
+CREATE TABLE Cours
+    (codeC          NUMBER(3),
+    niveau          VARCHAR2(30),
+    nbPlaces        NUMBER(3),
+    dateCours       DATE,
+    noM             NUMBER(3),
+    idSpecialite    NUMBER(3),
+    CONSTRAINT fk_cours_moniteur FOREIGN KEY (noM) REFERENCES Moniteur (noM),
+    CONSTRAINT fk_cours_specialite FOREIGN KEY (idSpecialite) REFERENCES Specialite (idSpecialite),
+    CONSTRAINT pk_cours PRIMARY KEY(codeC),
+    CONSTRAINT ck_nbPlaces CHECK (nbPlaces>0),
+    CONSTRAINT ck_niveau CHECK(niveau IN ('debutant', 'moyen', 'confirme', 'competition'))
+    );
+
+CREATE TABLE Suivre
+    (noA            NUMBER(3),
+    codeC           NUMBER(3),
+    CONSTRAINT fk_suivre_adherent FOREIGN KEY (noA) REFERENCES Adherent (noA),
+    CONSTRAINT fk_suivre_cours FOREIGN KEY (codeC) REFERENCES Cours (codeC),
+    CONSTRAINT pk_suivre PRIMARY KEY(noA, codeC)
+    );
+
+CREATE TABLE Louer
+    (noA        NUMBER(3),
+    codeM       NUMBER(3),
+    quantite    NUMBER(3),
+    CONSTRAINT fk_louer_adherent FOREIGN KEY (noA) REFERENCES Adherent (noA),
+    CONSTRAINT fk_louer_materiel FOREIGN KEY (codeM) REFERENCES Materiel (codeM),
+    CONSTRAINT pk_louer PRIMARY KEY(noA, codeM),
+    CONSTRAINT ck_quantite CHECK (quantite>0)
+    );
+
+
+
+
+
+
+--------------------------------------------
+--------------------------------------------
+--------------------------------------------
+
+
+
+INSERT INTO ADHERENT
+VALUES (1, 'Lars',  'Julien', '12 rue principale, Muret', 0666666666 , 13);
+INSERT INTO ADHERENT
+VALUES (2, 'Salma',  'Louise', '23 route de Tarbes, Pau', 0777777777  , 26);
+INSERT INTO ADHERENT
+VALUES (3, 'Jardin ',  'Lucien', 'Route d’Espagne, Tarbes', NULL, 52);
+
+INSERT INTO MONITEUR
+VALUES (1,  'Dupond', 'Jean'  ,'12 route du col, Germ' , '01-01-1980');
+INSERT INTO MONITEUR
+VALUES (2, 'Martin', 'Sophie', 'Route du lac, Loudenvielle', '13-05-1980' );
+
+INSERT INTO SPECIALITE
+VALUES (1, 'ski');
+INSERT INTO SPECIALITE
+VALUES (2, 'snowboard');
+INSERT INTO SPECIALITE
+VALUES (3, 'raquette');
+
+INSERT INTO MATERIEL
+VALUES (1, 'Ski', 'HyperGliss', 10, 2);
+INSERT INTO MATERIEL
+VALUES (2, 'Snowboard', 'HyperGliss', 11, 3);
+INSERT INTO MATERIEL
+VALUES (4, 'Raquette', 'Smash', 8, 2);
+
+INSERT INTO COURS
+VALUES (1, 'debutant',1, '01-02-2013', 1, 2);
+INSERT INTO COURS
+VALUES (2, 'moyen', 1, '02-02-2013', 1, 2);
+INSERT INTO COURS
+VALUES (3, 'debutant', 5, '01-02-2013', 2, 1);
+
+INSERT INTO LOUER
+VALUES (3, 1, 1);
+INSERT INTO LOUER
+VALUES (2, 1, 2);
+
+INSERT INTO SUIVRE
+VALUES (1, 1);
+INSERT INTO SUIVRE
+VALUES (1, 2);
+INSERT INTO SUIVRE
+VALUES (3, 1);
+INSERT INTO SUIVRE
+VALUES (2, 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

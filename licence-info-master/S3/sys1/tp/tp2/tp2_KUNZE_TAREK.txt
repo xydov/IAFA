@@ -1,0 +1,45 @@
+Kunze Tarek
+TP 2
+
+Exercice 8:
+
+1:
+	---
+	#! /bin/sh
+
+	mkdir $1
+	cp $2 $1/
+	---
+2:
+	---
+	#! /bin/sh
+
+	rm -r $1
+	---
+3:
+	---
+	#! /bin/sh
+
+	mkdir REP
+	ls | grep -e '\.sh\|\.txt' > liste.txt
+	cp `tail -1 liste.txt` REP/
+	rm liste.txt
+	---
+
+Exercice 9:
+	---
+	#! /bin/sh
+
+	echo "Il y a `ls | grep -c .txt` fichier dont le nom se termine par .txt"
+	echo "Il y a `ls | grep -c .sh` fichier dont le nom se termine par .sh"
+	echo "Il y a `ls -a | grep -c '^\.'` fichier cachés"
+	echo "Il y a `ls -a | grep -c -v -e '\.txt\|\.sh\|^\.'` autres fichiers"
+	---
+
+Exercice 10:
+
+1.	grep '[a-zA-Z][0-9]\{1\}$' liste.txt | sort -k3 | head -1
+
+2.	grep '[a-zA-Z][0-9]\{3\}$' liste.txt | sort -k3 | tail -1 | cut -d ' ' -f 1
+
+3.	
