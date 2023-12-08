@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TSP Doc: Référence du fichier lib/tools.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TSP Doc
+   </div>
+   <div id="projectbrief">Implémentation de différent algorithme pour résoudre TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier tools.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>fonctions diverses  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;tools.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de tools.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="tools_8c__incl.png" border="0" usemap="#lib_2tools_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a925d27b1258324aed37b8b57a648f10c"><td class="memItemLeft" align="right" valign="top">long **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a925d27b1258324aed37b8b57a648f10c">create_long_mat</a> (int nbRows, int nbCol)</td></tr>
+<tr class="separator:a925d27b1258324aed37b8b57a648f10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15e76c0911c70074505132e65ba794b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a15e76c0911c70074505132e65ba794b0">copy_array</a> (int *array_source, int *array_destination, int dimension)</td></tr>
+<tr class="separator:a15e76c0911c70074505132e65ba794b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec6c02d8a88d0b5a72893876394d06c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#aec6c02d8a88d0b5a72893876394d06c7">init_array</a> (int *array, int dimension)</td></tr>
+<tr class="separator:aec6c02d8a88d0b5a72893876394d06c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c356279caa57bb7de9d0ab19b9dcc0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a96c356279caa57bb7de9d0ab19b9dcc0">array_distance</a> (int *node_array, <a class="el" href="structinstance__s.html">instance_t</a> reference_instance)</td></tr>
+<tr class="separator:a96c356279caa57bb7de9d0ab19b9dcc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1368dd57d5a18da23884c30247673c15"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a1368dd57d5a18da23884c30247673c15">euclidean_distance</a> (long x1, long y1, long x2, long y2)</td></tr>
+<tr class="separator:a1368dd57d5a18da23884c30247673c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e8ba06c713bb356cd53d46d756443e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a28e8ba06c713bb356cd53d46d756443e">is_in_array</a> (int nb, int *array, int dimension)</td></tr>
+<tr class="separator:a28e8ba06c713bb356cd53d46d756443e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a739fe16637e9c88217a9935dba393"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#aa7a739fe16637e9c88217a9935dba393">swap_2opt</a> (int *tab, int ind1, int ind2)</td></tr>
+<tr class="memdesc:aa7a739fe16637e9c88217a9935dba393"><td class="mdescLeft">&#160;</td><td class="mdescRight">inverse le contenu de ind1 jusqu'a ind2  <a href="#aa7a739fe16637e9c88217a9935dba393">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa7a739fe16637e9c88217a9935dba393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6098231246a9a8edfd6a626c7e434ea2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a6098231246a9a8edfd6a626c7e434ea2">compare_slices</a> (int *array_1, int start_1, int end_1, int *array_2, int start_2, int end_2, int dimension)</td></tr>
+<tr class="separator:a6098231246a9a8edfd6a626c7e434ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c89c6714bad6f71e50de7adf69b010c"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a2c89c6714bad6f71e50de7adf69b010c">rev_array</a> (int *array, int d, int f)</td></tr>
+<tr class="separator:a2c89c6714bad6f71e50de7adf69b010c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df113ac4b58584c0614965a01747549"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a9df113ac4b58584c0614965a01747549">create_array_int</a> (int dimension)</td></tr>
+<tr class="separator:a9df113ac4b58584c0614965a01747549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99211900ea59d15a5ad9bf8dabd72929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a99211900ea59d15a5ad9bf8dabd72929">erreur</a> (char *message)</td></tr>
+<tr class="separator:a99211900ea59d15a5ad9bf8dabd72929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9248ee8ac2f581c40995375a17dcad39"><td class="memItemLeft" align="right" valign="top"><a id="a9248ee8ac2f581c40995375a17dcad39"></a>
+int **&#160;</td><td class="memItemRight" valign="bottom"><b>creer_mat_int</b> (int nbRows, int nbCol)</td></tr>
+<tr class="separator:a9248ee8ac2f581c40995375a17dcad39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12a9139e75046c5227c24386151756ef"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#a12a9139e75046c5227c24386151756ef">creer_mat_dist</a> (int dimension)</td></tr>
+<tr class="separator:a12a9139e75046c5227c24386151756ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa89d92f4f79d394a4de0408be22907c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tools_8c.html#aa89d92f4f79d394a4de0408be22907c9">swap</a> (int *tab, int ind1, int ind2)</td></tr>
+<tr class="memdesc:aa89d92f4f79d394a4de0408be22907c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">inverse le contenu des cases ind1 et ind2 dans tab  <a href="#aa89d92f4f79d394a4de0408be22907c9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa89d92f4f79d394a4de0408be22907c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>fonctions diverses </p>
+<dl class="section author"><dt>Auteur</dt><dd>Tarek Kunze </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>december 2019 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a96c356279caa57bb7de9d0ab19b9dcc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c356279caa57bb7de9d0ab19b9dcc0">&#9670;&nbsp;</a></span>array_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double array_distance </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>node_array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstance__s.html">instance_t</a>&#160;</td>
+          <td class="paramname"><em>reference_instance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>calcule la distance cyclique d'un tableau de noeud </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_array</td><td>: tableau de noeud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reference_instance</td><td>: instance du problème </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la distance du problème </dd></dl>
+
+</div>
+</div>
+<a id="a6098231246a9a8edfd6a626c7e434ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6098231246a9a8edfd6a626c7e434ea2">&#9670;&nbsp;</a></span>compare_slices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool compare_slices </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end_1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>start_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>end_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compare 2 tableau entre des bornes définies </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_1</td><td>: 1er tableau </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_1</td><td>: début 1er tab </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_1</td><td>: fin 1er tab </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_2</td><td>: 2eme tableau </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_2</td><td>: début 2eme tab </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_2</td><td>: fin 2eme tab </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si tab 1 == tab 2 </dd></dl>
+
+</div>
+</div>
+<a id="a15e76c0911c70074505132e65ba794b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15e76c0911c70074505132e65ba794b0">&#9670;&nbsp;</a></span>copy_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copy_array </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array_source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array_destination</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>copy une array dans une seconde array de même dimension </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_source</td><td>: nombre de ligne </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array_destination</td><td>: nombre de colonne </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9df113ac4b58584c0614965a01747549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df113ac4b58584c0614965a01747549">&#9670;&nbsp;</a></span>create_array_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* create_array_int </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>crée une liste d'entier de facon sûre </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>pointeur sur tableau </dd></dl>
+
+</div>
+</div>
+<a id="a925d27b1258324aed37b8b57a648f10c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925d27b1258324aed37b8b57a648f10c">&#9670;&nbsp;</a></span>create_long_mat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long** create_long_mat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbRows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbCol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>crée une matrice de long </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbRows</td><td>: nombre de ligne </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbColtance</td><td>: nombre de colonne </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>un pointeur de pointeur sur tableau de long </dd></dl>
+
+</div>
+</div>
+<a id="a12a9139e75046c5227c24386151756ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12a9139e75046c5227c24386151756ef">&#9670;&nbsp;</a></span>creer_mat_dist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double** creer_mat_dist </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>crée la matrice carrées des distances = tab dynamique triangulaire chaque ligne a une case de moins que la précédente </p>
+
+</div>
+</div>
+<a id="a99211900ea59d15a5ad9bf8dabd72929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99211900ea59d15a5ad9bf8dabd72929">&#9670;&nbsp;</a></span>erreur()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void erreur </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>imprime à l'écran un message d'erreur (chaîne de caractères) le message est sensé être composé du nom du sous-programme+" : "+message d'erreur </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>: le message à imprimer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1368dd57d5a18da23884c30247673c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1368dd57d5a18da23884c30247673c15">&#9670;&nbsp;</a></span>euclidean_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double euclidean_distance </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>calcule la distance euclidienne entre 2 points de coord x, y </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>: x1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>: x2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y1</td><td>: y1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y2</td><td>: y2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>la distance </dd></dl>
+
+</div>
+</div>
+<a id="aec6c02d8a88d0b5a72893876394d06c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6c02d8a88d0b5a72893876394d06c7">&#9670;&nbsp;</a></span>init_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_array </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>initialise une array avec les bon noud de départs </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">array</td><td>: le tableau </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28e8ba06c713bb356cd53d46d756443e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e8ba06c713bb356cd53d46d756443e">&#9670;&nbsp;</a></span>is_in_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int is_in_array </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>regarde si un nombre existe dans un tableau </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nb</td><td>: nombre a chercher dans le tableau </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>: tableau de noeud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si dans le tableau, 0 si non </dd></dl>
+
+</div>
+</div>
+<a id="a2c89c6714bad6f71e50de7adf69b010c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c89c6714bad6f71e50de7adf69b010c">&#9670;&nbsp;</a></span>rev_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* rev_array </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>array</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>f</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>reverse le contenu du tableau entre les indices d et f </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">array</td><td>: le tableau à modifier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td>: indice de début </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>: indice de fin </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>pointeur sur le tableau modifié </dd></dl>
+
+</div>
+</div>
+<a id="aa89d92f4f79d394a4de0408be22907c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89d92f4f79d394a4de0408be22907c9">&#9670;&nbsp;</a></span>swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swap </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ind1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ind2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>inverse le contenu des cases ind1 et ind2 dans tab </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tab</td><td>: le tableau </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ind1</td><td>: premier indice </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ind2</td><td>: deuxième indice </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section post"><dt>Postcondition</dt><dd>*tab[ind1]=*TAB[ind2] &amp;&amp; *tab[ind2]=*TAB[ind1] </dd></dl>
+
+</div>
+</div>
+<a id="aa7a739fe16637e9c88217a9935dba393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7a739fe16637e9c88217a9935dba393">&#9670;&nbsp;</a></span>swap_2opt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swap_2opt </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ind1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ind2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>inverse le contenu de ind1 jusqu'a ind2 </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tab</td><td>: le tableau </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ind1</td><td>: premier indice </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ind2</td><td>: deuxième indice </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section post"><dt>Postcondition</dt><dd>*tab[ind1]=*TAB[ind2] &amp;&amp; *tab[ind2]=*TAB[ind1] </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

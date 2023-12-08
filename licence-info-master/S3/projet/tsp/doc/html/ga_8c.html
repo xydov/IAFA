@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TSP Doc: Référence du fichier lib/ga.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TSP Doc
+   </div>
+   <div id="projectbrief">Implémentation de différent algorithme pour résoudre TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier ga.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>implementation de l'algo génétique  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;ga.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de ga.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="ga_8c__incl.png" border="0" usemap="#lib_2ga_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a0225df11108de0a22a7ae38e551d8208"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtour__s.html">tour_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ga_8c.html#a0225df11108de0a22a7ae38e551d8208">create_array_tour</a> (int dimension)</td></tr>
+<tr class="separator:a0225df11108de0a22a7ae38e551d8208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a358759c716db958ff85b5858b3c6c301"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structindices__s.html">indices_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ga_8c.html#a358759c716db958ff85b5858b3c6c301">create_array_indices</a> (int dimension)</td></tr>
+<tr class="separator:a358759c716db958ff85b5858b3c6c301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b93a0e33f9a241de566cb5e3c3441ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ga_8c.html#a8b93a0e33f9a241de566cb5e3c3441ec">two_random_numbers</a> (int *a, int *b, int dimension)</td></tr>
+<tr class="separator:a8b93a0e33f9a241de566cb5e3c3441ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c40fa53dafddba3510ee8579de6a85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ga_8c.html#ae2c40fa53dafddba3510ee8579de6a85">edge_destruction</a> (<a class="el" href="structtour__s.html">tour_t</a> *t_parent1, <a class="el" href="structtour__s.html">tour_t</a> *t_parent2, <a class="el" href="structtour__s.html">tour_t</a> *tfille, int dimension)</td></tr>
+<tr class="separator:ae2c40fa53dafddba3510ee8579de6a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af42675c3f2da818aad501e2158756136"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ga_8c.html#af42675c3f2da818aad501e2158756136">mutation</a> ()</td></tr>
+<tr class="separator:af42675c3f2da818aad501e2158756136"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac38790df50beb56eacce4d70891efdb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ga_8c.html#ac38790df50beb56eacce4d70891efdb5">dpx</a> (int *t_parent1, int *t_parent2, int *tfille, int *tfille_fin, int dimension)</td></tr>
+<tr class="separator:ac38790df50beb56eacce4d70891efdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac45f2b81bb097e519c7a886a31f6fbeb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ga_8c.html#ac45f2b81bb097e519c7a886a31f6fbeb">ga</a> (<a class="el" href="structinstance__s.html">instance_t</a> instance, float taux_mut, int n_individus, int n_generations)</td></tr>
+<tr class="separator:ac45f2b81bb097e519c7a886a31f6fbeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>implementation de l'algo génétique </p>
+<dl class="section author"><dt>Auteur</dt><dd>Tarek Kunze </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>december 2019 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a358759c716db958ff85b5858b3c6c301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a358759c716db958ff85b5858b3c6c301">&#9670;&nbsp;</a></span>create_array_indices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structindices__s.html">indices_t</a>* create_array_indices </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>crée un tableau d' indices_t </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau de retour </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>pointeur sur array de indices_t </dd></dl>
+
+</div>
+</div>
+<a id="a0225df11108de0a22a7ae38e551d8208"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0225df11108de0a22a7ae38e551d8208">&#9670;&nbsp;</a></span>create_array_tour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtour__s.html">tour_t</a>* create_array_tour </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>crée un tableau de tour_t </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau de retour </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>pointeur sur array de tour_t </dd></dl>
+
+</div>
+</div>
+<a id="ac38790df50beb56eacce4d70891efdb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac38790df50beb56eacce4d70891efdb5">&#9670;&nbsp;</a></span>dpx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dpx </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>t_parent1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>t_parent2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>tfille</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>tfille_fin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>execute l'algo DPX </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">t_parent1</td><td>: tableau parent1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">t_parent2</td><td>: tableau parent2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tfille</td><td>: tableau fille </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tfille_fin</td><td>tableau fille_fin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2c40fa53dafddba3510ee8579de6a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c40fa53dafddba3510ee8579de6a85">&#9670;&nbsp;</a></span>edge_destruction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void edge_destruction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtour__s.html">tour_t</a> *&#160;</td>
+          <td class="paramname"><em>t_parent1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtour__s.html">tour_t</a> *&#160;</td>
+          <td class="paramname"><em>t_parent2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtour__s.html">tour_t</a> *&#160;</td>
+          <td class="paramname"><em>tfille</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>deconstruit le tableau initial en pls sous segments </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">t_parent1</td><td>: tableau parent1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">t_parent2</td><td>: tableau parent2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tfille</td><td>: tableau fille </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac45f2b81bb097e519c7a886a31f6fbeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac45f2b81bb097e519c7a886a31f6fbeb">&#9670;&nbsp;</a></span>ga()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ga </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstance__s.html">instance_t</a>&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>taux_mut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_individus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_generations</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>execute l'algo genetique </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>: instance du problème </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">taux_mut</td><td>: taux de mutation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n_individus</td><td>: nombre d'individu </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n_generations</td><td>: nombre de générations </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>longeur du problème trouvé </dd></dl>
+
+</div>
+</div>
+<a id="af42675c3f2da818aad501e2158756136"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af42675c3f2da818aad501e2158756136">&#9670;&nbsp;</a></span>mutation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mutation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>execute l'algo de mutation </p>
+
+</div>
+</div>
+<a id="a8b93a0e33f9a241de566cb5e3c3441ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b93a0e33f9a241de566cb5e3c3441ec">&#9670;&nbsp;</a></span>two_random_numbers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void two_random_numbers </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>crée 2 nombre aléatoire différent </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>: pointeur sur entier </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">b</td><td>: pointeur sur entier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: valeur max des nombres aléatoires </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

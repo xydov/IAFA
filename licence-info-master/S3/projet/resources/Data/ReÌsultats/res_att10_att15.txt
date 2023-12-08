@@ -1,0 +1,60 @@
+vincent@vincent-PC ~/Bureau/Code C $ ./tsp -f Data/att10.tsp -bf
+J'ouvre le fichier : Data/att10.tsp
+Commentaire  : 10 premiers de att48)+0
+EOF
+17 lignes lues
+
+*** Instance ***
+Nom de l'instance ; att10
+Nb de villes (avec (0,0)) ; 11
+Type TSP
+Point ; Abs ; Ord
+   0 ;      0;     0
+   1 ;   6734;  1453
+   2 ;   2233;    10
+   3 ;   5530;  1424
+   4 ;    401;   841
+   5 ;   3082;  1644
+   6 ;   7608;  4458
+   7 ;   7573;  3716
+   8 ;   7265;  1268
+   9 ;   6898;  1885
+  10 ;   1112;  2049
+
+Méthode ; longueur ; Temps CPU (sec) ; Tour
+Meilleure tournée après le passage de la brute ;   20673.37 ;   1.67 ; [0,4,10,5,6,7,9,8,1,3,2]
+Pire tournée ;   64204.73 ;   1.67 ; [0,9,4,1,5,8,10,3,6,2,7]
+
+
+vincent@vincent-PC ~/Bureau/Code C $ ./tsp -f Data/att15.tsp -bf
+J'ouvre le fichier : Data/att15.tsp
+Commentaire  : 15 premiers de att48)
+EOF
+22 lignes lues
+
+*** Instance ***
+Nom de l'instance ; att15
+Nb de villes (avec (0,0)) ; 16
+Type TSP
+Point ; Abs ; Ord
+   0 ;      0;     0
+   1 ;   6734;  1453
+   2 ;   2233;    10
+   3 ;   5530;  1424
+   4 ;    401;   841
+   5 ;   3082;  1644
+   6 ;   7608;  4458
+   7 ;   7573;  3716
+   8 ;   7265;  1268
+   9 ;   6898;  1885
+  10 ;   1112;  2049
+  11 ;   5468;  2606
+  12 ;   5989;  2873
+  13 ;   4706;  2674
+  14 ;   4612;  2035
+  15 ;   6347;  2683
+
+Méthode ; longueur ; Temps CPU (sec) ; Tour
+Meilleure tournée après le passage de la brute ;   21502.02 ; 841550.22 ; [0,2,3,1,8,9,7,6,15,12,11,13,14,5,10,4]
+Pire tournée ;   73451.38 ; 841550.22 ; [0,7,4,15,5,9,10,1,13,8,14,6,2,11,3,12]
+vincent@vincent-PC ~/Bureau/Code C $

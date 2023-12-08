@@ -1,0 +1,103 @@
+\hypertarget{balises_8c}{}\section{Référence du fichier lib/balises.c}
+\label{balises_8c}\index{lib/balises.\+c@{lib/balises.\+c}}
+
+
+recuperation entree utilisateurs  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}balises.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tspstat.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de balises.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{balises_8c_a659e8f2d731e0cc30143ed7c15f04d1c}{init\+\_\+balises} (int $\ast$balises)
+\item 
+void \hyperlink{balises_8c_a9700d471069f23b7fa6c5458b07e1e3f}{anhiliation\+\_\+bal} (int ind\+\_\+bal, int $\ast$bal\+\_\+arr)
+\item 
+void \hyperlink{balises_8c_a402ea961bfc2ffeee61e3a7c330b1559}{print\+\_\+help} (void)
+\item 
+int \hyperlink{balises_8c_a6f1b9e3728335466359815fd45430600}{recherche\+\_\+chaine} (int argc, char $\ast$$\ast$argv, char $\ast$ch)
+\item 
+void \hyperlink{balises_8c_ae8c66bd957a3daa220cd3f2b2a036024}{analyse\+\_\+balises} (int argc, char $\ast$$\ast$argv, int tab\+\_\+arg\mbox{[}N\+B\+\_\+\+B\+A\+L\+I\+S\+ES\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+recuperation entree utilisateurs 
+
+\begin{DoxyAuthor}{Auteur}
+Tarek Kunze 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+december 2019 
+\end{DoxyDate}
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{balises_8c_ae8c66bd957a3daa220cd3f2b2a036024}\label{balises_8c_ae8c66bd957a3daa220cd3f2b2a036024}} 
+\index{balises.\+c@{balises.\+c}!analyse\+\_\+balises@{analyse\+\_\+balises}}
+\index{analyse\+\_\+balises@{analyse\+\_\+balises}!balises.\+c@{balises.\+c}}
+\subsubsection{\texorpdfstring{analyse\+\_\+balises()}{analyse\_balises()}}
+{\footnotesize\ttfamily void analyse\+\_\+balises (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{int}]{tab\+\_\+arg\mbox{[}\+N\+B\+\_\+\+B\+A\+L\+I\+S\+E\+S\mbox{]} }\end{DoxyParamCaption})}
+
+Crée un tableau tab\+\_\+args dont la dimension est le nombre maximal de balises, initialisé à -\/1 si la balise est présente dans la commande, le -\/1 correspondant est remplacé par son indice dans argv 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em argc} & \+: Le nombre d\textquotesingle{}argument dans le tableau argv \\
+\hline
+\mbox{\tt in}  & {\em $\ast$$\ast$argv} & \+: listes des arguments \\
+\hline
+\mbox{\tt in,out}  & {\em tab\+\_\+arg} & \+: Le tableau contenant l\textquotesingle{}indice des balises utilisés dans argv \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balises_8c_a9700d471069f23b7fa6c5458b07e1e3f}\label{balises_8c_a9700d471069f23b7fa6c5458b07e1e3f}} 
+\index{balises.\+c@{balises.\+c}!anhiliation\+\_\+bal@{anhiliation\+\_\+bal}}
+\index{anhiliation\+\_\+bal@{anhiliation\+\_\+bal}!balises.\+c@{balises.\+c}}
+\subsubsection{\texorpdfstring{anhiliation\+\_\+bal()}{anhiliation\_bal()}}
+{\footnotesize\ttfamily void anhiliation\+\_\+bal (\begin{DoxyParamCaption}\item[{int}]{ind\+\_\+bal,  }\item[{int $\ast$}]{bal\+\_\+arr }\end{DoxyParamCaption})}
+
+Si une balises est \char`\"{}utilisés\char`\"{} on remplace sa valeur par -\/1 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em ind\+\_\+bal} & \+: indice de la balise a supprimer \\
+\hline
+\mbox{\tt in,out}  & {\em bal\+\_\+arr} & \+: tableau des balises \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balises_8c_a659e8f2d731e0cc30143ed7c15f04d1c}\label{balises_8c_a659e8f2d731e0cc30143ed7c15f04d1c}} 
+\index{balises.\+c@{balises.\+c}!init\+\_\+balises@{init\+\_\+balises}}
+\index{init\+\_\+balises@{init\+\_\+balises}!balises.\+c@{balises.\+c}}
+\subsubsection{\texorpdfstring{init\+\_\+balises()}{init\_balises()}}
+{\footnotesize\ttfamily void init\+\_\+balises (\begin{DoxyParamCaption}\item[{int $\ast$}]{balises }\end{DoxyParamCaption})}
+
+initialise le tableau des balises a -\/1 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in,out}  & {\em balises} & \+: tableau des balises \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{balises_8c_a402ea961bfc2ffeee61e3a7c330b1559}\label{balises_8c_a402ea961bfc2ffeee61e3a7c330b1559}} 
+\index{balises.\+c@{balises.\+c}!print\+\_\+help@{print\+\_\+help}}
+\index{print\+\_\+help@{print\+\_\+help}!balises.\+c@{balises.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+help()}{print\_help()}}
+{\footnotesize\ttfamily void print\+\_\+help (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Affiche à l\textquotesingle{}écran le fichier d\textquotesingle{}aide de la sélection des balises \mbox{\Hypertarget{balises_8c_a6f1b9e3728335466359815fd45430600}\label{balises_8c_a6f1b9e3728335466359815fd45430600}} 
+\index{balises.\+c@{balises.\+c}!recherche\+\_\+chaine@{recherche\+\_\+chaine}}
+\index{recherche\+\_\+chaine@{recherche\+\_\+chaine}!balises.\+c@{balises.\+c}}
+\subsubsection{\texorpdfstring{recherche\+\_\+chaine()}{recherche\_chaine()}}
+{\footnotesize\ttfamily int recherche\+\_\+chaine (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{char $\ast$}]{ch }\end{DoxyParamCaption})}
+
+Cherche une chaine dans le tableau argv 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em argc} & \+: Le nombre d\textquotesingle{}argument dans le tableau argv \\
+\hline
+\mbox{\tt in}  & {\em $\ast$$\ast$argv} & \+: listes des arguments \\
+\hline
+\mbox{\tt in}  & {\em $\ast$ch} & \+: La chaine recherché dans argv \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+l\textquotesingle{}indice de la chaine recherché dans le tableau argv ou N\+IL si absente 
+\end{DoxyReturn}

@@ -1,0 +1,137 @@
+Tarek Kunze 21810251
+
+TP1
+
+2 DHCP
+2.1: les messages sont envoyés au dessus du protocole UDP
+2.2:
+
+0.0.0.0	255.255.255.255	192.168.1.254	      192.168.1.37
+  68------------------->67
+	DHCP request
+				              67----------------->68
+						     DHCP ACK
+
+2.3: 192.168.1.254
+2.4: Your (client) IP address: 192.168.1.37 | la nouvelle IP du client : 192.168.1.37
+2.5: 1 day (86400s)
+
+
+3 PING
+3.1: protocole utilisé: ICMP
+3.2: les paquets ICMP communiquent avec un réseau externe et n'ont donc pas besoin de port 
+3.3: 
+
+3.7: nouvelle valeur de la mtu 232
+3.8: Non il n'y a pas d'autre fragmentation qui on lieu
+		-> filtre utilisé: ip.flags.mf == 1 or ip.frag_offset gt 0
+3.9: le protocole FNS appartient à la couche 7, application
+3.10: les messages DNS sont envoyés sur UDP
+
+
+4 HTTP
+4.1: HTTP/1.1
+4.2: status: 200 OK
+4.3: Last-Modified: Mon, 21 Jan 2008 10:55:02 GMT
+4.4: 1232 bytes, taille de la réponse du paque n°272
+4.5: le fichier est fragmenté en 18 segments TCP
+4.6: Server: Apache/2.2.8 (Fedora), le système d'exploitation est donc un linux
+4.7: nb max fichier = 4 (trames n°363, 364, 365, 368)
+4.8: ?
+
+5 TELNET
+5.1: les messages de la session telnet sont envoyé sur TCP
+5.2: login: guest |password: trivial | ip serveur = 192.168.0.6
+5.3: commande = pwd | réponse = /home/guest
+5.4: Diagramme temporel d'échange
+192.168.0.10		192.168.0.6
+ init session--------------->
+   <---------------------spectre login:
+   g------------------------>
+   <----------------------ack
+   u------------------------>
+   <----------------------ack
+   e------------------------>
+   <----------------------ack
+   s------------------------>
+   <----------------------ack
+   t------------------------>
+   <----------------------ack
+   <----------------------Password:
+   t------------------------>
+   <----------------------ack
+   r------------------------>
+   <----------------------ack
+   i------------------------>
+   <----------------------ack
+   v------------------------>
+   <----------------------ack
+   i------------------------>
+   <----------------------ack
+   a------------------------>
+   <----------------------ack
+   l------------------------>
+   <----------------------ack
+   <------------Data: Last login: Sat Apr 26 23:25:07 CEST 2008 from fakir.local on pts/0\r\n
+		Data: Linux spectre 2.6.24-1-486 #1 Thu Jan 31 19:52:42 UTC 2008 i686\r\n
+   		Data: \r\n
+		Data: The programs included with the Debian GNU/Linux system are free software;\r\n
+		Data: the exact distribution terms for each program are described in the\r\n
+		Data: individual files in /usr/share/doc/*/copyright.\r\n
+		Data: \r\n
+		Data: Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent\r\n
+   		Data: permitted by applicable law.\r\n
+  
+  
+  
+6 FTP
+6.1: les messages de la session ftp sont envoyé sur TCP, filtre: ftp
+6.2: login: anonymous | pass: toto@titi.fr
+6.3: welcome.msg
+6.4: contenu: 
+			    Welcome to the
+
+			LINUX KERNEL ARCHIVES
+			    ftp.kernel.org
+
+		    "Much more than just kernels"
+
+	   IF YOU'RE ACCESSING THIS SITE VIA A WEB BROWSER
+		PLEASE USE THE HTTP URL BELOW INSTEAD!
+
+---->       If you are looking for mirror sites, please go       <----
+---->		    to mirrors.kernel.org instead                <----
+
+This site is provided as a public service by the Linux Kernel
+Organization, a California nonprofit corporation.  Bandwidth is
+provided by The Internet Software Consortium, Inc.  Our servers are
+located in San Francisco and Palo Alto, California; Corvallis, Oregon;
+Amsterdam, Netherlands and UmeÃ¥, Sweden; use in violation of any
+applicable laws strictly prohibited.
+
+Due to U.S. Exports Regulations, all cryptographic software on this
+site is subject to the following legal notice:
+
+    This site includes publicly available encryption source code
+    which, together with object code resulting from the compiling of
+    publicly available source code, may be exported from the United
+    States under License Exception "TSU" pursuant to 15 C.F.R. Section
+    740.13(e).
+
+This legal notice applies to cryptographic software only.  Please see
+the Bureau of Industry and Security (http://www.bis.doc.gov/) for more
+information about current U.S. regulations.
+
+Neither the Linux Kernel Organization, nor its sponsors make any
+guarantees, explicit or implicit, about the contents of this site.
+Use at your own risk
+
+6.5: 
+192.168.0.10			204.152.191.5
+Request: RETR welcome.msg------------->
+     <-----------------Opening BINARY mode data connection for welcome.msg (1912 bytes).
+     ACK------------------------------>
+     <--------------------------Data: 1448 bytes
+     ACK------------------------------>
+     <--------------------------Response: 226 File send OK.
+     ACK------------------------------>

@@ -1,0 +1,65 @@
+Tarek KUNZE 
+21810251
+
+Exercice 1:
+
+1.	ls *.txt
+2.	echo "Le renard dit \"Oh, Monsieur du Corbeau\""
+	echo "J'ai gagne \$100 a l'Alcazar"
+	echo "Commentaire : \\* Initialisation *\\"
+
+Exercice 2:
+
+1. 	cd
+2.	mkdir -p REP/SOUSREP
+3.	cp users/linfg/linfg0/S3/liste.txt users/linfg/linfg0/S3/REP/SOUSREP
+4.	cd S3/REP/SOUSREP ; ls
+5.	mv liste.txt ../
+6.	rm -r REP/
+
+Exercice 3:
+
+1.	cp liste.txt $HOME
+2.	more liste.txt
+3.	ls -l
+4.	chmod -w liste.txt
+5.	ls -l
+6.	nedit liste.txt
+7.	chmod +w liste.txt
+8.	nedit liste.txt
+
+Exercice 4:
+
+1.	affiche les 5 dernières lignes
+2.	affiche tout le fichier sauf les 5 premières lignes
+3.	affiche les 5 premières lignes
+4.	affiche les 10 premières lignes
+
+Exercice 5:
+
+1.	grep '[a-zA-Z][0-9]\{1\}$' liste.txt | sort -k3 >> temp
+	grep '[a-zA-Z][0-9]\{2\}$' liste.txt | sort -k3 >> temp
+	grep '[a-zA-Z][0-9]\{3\}$' liste.txt | sort -k3 >> temp
+	cat temp
+	rm temp
+2.	cat liste.txt | tail -n +5 | sort -k2
+
+Exercice 6:
+
+1.	grep '[A-Z] LAURENT' liste.txt
+2.	grep '[0-9]\{2\}$' liste.txt
+3.	grep '1' liste.txt
+
+
+Exercice 7:
+
+
+1.	echo "Est-ce que j'arrive" >> tdm01.txt
+	echo "a rediriger la" >> tdm01.txt
+	echo "sortie standard ?" >> tdm01.txt
+
+2.	Affiche le fichier liste.txt en entier
+	crée ou écrase le fichier liste2.txt et redirige le sortie standart de cat liste.txt vers le fichier créer
+	supprime le fichier liste2.txt
+	Affiche les 5 dernières lignes du fichier liste.txt
+3.	head liste.txt | tail -5

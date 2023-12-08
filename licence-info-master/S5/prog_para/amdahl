@@ -1,0 +1,7 @@
+Accélération_théorique = 1 / ((1 - p) + (p / s))
+
+avec
+    p = pourcentage parallélisable
+    s = nb thread
+
+Efficacité = Accélération_théorique / s

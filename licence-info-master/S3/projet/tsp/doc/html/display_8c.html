@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TSP Doc: Référence du fichier lib/display.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">TSP Doc
+   </div>
+   <div id="projectbrief">Implémentation de différent algorithme pour résoudre TSP</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier display.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>affichage a l'ecran  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;display.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de display.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="display_8c__incl.png" border="0" usemap="#lib_2display_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aee4048b895a0d858dcca2035d89574f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#aee4048b895a0d858dcca2035d89574f8">to_csv_file</a> (char *filename, <a class="el" href="structinstance__s.html">instance_t</a> instance)</td></tr>
+<tr class="separator:aee4048b895a0d858dcca2035d89574f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9066067adf630336f8cdcc0727ed38f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a9066067adf630336f8cdcc0727ed38f0">print_entete</a> (<a class="el" href="structinstance__s.html">instance_t</a> *instance, char *filename)</td></tr>
+<tr class="separator:a9066067adf630336f8cdcc0727ed38f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0799ee626614539077a042fcc13bb386"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a0799ee626614539077a042fcc13bb386">print_instance_csv</a> (<a class="el" href="structinstance__s.html">instance_t</a> *instance)</td></tr>
+<tr class="separator:a0799ee626614539077a042fcc13bb386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad778e48b1433a5211cfaace2c152bdb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#ad778e48b1433a5211cfaace2c152bdb2">print_methode</a> (bool *al_an, char *m_name, double final_length, double time, int *final_nodes, int dimension)</td></tr>
+<tr class="separator:ad778e48b1433a5211cfaace2c152bdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e8d07e804b234b3689ce2450db4176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a27e8d07e804b234b3689ce2450db4176">print_methode_csv_file</a> (bool *al_an, char *m_name, double final_length, double time, int *final_nodes, int dimension, char *filename)</td></tr>
+<tr class="separator:a27e8d07e804b234b3689ce2450db4176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a1e84d306b462e78308e246eb7f5c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a47a1e84d306b462e78308e246eb7f5c7">print_bf</a> (bool *al_an, double final_length, double time, int *final_nodes, int *worst_nodes, int dimension, <a class="el" href="structinstance__s.html">instance_t</a> inst)</td></tr>
+<tr class="separator:a47a1e84d306b462e78308e246eb7f5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37c7dc8a4f218104b1a675d22e91386f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a37c7dc8a4f218104b1a675d22e91386f">print_bf_csv_file</a> (bool *al_an, double final_length, double time, int *final_nodes, int *worst_nodes, int dimension, char *filename, <a class="el" href="structinstance__s.html">instance_t</a> inst)</td></tr>
+<tr class="separator:a37c7dc8a4f218104b1a675d22e91386f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>affichage a l'ecran </p>
+<dl class="section author"><dt>Auteur</dt><dd>Tarek Kunze </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>december 2019 </dd></dl>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a47a1e84d306b462e78308e246eb7f5c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a1e84d306b462e78308e246eb7f5c7">&#9670;&nbsp;</a></span>print_bf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_bf </td>
+          <td>(</td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>al_an</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>final_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>final_nodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>worst_nodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstance__s.html">instance_t</a>&#160;</td>
+          <td class="paramname"><em>inst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>écrit les résultats de la methode bruteforce à l'écran </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">final_length</td><td>: longeur finale de la méthode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>: temps qu'a pris la fonction a s'exécuter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">final_nodes</td><td>: tableau des noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">worst_nodes</td><td>: tableau des pire noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau de noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inst</td><td>: instance de référence </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a37c7dc8a4f218104b1a675d22e91386f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37c7dc8a4f218104b1a675d22e91386f">&#9670;&nbsp;</a></span>print_bf_csv_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_bf_csv_file </td>
+          <td>(</td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>al_an</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>final_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>final_nodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>worst_nodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstance__s.html">instance_t</a>&#160;</td>
+          <td class="paramname"><em>inst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>écrit les résultats de la methode bruteforce dans le fichier de nom filename </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">final_length</td><td>: longeur finale de la méthode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>: temps qu'a pris la fonction a s'exécuter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">final_nodes</td><td>: tableau des noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">worst_nodes</td><td>: tableau des pire noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau de noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>: nom du fichier csv </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inst</td><td>: instance de référence </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9066067adf630336f8cdcc0727ed38f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9066067adf630336f8cdcc0727ed38f0">&#9670;&nbsp;</a></span>print_entete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_entete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstance__s.html">instance_t</a> *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>affiche l'en tete </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inst</td><td>: instance du problème </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>: nom du fichier </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0799ee626614539077a042fcc13bb386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0799ee626614539077a042fcc13bb386">&#9670;&nbsp;</a></span>print_instance_csv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_instance_csv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structinstance__s.html">instance_t</a> *&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>affiche les resultats sous forme csv </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inst</td><td>: instance du problème </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad778e48b1433a5211cfaace2c152bdb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad778e48b1433a5211cfaace2c152bdb2">&#9670;&nbsp;</a></span>print_methode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_methode </td>
+          <td>(</td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>al_an</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>m_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>final_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>final_nodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>écrit les résultats de la methode a l'écran en format csv </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">al_an</td><td>: si cette chaine de caractére a déjà été affiché </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m_name</td><td>: nom de la méthode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">final_length</td><td>: longeur finale de la méthode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>: temps qu'a pris la fonction a s'exécuter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">final_nodes</td><td>: tableau des noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau de noeuds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27e8d07e804b234b3689ce2450db4176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e8d07e804b234b3689ce2450db4176">&#9670;&nbsp;</a></span>print_methode_csv_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_methode_csv_file </td>
+          <td>(</td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>al_an</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>m_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>final_length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>final_nodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dimension</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>écrit les résultats de la methode dans le fichier csv </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">al_an</td><td>: si cette chaine de caractére a déjà été affiché </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m_name</td><td>: nom de la méthode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">final_length</td><td>: longeur finale de la méthode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>: temps qu'a pris la fonction a s'exécuter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">final_nodes</td><td>: tableau des noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dimension</td><td>: dimension du tableau de noeuds </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>: nom du fichier csv </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee4048b895a0d858dcca2035d89574f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4048b895a0d858dcca2035d89574f8">&#9670;&nbsp;</a></span>to_csv_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int to_csv_file </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structinstance__s.html">instance_t</a>&#160;</td>
+          <td class="paramname"><em>instance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>écrit les résultats dans un fichiers </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>: nom du fichier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inst</td><td>: instance du problème </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>si le fichier a bien été créer </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

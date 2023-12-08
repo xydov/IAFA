@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ATOM_HOME=~/Documents/.atom atom
