@@ -1,0 +1,294 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/">
+    <rdf:Description rdf:about="http://arxiv.org/abs/1909.01066">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>arXiv</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Petroni</foaf:surname>
+                        <foaf:givenName>Fabio</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Rocktäschel</foaf:surname>
+                        <foaf:givenName>Tim</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lewis</foaf:surname>
+                        <foaf:givenName>Patrick</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Bakhtin</foaf:surname>
+                        <foaf:givenName>Anton</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Wu</foaf:surname>
+                        <foaf:givenName>Yuxiang</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Miller</foaf:surname>
+                        <foaf:givenName>Alexander H.</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Riedel</foaf:surname>
+                        <foaf:givenName>Sebastian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_1276"/>
+        <link:link rdf:resource="#item_1278"/>
+        <link:link rdf:resource="#item_1280"/>
+        <link:link rdf:resource="#item_1407"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer Science - Computation and Language</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Language Models as Knowledge Bases?</dc:title>
+        <dcterms:abstract>Recent progress in pretraining language models on large textual corpora led to a surge of improvements for downstream NLP tasks. Whilst learning linguistic knowledge, these models may also be storing relational knowledge present in the training data, and may be able to answer queries structured as &quot;fill-in-the-blank&quot; cloze statements. Language models have many advantages over structured knowledge bases: they require no schema engineering, allow practitioners to query about an open class of relations, are easy to extend to more data, and require no human supervision to train. We present an in-depth analysis of the relational knowledge already present (without fine-tuning) in a wide range of state-of-the-art pretrained language models. We find that (i) without fine-tuning, BERT contains relational knowledge competitive with traditional NLP methods that have some access to oracle knowledge, (ii) BERT also does remarkably well on open-domain question answering against a supervised baseline, and (iii) certain types of factual knowledge are learned much more readily than others by standard language model pretraining approaches. The surprisingly strong ability of these models to recall factual knowledge without any fine-tuning demonstrates their potential as unsupervised open-domain QA systems. The code to reproduce our analysis is available at https://github.com/facebookresearch/LAMA.</dcterms:abstract>
+        <dc:date>2019-09-04</dc:date>
+        <z:libraryCatalog>arXiv.org</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://arxiv.org/abs/1909.01066</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 08:47:24</dcterms:dateSubmitted>
+        <dc:description>Issue: arXiv:1909.01066
+arXiv:1909.01066 [cs]
+version: 2</dc:description>
+        <dc:identifier>DOI 10.48550/arXiv.1909.01066</dc:identifier>
+        <prism:number>arXiv:1909.01066</prism:number>
+    </rdf:Description>
+    <bib:Memo rdf:about="#item_1276">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;Cet article analyse en profondeur les connaissances factuelles et de bon sens intégrées dans les modèles de langage pré-entraînés accessibles publiquement, mettant en avant les performances remarquables de BERT-Large. À travers la sonde LAMA (Analyse des Modèles de Langage), l’étude évalue la capacité de ces modèles, incluant BERT, ELMo et Transformer-XL, à emmagasiner et à récupérer des connaissances sans ajustements spécifiques. BERT-Large se distingue particulièrement, dépassant les bases de connaissances traditionnelles et autres modèles neuronaux. Toutefois, l’article reconnaît la difficulté d’extraire des informations précises des bases de connaissances textuelles. Les résultats suggèrent qu’augmenter la quantité de données traitées par BERT-Large n’améliore pas significativement sa performance, indiquant une limite à l’apprentissage basé sur la quantité de données. Des défis tels que la variation de l’efficacité de rappel avec différents modèles de langage naturel et l’évaluation des réponses multi-mots demeurent, indiquant des directions pour la recherche future. Cette recherche souligne le potentiel des modèles de langage pour remplacer éventuellement les bases de connaissances traditionnelles et met en lumière l’importance des cadres tels que AllenNLP, fairseq et les transformers PyTorch de Hugging Face, qui ont été essentiels à ces découvertes.&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_1278">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>arXiv Fulltext PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://arxiv.org/pdf/1909.01066v2.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 08:47:24</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_1280">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>arXiv.org Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://arxiv.org/abs/1909.01066</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 08:47:29</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_1407">
+        <z:itemType>attachment</z:itemType>
+        <rdf:resource rdf:resource="files/1407/Petroni et al. - 2019 - Language Models as Knowledge Bases.pdf"/>
+        <dc:title>Texte intégral</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://arxiv.org/pdf/1909.01066.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-24 14:34:37</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="http://arxiv.org/abs/1810.04805">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>arXiv</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Devlin</foaf:surname>
+                        <foaf:givenName>Jacob</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Chang</foaf:surname>
+                        <foaf:givenName>Ming-Wei</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Lee</foaf:surname>
+                        <foaf:givenName>Kenton</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Toutanova</foaf:surname>
+                        <foaf:givenName>Kristina</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_1408"/>
+        <link:link rdf:resource="#item_1314"/>
+        <link:link rdf:resource="#item_1316"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer Science - Computation and Language</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</dc:title>
+        <dcterms:abstract>We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).</dcterms:abstract>
+        <dc:date>2019-05-24</dc:date>
+        <z:shortTitle>BERT</z:shortTitle>
+        <z:libraryCatalog>arXiv.org</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://arxiv.org/abs/1810.04805</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 10:18:56</dcterms:dateSubmitted>
+        <dc:description>Issue: arXiv:1810.04805
+arXiv:1810.04805 [cs]</dc:description>
+        <dc:identifier>DOI 10.48550/arXiv.1810.04805</dc:identifier>
+        <prism:number>arXiv:1810.04805</prism:number>
+    </rdf:Description>
+    <bib:Memo rdf:about="#item_1408">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;L’article présente BERT, une nouvelle méthode de pré-apprentissage pour le traitement du langage naturel. L’innovation de BERT réside dans son architecture bidirectionnelle profonde qui, grâce à un apprentissage non supervisé sur un corpus étendu, capture des représentations contextuelles riches. BERT se distingue par son entraînement sur les contextes gauche et droit en utilisant un modèle de langage masqué et la prédiction de la prochaine phrase, ce qui améliore sa compréhension du langage. Il surpasse les modèles unidirectionnels dans divers tests, y compris GLUE et SQuAD, et se montre compétent tant dans l’approche de fine-tuning que dans les méthodes basées sur les caractéristiques, démontrant une adaptabilité et des performances remarquables, même pour les tâches avec peu de ressources. La conception de BERT souligne l’importance de la bidirectionnalité et de la profondeur du pré-apprentissage, le positionnant comme un modèle fondamental qui établit de nouvelles normes d’excellence dans le domaine du NLP.&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_1314">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>arXiv Fulltext PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://arxiv.org/pdf/1810.04805.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 10:18:57</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_1316">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>arXiv.org Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://arxiv.org/abs/1810.04805</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 10:19:01</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <rdf:Description rdf:about="http://arxiv.org/abs/1801.06146">
+        <z:itemType>preprint</z:itemType>
+        <dc:publisher>
+           <foaf:Organization><foaf:name>arXiv</foaf:name></foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Howard</foaf:surname>
+                        <foaf:givenName>Jeremy</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Ruder</foaf:surname>
+                        <foaf:givenName>Sebastian</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_1326"/>
+        <link:link rdf:resource="#item_1328"/>
+        <link:link rdf:resource="#item_1330"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer Science - Computation and Language</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Computer Science - Machine Learning</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Statistics - Machine Learning</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:title>Universal Language Model Fine-tuning for Text Classification</dc:title>
+        <dcterms:abstract>Inductive transfer learning has greatly impacted computer vision, but existing approaches in NLP still require task-specific modifications and training from scratch. We propose Universal Language Model Fine-tuning (ULMFiT), an effective transfer learning method that can be applied to any task in NLP, and introduce techniques that are key for fine-tuning a language model. Our method significantly outperforms the state-of-the-art on six text classification tasks, reducing the error by 18-24% on the majority of datasets. Furthermore, with only 100 labeled examples, it matches the performance of training from scratch on 100x more data. We open-source our pretrained models and code.</dcterms:abstract>
+        <dc:date>2018-05-23</dc:date>
+        <z:libraryCatalog>arXiv.org</z:libraryCatalog>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://arxiv.org/abs/1801.06146</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 10:23:00</dcterms:dateSubmitted>
+        <dc:description>Issue: arXiv:1801.06146
+arXiv:1801.06146 [cs, stat]</dc:description>
+        <dc:identifier>DOI 10.48550/arXiv.1801.06146</dc:identifier>
+        <prism:number>arXiv:1801.06146</prism:number>
+    </rdf:Description>
+    <bib:Memo rdf:about="#item_1326">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;ULMFiT (Universal Language Model Fine-tuning) est une méthode innovante de transfert d’apprentissage pour le traitement du langage naturel (NLP), qui surpasse les techniques actuelles en adaptant un modèle de langue pré-entraîné à des tâches spécifiques de classification de texte. Au 1 lieu de reconstruire des modèles à partir de zéro, ULMFiT utilise un apprentissage discriminatif et des taux d’apprentissage triangulaires pour affiner les modèles de langue sur des tâches ciblées, en préservant la connaissance antérieure tout en s’adaptant aux nouvelles tâches. Cette approche démontre des performances exceptionnelles même avec un nombre limité d’exemples étiquetés, réduisant de manière significative les erreurs de classification à travers une variété de jeux de données. ULMFiT est particulièrement prometteur pour les langues autres que l’anglais, les nouvelles tâches de NLP, et les situations où les données étiquetées sont rares. L’article suggère des directions futures, comme l’amélioration de la pré-formation du modèle de langue et l’extension à des tâches de NLP plus complexes, en espérant que ULMFiT puisse catalyser de nouveaux développements dans le transfert d’apprentissage pour le NLP.&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_1328">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>arXiv Fulltext PDF</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://arxiv.org/pdf/1801.06146.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 10:23:01</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>application/pdf</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_1330">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>arXiv.org Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://arxiv.org/abs/1801.06146</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2024-03-19 10:23:06</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+</rdf:RDF>
