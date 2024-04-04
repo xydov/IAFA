@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/amak-exercise-prey-predator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../tresor/khalil/M1-IAFA/Algo-Av/VoyageurDeCommerce" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../tresor/khalil/M1-IAFA/MCDC/TP/mcdc-2022-deco-tp1-deco-tpa11-maachou-besseghieur" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../tresor/khalil/M1-IAFA/MCDC/TP/mcdc-2022-deco-tp2-tp2-tpa11-bilel-khalil" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../tresor/khalil/M1-IAFA/TL/TP-Coq/tl-coq-2022-khalilmaachou" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../tresor/khalil/M1-IAFA/TL/tl-coq-2022-tpn-khalilmaachou" vcs="Git" />
+  </component>
+</project>
