@@ -1,0 +1,65 @@
+    Déterminer le débit binaire (bitrate) :
+    Le débit binaire est calculé en multipliant la résolution en bits par le taux d'échantillonnage par seconde et le nombre de canaux audio.
+        Résolution en bits : 16 bits par échantillon.
+        Taux d'échantillonnage : 44,1 kHz (ou 44100 échantillons par seconde).
+        Nombre de canaux : stéréo, donc 2 canaux.
+
+    Le débit binaire par seconde peut être calculé comme suit :
+    Deˊbit binaire (en bits par seconde)=Reˊsolution en bits×Taux d’eˊchantillonnage×Nombre de canauxDeˊbit binaire (en bits par seconde)=Reˊsolution en bits×Taux d’eˊchantillonnage×Nombre de canaux
+    Deˊbit binaire=16 bits×44100 Hz×2=1411200 bits par secondeDeˊbit binaire=16 bits×44100 Hz×2=1411200 bits par seconde
+
+    Convertir le débit binaire en octets par seconde :
+    Comme 1 octet = 8 bits, nous divisons le débit binaire par 8 pour obtenir le débit en octets par seconde.
+    Deˊbit en octets par seconde=Deˊbit binaire en bits par seconde8Deˊbit en octets par seconde=8Deˊbit binaire en bits par seconde​
+    Deˊbit en octets par seconde=14112008=176400 octets par secondeDeˊbit en octets par seconde=81411200​=176400 octets par seconde
+
+    Calculer la taille pour une heure d'enregistrement :
+    Maintenant, pour obtenir la taille totale en octets pour une heure d'enregistrement, multiplions le débit en octets par seconde par le nombre de secondes dans une heure (3600 secondes).
+    Taille en octets pour une heure=Deˊbit en octets par seconde×Nombre de secondes dans une heureTaille en octets pour une heure=Deˊbit en octets par seconde×Nombre de secondes dans une heure
+    Taille en octets pour une heure=176400 octets par seconde×3600 secondes=635040000 octetsTaille en octets pour une heure=176400 octets par seconde×3600 secondes=635040000 octets
+
+    Convertir en Mébioctets (Mio) :
+    Enfin, pour convertir cette taille en Mébioctets (Mio), nous divisons le nombre d'octets par le facteur de conversion pour les Mébioctets.
+    Taille en Meˊbioctets (Mio)=Taille en octets10242Taille en Meˊbioctets (Mio)=10242Taille en octets​
+    Taille en Meˊbioctets (Mio)=635040000 octets10242≈605.26 MioTaille en Meˊbioctets (Mio)=10242635040000 octets​≈605.26 Mio
+
+Donc, la taille mémoire d'une heure d'enregistrement en qualité CD (16 bits, 44,1 kHz, stéréo) est d'environ 605.26 Mébioctets (Mio)
+
+
+ Nombre de points capturés par intervalle de temps :
+
+La fréquence d'échantillonnage est de 16 kHz, ce qui signifie qu'il y a 16 000 échantillons par seconde (16 000 Hz).
+
+L'analyse se fait sur des fenêtres de 256 points avec un recouvrement sur la moitié, ce qui signifie que chaque nouvelle fenêtre avance de 128 points par rapport à la précédente.
+
+Le nombre de points capturés par intervalle de temps correspond au recouvrement entre les fenêtres. Dans ce cas, le recouvrement est de 128 points. Donc, à chaque nouvelle fenêtre, 128 nouveaux points sont capturés.
+
+b. Durée d'une fenêtre d'analyse :
+
+Pour déterminer la durée d'une fenêtre d'analyse en millisecondes, nous devons considérer le nombre d'échantillons par seconde et le nombre de points dans chaque fenêtre.
+
+La durée d'une fenêtre d'analyse est calculée en utilisant la formule :
+Dureˊe d’une feneˆtre (en ms)=Nombre de points par feneˆtreFreˊquence d’eˊchantillonnage×1000Dureˊe d’une feneˆtre (en ms)=Freˊquence d’eˊchantillonnageNombre de points par feneˆtre​×1000
+
+Ici, le nombre de points par fenêtre est 256 et la fréquence d'échantillonnage est 16 kHz (ou 16 000 Hz).
+Dureˊe d’une feneˆtre (en ms)=25616000×1000=16 msDureˊe d’une feneˆtre (en ms)=16000256​×1000=16 ms
+
+c. Nombre de fenêtres (vecteurs) pour un fichier de 10 minutes :
+
+Pour calculer le nombre de fenêtres à traiter pour un fichier de 10 minutes, nous devons d'abord convertir la durée du fichier en secondes, puis diviser cette durée par la durée d'une fenêtre en secondes.
+
+Durée d'un fichier de 10 minutes = 10 minutes = 10 × 60 secondes = 600 secondes.
+
+Nombre de fenêtres (vecteurs) à traiter :
+Nombre de feneˆtres=Dureˊe totale du fichier (en secondes)Dureˊe d’une feneˆtre (en secondes)Nombre de feneˆtres=Dureˊe d’une feneˆtre (en secondes)Dureˊe totale du fichier (en secondes)​
+Nombre de feneˆtres=6000.016=60016=37.5Nombre de feneˆtres=0.016600​=16600​=37.5
+
+Comme le nombre de fenêtres doit être un entier, nous arrondissons à l'entier le plus proche. Donc, environ 38 fenêtres seront traitées pour un fichier de 10 minutes.
+
+En résumé :
+
+    a. Nombre de points capturés par intervalle de temps : 128 points.
+    b. Durée d'une fenêtre d'analyse : 16 ms.
+    c. Nombre de fenêtres (vecteurs) à traiter pour un fichier de 10 minutes : environ 38 fenêtres.
+
+
