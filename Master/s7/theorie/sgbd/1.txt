@@ -1,0 +1,11 @@
+Début 
+	enregistrement voiture{ marque : chaine (20) , proprio : chaine (50) , im : entier(10) } v;
+	assignation (fv , <<voiture.txt>> ,   sequentielle);
+	ouverture(fv , lecture  , sequentiel);
+	while not eof(fv) : 
+		Début 
+		lecture ( fv , v);
+		si v.marque = <31xx31> alors afficher (v.proprietaire , v.im);
+		Fin 
+	fermeture(fv);
+FIn 
