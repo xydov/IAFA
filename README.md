@@ -1,3 +1,10 @@
-@@ IAFA 
+@@@@
+IAFA
+@@@ 
 
-Ce git rep contient tout mes TPs et avancements en Licence / Master IA à Toulouse III : paul sabatier
+
+Ce répertoire est Soumis à des restrictions d'utilisation. toute utilisation, reproduction ou distribution nécessite une autorisation préalable.
+
+Author : CHELGHAM NOUH
+
+Formation : Master IAFA, université Paul Sabatier.
