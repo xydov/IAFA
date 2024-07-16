@@ -1,0 +1,14 @@
+Inductive exp :=
+| Const (c: nat)
+| Call (op: nat->nat->nat) (e1 e2: exp)
+| Test (op: nat->nat->bool) (e1 e2: exp)
+| Ite (c e1 e2: exp)
+| Error
+| Try (e1 e2: exp).
+
+Definition le x y := x<=y.
+Check le.
+
+Inductive WT: exp -> Type -> Prop :=
+|Wcst: forall c (n:nat), WT (Const c) n
+|Wcall: forall e1 e2 (n:nat) op, (WT e1 n) -> (WT e2 n) -> WT (Call op e1 e2) n.

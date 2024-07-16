@@ -1,0 +1,54 @@
+2 dimensions of
+    color of 0..1,
+    ant of 0..5
+end
+
+none := 0
+north := 1
+west := 2
+south := 3
+east := 4
+
+// white: turn right
+// black: turn left
+left := 0
+right := 1
+
+// to west
+if [1, 0].ant != none then
+	if ([1,0].color = left & [1,0].ant = north)
+	|  ([1,0].color = right & [1,0].ant = south) then
+		[0,0].ant := west
+	end
+
+// to east
+elsif [-1,0].ant != none then
+	if ([-1,0].color = left & [-1,0].ant = south)
+	|  ([-1,0].color = right & [-1,0].ant = north) then
+		[0,0].ant := east
+	end
+
+// to north
+elsif [0,1].ant != none then
+	if ([0,1].color = left & [0,1].ant = east)
+	|  ([0,1].color = right & [0,1].ant = west) then
+		[0,0].ant := north
+	end
+
+// to south
+elsif [0, -1].ant != none then
+	if ([0,-1].color = left & [0,-1].ant = west)
+	|  ([0,-1].color = right & [0,-1].ant = east) then
+		[0,0].ant := south
+	end
+
+// ant here!
+elsif [0,0].ant != none then
+	if [0, 0].color = 0 then
+		[0, 0].color := 1
+	else
+		[0, 0].color := 0
+	end
+    [0, 0].ant := none
+end
+

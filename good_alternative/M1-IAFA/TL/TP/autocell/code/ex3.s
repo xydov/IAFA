@@ -1,0 +1,18 @@
+@ Type exercise 3 here
+	INVOKE 1, 2, 3
+	SETI R0, #0
+	SETI R4, #1
+L0:
+	GOTO_GE L3, R0, R3
+	SETI R1, #0
+L1:
+	GOTO_GE L2, R1, R2
+	INVOKE 4, 4, 0
+	INVOKE 3, 1, 0
+	ADD R1, R1, R4
+	GOTO L1
+L2:
+	ADD R0, R0, R4
+	GOTO L0
+L3:
+	STOP

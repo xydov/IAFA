@@ -1,0 +1,756 @@
+   0  $accept : %entry% $end
+
+   1  listing : commands EOF
+
+   2  commands : command
+   3           | command commands
+
+   4  command : META LABEL STR
+   5          | LABEL COLON
+   6          | STOP
+   7          | ADD REG COMMA REG COMMA REG
+   8          | SUB REG COMMA REG COMMA REG
+   9          | MUL REG COMMA REG COMMA REG
+  10          | DIV REG COMMA REG COMMA REG
+  11          | MOD REG COMMA REG COMMA REG
+  12          | SET REG COMMA REG
+  13          | SETI REG COMMA SHARP INT
+  14          | GOTO LABEL
+  15          | GOTO_EQ LABEL COMMA REG COMMA REG
+  16          | GOTO_NE LABEL COMMA REG COMMA REG
+  17          | GOTO_GT LABEL COMMA REG COMMA REG
+  18          | GOTO_GE LABEL COMMA REG COMMA REG
+  19          | GOTO_LT LABEL COMMA REG COMMA REG
+  20          | GOTO_LE LABEL COMMA REG COMMA REG
+  21          | CALL LABEL
+  22          | RETURN
+  23          | INVOKE INT COMMA INT COMMA INT
+
+  24  %entry% : '\001' listing
+
+state 0
+	$accept : . %entry% $end  (0)
+
+	'\001'  shift 1
+	.  error
+
+	%entry%  goto 2
+
+
+state 1
+	%entry% : '\001' . listing  (24)
+
+	ADD  shift 3
+	SUB  shift 4
+	MUL  shift 5
+	DIV  shift 6
+	MOD  shift 7
+	SET  shift 8
+	SETI  shift 9
+	GOTO  shift 10
+	GOTO_EQ  shift 11
+	GOTO_NE  shift 12
+	GOTO_LT  shift 13
+	GOTO_LE  shift 14
+	GOTO_GT  shift 15
+	GOTO_GE  shift 16
+	CALL  shift 17
+	RETURN  shift 18
+	INVOKE  shift 19
+	STOP  shift 20
+	LABEL  shift 21
+	META  shift 22
+	.  error
+
+	listing  goto 23
+	commands  goto 24
+	command  goto 25
+
+
+state 2
+	$accept : %entry% . $end  (0)
+
+	$end  accept
+
+
+state 3
+	command : ADD . REG COMMA REG COMMA REG  (7)
+
+	REG  shift 26
+	.  error
+
+
+state 4
+	command : SUB . REG COMMA REG COMMA REG  (8)
+
+	REG  shift 27
+	.  error
+
+
+state 5
+	command : MUL . REG COMMA REG COMMA REG  (9)
+
+	REG  shift 28
+	.  error
+
+
+state 6
+	command : DIV . REG COMMA REG COMMA REG  (10)
+
+	REG  shift 29
+	.  error
+
+
+state 7
+	command : MOD . REG COMMA REG COMMA REG  (11)
+
+	REG  shift 30
+	.  error
+
+
+state 8
+	command : SET . REG COMMA REG  (12)
+
+	REG  shift 31
+	.  error
+
+
+state 9
+	command : SETI . REG COMMA SHARP INT  (13)
+
+	REG  shift 32
+	.  error
+
+
+state 10
+	command : GOTO . LABEL  (14)
+
+	LABEL  shift 33
+	.  error
+
+
+state 11
+	command : GOTO_EQ . LABEL COMMA REG COMMA REG  (15)
+
+	LABEL  shift 34
+	.  error
+
+
+state 12
+	command : GOTO_NE . LABEL COMMA REG COMMA REG  (16)
+
+	LABEL  shift 35
+	.  error
+
+
+state 13
+	command : GOTO_LT . LABEL COMMA REG COMMA REG  (19)
+
+	LABEL  shift 36
+	.  error
+
+
+state 14
+	command : GOTO_LE . LABEL COMMA REG COMMA REG  (20)
+
+	LABEL  shift 37
+	.  error
+
+
+state 15
+	command : GOTO_GT . LABEL COMMA REG COMMA REG  (17)
+
+	LABEL  shift 38
+	.  error
+
+
+state 16
+	command : GOTO_GE . LABEL COMMA REG COMMA REG  (18)
+
+	LABEL  shift 39
+	.  error
+
+
+state 17
+	command : CALL . LABEL  (21)
+
+	LABEL  shift 40
+	.  error
+
+
+state 18
+	command : RETURN .  (22)
+
+	.  reduce 22
+
+
+state 19
+	command : INVOKE . INT COMMA INT COMMA INT  (23)
+
+	INT  shift 41
+	.  error
+
+
+state 20
+	command : STOP .  (6)
+
+	.  reduce 6
+
+
+state 21
+	command : LABEL . COLON  (5)
+
+	COLON  shift 42
+	.  error
+
+
+state 22
+	command : META . LABEL STR  (4)
+
+	LABEL  shift 43
+	.  error
+
+
+state 23
+	%entry% : '\001' listing .  (24)
+
+	.  reduce 24
+
+
+state 24
+	listing : commands . EOF  (1)
+
+	EOF  shift 44
+	.  error
+
+
+state 25
+	commands : command .  (2)
+	commands : command . commands  (3)
+
+	ADD  shift 3
+	SUB  shift 4
+	MUL  shift 5
+	DIV  shift 6
+	MOD  shift 7
+	SET  shift 8
+	SETI  shift 9
+	GOTO  shift 10
+	GOTO_EQ  shift 11
+	GOTO_NE  shift 12
+	GOTO_LT  shift 13
+	GOTO_LE  shift 14
+	GOTO_GT  shift 15
+	GOTO_GE  shift 16
+	CALL  shift 17
+	RETURN  shift 18
+	INVOKE  shift 19
+	STOP  shift 20
+	LABEL  shift 21
+	META  shift 22
+	EOF  reduce 2
+
+	commands  goto 45
+	command  goto 25
+
+
+state 26
+	command : ADD REG . COMMA REG COMMA REG  (7)
+
+	COMMA  shift 46
+	.  error
+
+
+state 27
+	command : SUB REG . COMMA REG COMMA REG  (8)
+
+	COMMA  shift 47
+	.  error
+
+
+state 28
+	command : MUL REG . COMMA REG COMMA REG  (9)
+
+	COMMA  shift 48
+	.  error
+
+
+state 29
+	command : DIV REG . COMMA REG COMMA REG  (10)
+
+	COMMA  shift 49
+	.  error
+
+
+state 30
+	command : MOD REG . COMMA REG COMMA REG  (11)
+
+	COMMA  shift 50
+	.  error
+
+
+state 31
+	command : SET REG . COMMA REG  (12)
+
+	COMMA  shift 51
+	.  error
+
+
+state 32
+	command : SETI REG . COMMA SHARP INT  (13)
+
+	COMMA  shift 52
+	.  error
+
+
+state 33
+	command : GOTO LABEL .  (14)
+
+	.  reduce 14
+
+
+state 34
+	command : GOTO_EQ LABEL . COMMA REG COMMA REG  (15)
+
+	COMMA  shift 53
+	.  error
+
+
+state 35
+	command : GOTO_NE LABEL . COMMA REG COMMA REG  (16)
+
+	COMMA  shift 54
+	.  error
+
+
+state 36
+	command : GOTO_LT LABEL . COMMA REG COMMA REG  (19)
+
+	COMMA  shift 55
+	.  error
+
+
+state 37
+	command : GOTO_LE LABEL . COMMA REG COMMA REG  (20)
+
+	COMMA  shift 56
+	.  error
+
+
+state 38
+	command : GOTO_GT LABEL . COMMA REG COMMA REG  (17)
+
+	COMMA  shift 57
+	.  error
+
+
+state 39
+	command : GOTO_GE LABEL . COMMA REG COMMA REG  (18)
+
+	COMMA  shift 58
+	.  error
+
+
+state 40
+	command : CALL LABEL .  (21)
+
+	.  reduce 21
+
+
+state 41
+	command : INVOKE INT . COMMA INT COMMA INT  (23)
+
+	COMMA  shift 59
+	.  error
+
+
+state 42
+	command : LABEL COLON .  (5)
+
+	.  reduce 5
+
+
+state 43
+	command : META LABEL . STR  (4)
+
+	STR  shift 60
+	.  error
+
+
+state 44
+	listing : commands EOF .  (1)
+
+	.  reduce 1
+
+
+state 45
+	commands : command commands .  (3)
+
+	.  reduce 3
+
+
+state 46
+	command : ADD REG COMMA . REG COMMA REG  (7)
+
+	REG  shift 61
+	.  error
+
+
+state 47
+	command : SUB REG COMMA . REG COMMA REG  (8)
+
+	REG  shift 62
+	.  error
+
+
+state 48
+	command : MUL REG COMMA . REG COMMA REG  (9)
+
+	REG  shift 63
+	.  error
+
+
+state 49
+	command : DIV REG COMMA . REG COMMA REG  (10)
+
+	REG  shift 64
+	.  error
+
+
+state 50
+	command : MOD REG COMMA . REG COMMA REG  (11)
+
+	REG  shift 65
+	.  error
+
+
+state 51
+	command : SET REG COMMA . REG  (12)
+
+	REG  shift 66
+	.  error
+
+
+state 52
+	command : SETI REG COMMA . SHARP INT  (13)
+
+	SHARP  shift 67
+	.  error
+
+
+state 53
+	command : GOTO_EQ LABEL COMMA . REG COMMA REG  (15)
+
+	REG  shift 68
+	.  error
+
+
+state 54
+	command : GOTO_NE LABEL COMMA . REG COMMA REG  (16)
+
+	REG  shift 69
+	.  error
+
+
+state 55
+	command : GOTO_LT LABEL COMMA . REG COMMA REG  (19)
+
+	REG  shift 70
+	.  error
+
+
+state 56
+	command : GOTO_LE LABEL COMMA . REG COMMA REG  (20)
+
+	REG  shift 71
+	.  error
+
+
+state 57
+	command : GOTO_GT LABEL COMMA . REG COMMA REG  (17)
+
+	REG  shift 72
+	.  error
+
+
+state 58
+	command : GOTO_GE LABEL COMMA . REG COMMA REG  (18)
+
+	REG  shift 73
+	.  error
+
+
+state 59
+	command : INVOKE INT COMMA . INT COMMA INT  (23)
+
+	INT  shift 74
+	.  error
+
+
+state 60
+	command : META LABEL STR .  (4)
+
+	.  reduce 4
+
+
+state 61
+	command : ADD REG COMMA REG . COMMA REG  (7)
+
+	COMMA  shift 75
+	.  error
+
+
+state 62
+	command : SUB REG COMMA REG . COMMA REG  (8)
+
+	COMMA  shift 76
+	.  error
+
+
+state 63
+	command : MUL REG COMMA REG . COMMA REG  (9)
+
+	COMMA  shift 77
+	.  error
+
+
+state 64
+	command : DIV REG COMMA REG . COMMA REG  (10)
+
+	COMMA  shift 78
+	.  error
+
+
+state 65
+	command : MOD REG COMMA REG . COMMA REG  (11)
+
+	COMMA  shift 79
+	.  error
+
+
+state 66
+	command : SET REG COMMA REG .  (12)
+
+	.  reduce 12
+
+
+state 67
+	command : SETI REG COMMA SHARP . INT  (13)
+
+	INT  shift 80
+	.  error
+
+
+state 68
+	command : GOTO_EQ LABEL COMMA REG . COMMA REG  (15)
+
+	COMMA  shift 81
+	.  error
+
+
+state 69
+	command : GOTO_NE LABEL COMMA REG . COMMA REG  (16)
+
+	COMMA  shift 82
+	.  error
+
+
+state 70
+	command : GOTO_LT LABEL COMMA REG . COMMA REG  (19)
+
+	COMMA  shift 83
+	.  error
+
+
+state 71
+	command : GOTO_LE LABEL COMMA REG . COMMA REG  (20)
+
+	COMMA  shift 84
+	.  error
+
+
+state 72
+	command : GOTO_GT LABEL COMMA REG . COMMA REG  (17)
+
+	COMMA  shift 85
+	.  error
+
+
+state 73
+	command : GOTO_GE LABEL COMMA REG . COMMA REG  (18)
+
+	COMMA  shift 86
+	.  error
+
+
+state 74
+	command : INVOKE INT COMMA INT . COMMA INT  (23)
+
+	COMMA  shift 87
+	.  error
+
+
+state 75
+	command : ADD REG COMMA REG COMMA . REG  (7)
+
+	REG  shift 88
+	.  error
+
+
+state 76
+	command : SUB REG COMMA REG COMMA . REG  (8)
+
+	REG  shift 89
+	.  error
+
+
+state 77
+	command : MUL REG COMMA REG COMMA . REG  (9)
+
+	REG  shift 90
+	.  error
+
+
+state 78
+	command : DIV REG COMMA REG COMMA . REG  (10)
+
+	REG  shift 91
+	.  error
+
+
+state 79
+	command : MOD REG COMMA REG COMMA . REG  (11)
+
+	REG  shift 92
+	.  error
+
+
+state 80
+	command : SETI REG COMMA SHARP INT .  (13)
+
+	.  reduce 13
+
+
+state 81
+	command : GOTO_EQ LABEL COMMA REG COMMA . REG  (15)
+
+	REG  shift 93
+	.  error
+
+
+state 82
+	command : GOTO_NE LABEL COMMA REG COMMA . REG  (16)
+
+	REG  shift 94
+	.  error
+
+
+state 83
+	command : GOTO_LT LABEL COMMA REG COMMA . REG  (19)
+
+	REG  shift 95
+	.  error
+
+
+state 84
+	command : GOTO_LE LABEL COMMA REG COMMA . REG  (20)
+
+	REG  shift 96
+	.  error
+
+
+state 85
+	command : GOTO_GT LABEL COMMA REG COMMA . REG  (17)
+
+	REG  shift 97
+	.  error
+
+
+state 86
+	command : GOTO_GE LABEL COMMA REG COMMA . REG  (18)
+
+	REG  shift 98
+	.  error
+
+
+state 87
+	command : INVOKE INT COMMA INT COMMA . INT  (23)
+
+	INT  shift 99
+	.  error
+
+
+state 88
+	command : ADD REG COMMA REG COMMA REG .  (7)
+
+	.  reduce 7
+
+
+state 89
+	command : SUB REG COMMA REG COMMA REG .  (8)
+
+	.  reduce 8
+
+
+state 90
+	command : MUL REG COMMA REG COMMA REG .  (9)
+
+	.  reduce 9
+
+
+state 91
+	command : DIV REG COMMA REG COMMA REG .  (10)
+
+	.  reduce 10
+
+
+state 92
+	command : MOD REG COMMA REG COMMA REG .  (11)
+
+	.  reduce 11
+
+
+state 93
+	command : GOTO_EQ LABEL COMMA REG COMMA REG .  (15)
+
+	.  reduce 15
+
+
+state 94
+	command : GOTO_NE LABEL COMMA REG COMMA REG .  (16)
+
+	.  reduce 16
+
+
+state 95
+	command : GOTO_LT LABEL COMMA REG COMMA REG .  (19)
+
+	.  reduce 19
+
+
+state 96
+	command : GOTO_LE LABEL COMMA REG COMMA REG .  (20)
+
+	.  reduce 20
+
+
+state 97
+	command : GOTO_GT LABEL COMMA REG COMMA REG .  (17)
+
+	.  reduce 17
+
+
+state 98
+	command : GOTO_GE LABEL COMMA REG COMMA REG .  (18)
+
+	.  reduce 18
+
+
+state 99
+	command : INVOKE INT COMMA INT COMMA INT .  (23)
+
+	.  reduce 23
+
+
+30 terminals, 5 nonterminals
+25 grammar rules, 100 states

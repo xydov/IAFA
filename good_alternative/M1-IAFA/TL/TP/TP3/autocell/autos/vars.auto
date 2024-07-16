@@ -1,0 +1,5 @@
+2 dimensions of 0..1 end
+
+x := [1, 1]
+y := x
+[0, 0] := y

@@ -1,0 +1,52 @@
+@ Type exercise 5 here
+	INVOKE 1, 2, 3 @ SIZE in R2 and R3
+	SETI R0, #0 @ row
+	SETI R4, #1
+    SETI R6, #0
+L0:
+	GOTO_GE L7, R0, R3
+	SETI R1, #0 @ col
+L1:
+	GOTO_GE L6, R1, R2
+	INVOKE 3, 1, 0
+    
+	INVOKE 5, 5, 0
+	GOTO_EQ L3, R5, R4
+
+    INVOKE 5, 5, 1
+	GOTO_EQ L4, R5, R4
+
+    INVOKE 5, 5, 2
+	GOTO_EQ L4, R5, R4
+
+    INVOKE 5, 5, 3
+	GOTO_EQ L4, R5, R4
+
+    INVOKE 5, 5, 4
+	GOTO_EQ L4, R5, R4
+
+    INVOKE 5, 5, 5
+	GOTO_EQ L4, R5, R4
+
+    INVOKE 5, 5, 6
+	GOTO_EQ L4, R5, R4
+
+    INVOKE 5, 5, 7
+	GOTO_EQ L4, R5, R4
+
+    INVOKE 5, 5, 8
+	GOTO_EQ L4, R5, R4
+    GOTO L5
+L3:
+    INVOKE 4, 6, 0
+    GOTO L5
+L4:
+    INVOKE 4, 5, 0
+L5:
+	ADD R1, R1, R4
+	GOTO L1
+L6:
+	ADD R0, R0, R4
+	GOTO L0
+L7:
+	STOP
