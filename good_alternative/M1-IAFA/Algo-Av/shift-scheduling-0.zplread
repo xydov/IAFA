@@ -1,0 +1,72 @@
+# lines starting with 'h' = horizon = number of days
+# lines starting with 'd' = durations of shifts
+# lines starting with 'c' = conflicts = shifts that cannot follow one another
+# lines starting with 's' = details of staff (working time, ...)
+# lines starting with 'm' = max. nb of shifts of each type that each employee can do
+# lines starting with 'f' = days off (staff, day)
+# lines starting with 'n' = shifts pref. off for each staff - with weight
+# lines starting with 'y' = shifts pref. on for each staff - with weight
+# lines starting with 'r' = requirements = nb staff required for each day/shift, with under / above penalties
+
+
+# horizon
+h 7
+
+# durations of shifts
+d D 120
+d E 120
+
+# forbiddenSeq or conflicts : c X Y 1 = shift Y cannot follow shift X (on the next day)
+c E D 1
+
+# staff
+# Person Tmax Tmin MaxConsShifts MinConsShifts MinConsOff MaxWeekEnds
+s A 1000 0 3 2 3 1
+s B 2000 480 2 2 2 1
+s C 6400 0 6 2 2 1
+
+# max shifts of each type
+# m X Y nb = staff X cannot do more than nb shifts of type Y
+m A D 5
+m B D 3
+m A E 3
+m B E 4
+m C D 7
+m C E 7
+
+				
+# days off
+# f X D 1 = staff X should be off on day D
+f A 1 1
+f B 0 1
+
+# shifts preferentially off
+# n X D S P = staff X prefers to be off on day D for shift S with penalty P
+n B 0 E 1
+n B 6 E 1
+
+# shifts preferentially on
+y A 2 D 2
+y A 3 D 2
+y B 0 D 3
+y B 1 D 3
+y B 2 D 3
+y B 3 D 3
+y B 4 D 3
+
+# Cover requirements
+# r D S N 100 1 = shift S on day D requires N persons
+r 0 D 1 100 1
+r 1 D 2 100 1
+r 2 D 1 100 1
+r 3 D 0 100 1
+r 4 D 1 100 1
+r 5 D 2 100 1
+r 6 D 1 100 1
+r 0 E 0 100 1
+r 1 E 0 100 1
+r 2 E 1 100 1
+r 3 E 1 100 1
+r 4 E 1 100 1
+r 5 E 0 100 1
+r 6 E 1 100 1

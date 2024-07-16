@@ -1,0 +1,49 @@
+I)Optimisation avec contraintes:
+L(x,y,lamda) = f(x,y) + lamda g(x,y)
+
+CN 1er ordre:
+    VL(x,y,lamda) = [0,0,0].T (x*,y*,lamda*)
+
+    qualification des contraintes:
+    {
+        g(x*,y*) = 0 -----> OK
+        Vg(x*,y*)!= [0,0].T
+    }
+
+CN 2eme ordre:
+det(V²L(x*,y*,lamda)) > 0 -> max
+det(V²L(x*,y*,lamda)) < 0 -> min
+
+II)Bayess (supervisé)
+1) proba à priori
+2) vraisemblance: p(x/wi)
+Sigma(i) = (1/ni) * Xc.T * Xc ou
+ni : le nombre des élément de la classe i
+Xc : la matrice centrée 
+
+3)likelyhood: log(vraisemblance)
+4)separateur:
+    gi(x) = log(p(x/wi)*p(wi)) = log(p(x/wi)) + log(p(wi))
+    g1(x) - g2(x) = 0 -separateur-
+
+
+III) Reduction de données ACP:
+    1) calculer Xc
+    2) calculer sigma
+    3) calculer les axes principaux: vectp associer aux plus grands valeurs propre
+    4) calculer les composants principaux: coef de projection de x sur les axes principaux
+        MatriceDeDonnées * vectPropre
+
+IV) Moindre carée:
+    données : .............
+    fonction f(x) = a*x + b
+    1) f interpole les 3 pts (calculer a b)
+    2) version analytique :
+        S:(a,b) -> Sum(f(xi) - yi*)²
+        a) CN 1er ordre: VS(a,b) = [0,0].T  ==> (a,b)
+        b) CN 2eme ordre: verifier que c'est un min ==> det(V²S(a,b)) < 0
+    3) version factorisé :
+        S(a,b) = T(beta) = ||A*beta - b||²
+        avec beta = [a,b].T
+        a) determiner A et b
+        b) resoudre beta = (A.T * A).inv * A.T * b

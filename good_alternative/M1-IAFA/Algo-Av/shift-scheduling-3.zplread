@@ -1,0 +1,243 @@
+# lines starting with 'h' = horizon = number of days
+# lines starting with 'd' = durations of shifts
+# lines starting with 'c' = conflits = shifts that cannot follow one another
+# lines starting with 's' = details of staff (working time, ...)
+# lines starting with 'm' = max. nb of shifts of each type that each employee can do
+# lines starting with 'f' = days off (staff, day)
+# lines starting with 'n' = shifts pref. off for each staff - with weight
+# lines starting with 'y' = shifts pref. on for each staff - with weight
+# lines starting with 'r' = requirements = nb staff required for each day/shift, with under / above penalties
+
+
+# horizon
+h 14
+
+# durées des shifts
+d E 480
+d D 480
+d L 480
+
+# conflits : c X Y = shift Y cannot follow shift X (on the next day)
+c D E 1
+c L E 1
+c L D 1
+
+# staff
+# Tmax Tmin MaxConsShifts MinConsShifts MinConsOff MaxWeekEnds
+s A 4320 3360 5 2 2 1
+s B 4320 3360 5 2 2 1
+s C 4320 3360 5 2 2 1
+s D 4320 3360 5 2 2 1
+s E 4320 3360 5 2 2 1
+s F 4320 3360 5 2 2 1
+s G 4320 3360 5 2 2 1
+s H 4320 3360 5 2 2 1
+s I 4320 3360 5 2 2 1
+s J 4320 3360 5 2 2 1
+s K 4320 3360 6 2 3 1
+s L 4320 3360 6 2 3 1
+s M 4320 3360 6 2 3 1
+s N 4320 3360 6 2 3 1
+s O 4320 3360 6 2 3 1
+s P 2160 1200 5 1 2 1
+s Q 2160 1200 5 1 2 1
+s R 2160 1200 5 1 2 1
+s S 2160 1200 5 1 2 1
+s T 2160 1200 5 1 2 1
+
+# max de shifts de chaque type
+# m X Y nb = staff X ne peut faire plus de nb shifts de type Y
+m A E 14
+m A D 14
+m A L 0
+m B E 14
+m B D 14
+m B L 5
+m C E 14
+m C D 14
+m C L 5
+m D E 14
+m D D 0
+m D L 5
+m E E 14
+m E D 0
+m E L 0
+m F E 14
+m F D 14
+m F L 0
+m G E 14
+m G D 14
+m G L 5
+m H E 14
+m H D 14
+m H L 5
+m I E 14
+m I D 14
+m I L 5
+m J E 14
+m J D 14
+m J L 0
+m K E 14
+m K D 14
+m K L 0
+m L E 0
+m L D 14
+m L L 5
+m M E 14
+m M D 14
+m M L 5
+m N E 0
+m N D 14
+m N L 5
+m O E 0
+m O D 14
+m O L 5
+m P E 14
+m P D 14
+m P L 2
+m Q E 0
+m Q D 14
+m Q L 2
+m R E 14
+m R D 14
+m R L 0
+m S E 14
+m S D 0
+m S L 2
+m T E 14
+m T D 14
+m T L 0
+
+# days off
+f A 0 1
+f B 6 1
+f C 1 1
+f D 0 1
+f E 3 1
+f F 0 1
+f G 4 1
+f H 12 1
+f I 6 1
+f J 2 1
+f K 4 1
+f L 4 1
+f M 1 1
+f N 8 1
+f O 3 1
+f P 2 1
+f Q 6 1
+f R 1 1
+f S 8 1
+f T 11 1
+
+# shfits preferentially off
+n A 9 E 2
+n A 10 E 2
+n A 11 E 2
+n A 12 E 2
+n A 13 E 2
+n C 2 L 3
+n H 7 E 2
+n H 8 E 2
+n H 9 E 2
+n H 10 E 2
+n M 3 E 2
+n M 4 E 2
+n M 5 E 2
+n M 6 E 2
+n M 7 E 2
+n O 13 D 3
+n P 5 L 3
+n P 6 L 3
+n P 7 L 3
+n P 8 L 3
+n Q 1 D 3
+n Q 2 D 3
+n Q 3 D 3
+n Q 4 D 3
+n Q 5 D 3
+
+# shfits preferentially on
+y B 0 D 1
+y B 1 D 1
+y B 2 D 1
+y B 3 D 1
+y B 4 D 1
+y D 7 E 2
+y D 8 E 2
+y D 12 E 2
+y D 13 E 2
+y F 8 E 2
+y F 12 D 3
+y F 13 D 3
+y G 10 L 2
+y G 11 L 2
+y H 2 E 1
+y H 3 E 1
+y I 0 D 2
+y I 1 D 2
+y I 2 D 2
+y J 8 D 2
+y J 9 D 2
+y K 6 D 3
+y K 7 D 3
+y K 8 D 3
+y K 9 D 3
+y K 10 D 3
+y L 8 L 2
+y N 3 L 1
+y N 4 L 1
+y N 5 L 1
+y N 6 L 1
+y O 5 D 1
+y O 6 D 1
+y O 7 D 1
+y S 1 E 3
+y S 6 E 2
+y S 7 E 2
+y T 3 E 3
+y T 4 E 3
+
+# Cover requirements
+r 0 E 2 100 1
+r 0 D 3 100 1
+r 0 L 3 100 1
+r 1 E 3 100 1
+r 1 D 4 100 1
+r 1 L 3 100 1
+r 2 E 3 100 1
+r 2 D 5 100 1
+r 2 L 3 100 1
+r 3 E 4 100 1
+r 3 D 5 100 1
+r 3 L 2 100 1
+r 4 E 2 100 1
+r 4 D 5 100 1
+r 4 L 4 100 1
+r 5 E 4 100 1
+r 5 D 6 100 1
+r 5 L 2 100 1
+r 6 E 6 100 1
+r 6 D 5 100 1
+r 6 L 3 100 1
+r 7 E 4 100 1
+r 7 D 6 100 1
+r 7 L 3 100 1
+r 8 E 3 100 1
+r 8 D 4 100 1
+r 8 L 2 100 1
+r 9 E 4 100 1
+r 9 D 5 100 1
+r 9 L 4 100 1
+r 10 E 2 100 1
+r 10 D 5 100 1
+r 10 L 2 100 1
+r 11 E 2 100 1
+r 11 D 3 100 1
+r 11 L 4 100 1
+r 12 E 2 100 1
+r 12 D 6 100 1
+r 12 L 5 100 1
+r 13 E 3 100 1
+r 13 D 5 100 1
+r 13 L 3 100 1

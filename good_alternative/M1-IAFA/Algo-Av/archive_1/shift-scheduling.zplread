@@ -1,0 +1,211 @@
+# lines starting with 'h' = horizon = number of days
+# lines starting with 'd' = durations of shifts
+# lines starting with 'c' = conflits = shifts that cannot follow one another
+# lines starting with 's' = details of staff (working time, ...)
+# lines starting with 'm' = max. nb of shifts of each type that each employee can do
+# lines starting with 'f' = days off (staff, day)
+# lines starting with 'n' = shifts pref. off for each staff - with weight
+# lines starting with 'y' = shifts pref. on for each staff - with weight
+# lines starting with 'r' = requirements = nb staff required for each day/shift, with under / above penalties
+
+
+# horizon
+h 28
+
+# durées des shifts
+d E 480
+d L 480
+
+# conflits : c X Y = shift Y cannot follow shift X (on the next day)
+c L E 1
+
+# staff
+# Tmax Tmin MaxConsShifts MinConsShifts MinConsOff MaxWeekEnds
+s A 8640 7560 5 2 2 2
+s B 8640 7560 5 2 2 2
+s C 8640 7560 5 2 2 2
+s D 8640 7560 5 2 2 2
+s E 8640 7560 5 2 2 2
+s F 8640 7560 5 2 2 2
+s G 8640 7560 5 2 2 2
+s H 8640 7560 5 2 2 2
+s I 8640 7560 5 2 2 2
+s J 8640 7560 5 2 2 2
+
+# max de shifts de chaque type
+# m X Y nb = staff X ne peut faire plus de nb shifts de type Y
+m A E 28
+m A L 28
+m B E 28
+m B L 0
+m C E 28
+m C L 28
+m D E 28
+m D L 28
+m E E 28
+m E L 28
+m F E 0
+m F L 28
+m G E 28
+m G L 28
+m H E 28
+m H L 28
+m I E 28
+m I L 28
+m J E 28
+m J L 28
+
+# days off
+f A 5 1
+f A 6 1
+f B 11 1
+f B 16 1
+f C 13 1
+f C 14 1
+f D 2 1
+f D 12 1
+f E 23 1
+f E 24 1
+f F 8 1
+f F 17 1
+f G 25 1
+f G 26 1
+f H 10 1
+f H 11 1
+f I 19 1
+f I 20 1
+f J 21 1
+f J 24 1
+
+# shfits preferentially on
+y A 7 L 2.6
+y A 8 L 2.6
+y A 23 L 1.3
+y B 7 E 2.6
+y B 8 E 2.6
+y B 9 E 2.6
+y B 25 E 2.6
+y C 1 E 3.9000000000000004
+y C 2 E 3.9000000000000004
+y C 6 E 3.9000000000000004
+y C 7 E 3.9000000000000004
+y C 8 E 3.9000000000000004
+y C 16 L 2.6
+y C 17 L 2.6
+y C 25 E 2.6
+y C 26 E 2.6
+y D 7 E 2.6
+y D 8 E 2.6
+y D 9 E 2.6
+y D 10 E 2.6
+y D 11 E 2.6
+y D 19 E 1.3
+y D 20 E 1.3
+y D 21 E 1.3
+y D 22 E 1.3
+y D 23 E 1.3
+y E 2 E 3.9000000000000004
+y E 3 E 3.9000000000000004
+y E 4 E 3.9000000000000004
+y E 5 E 3.9000000000000004
+y F 13 L 3.9000000000000004
+y F 14 L 3.9000000000000004
+y F 15 L 3.9000000000000004
+y G 6 L 3.9000000000000004
+y G 7 L 3.9000000000000004
+y G 8 L 3.9000000000000004
+y G 9 L 3.9000000000000004
+y G 10 L 3.9000000000000004
+y G 17 L 3.9000000000000004
+y G 18 L 3.9000000000000004
+y G 19 L 3.9000000000000004
+y H 13 E 3.9000000000000004
+y I 0 E 2.6
+y I 1 E 2.6
+y I 2 E 2.6
+y I 10 L 2.6
+y I 11 L 2.6
+y I 12 L 2.6
+y I 13 L 2.6
+y I 21 E 2.6
+y I 22 E 2.6
+y I 23 E 2.6
+
+# shfits preferentially off
+n B 17 E 3.9000000000000004
+n B 18 E 3.9000000000000004
+n E 16 L 3.9000000000000004
+n E 17 L 3.9000000000000004
+n E 18 L 3.9000000000000004
+n E 19 L 3.9000000000000004
+n E 20 L 3.9000000000000004
+n F 3 L 1.3
+n F 4 L 1.3
+n F 5 L 1.3
+n F 6 L 1.3
+n F 20 L 2.6
+n F 21 L 2.6
+n J 7 L 3.9000000000000004
+n J 8 L 3.9000000000000004
+n J 9 L 3.9000000000000004
+n J 13 L 1.3
+n J 14 L 1.3
+n J 15 L 1.3
+
+# Cover requirements
+r 0 E 2 130.0 1.3
+r 0 L 3 130.0 1.3
+r 1 E 3 130.0 1.3
+r 1 L 3 130.0 1.3
+r 2 E 4 130.0 1.3
+r 2 L 4 130.0 1.3
+r 3 E 2 130.0 1.3
+r 3 L 3 130.0 1.3
+r 4 E 2 130.0 1.3
+r 4 L 3 130.0 1.3
+r 5 E 2 130.0 1.3
+r 5 L 3 130.0 1.3
+r 6 E 2 130.0 1.3
+r 6 L 3 130.0 1.3
+r 7 E 3 130.0 1.3
+r 7 L 3 130.0 1.3
+r 8 E 4 130.0 1.3
+r 8 L 3 130.0 1.3
+r 9 E 3 130.0 1.3
+r 9 L 2 130.0 1.3
+r 10 E 2 130.0 1.3
+r 10 L 3 130.0 1.3
+r 11 E 4 130.0 1.3
+r 11 L 3 130.0 1.3
+r 12 E 2 130.0 1.3
+r 12 L 3 130.0 1.3
+r 13 E 5 130.0 1.3
+r 13 L 3 130.0 1.3
+r 14 E 3 130.0 1.3
+r 14 L 4 130.0 1.3
+r 15 E 5 130.0 1.3
+r 15 L 4 130.0 1.3
+r 16 E 4 130.0 1.3
+r 16 L 4 130.0 1.3
+r 17 E 3 130.0 1.3
+r 17 L 2 130.0 1.3
+r 18 E 2 130.0 1.3
+r 18 L 3 130.0 1.3
+r 19 E 6 130.0 1.3
+r 19 L 4 130.0 1.3
+r 20 E 2 130.0 1.3
+r 20 L 2 130.0 1.3
+r 21 E 4 130.0 1.3
+r 21 L 4 130.0 1.3
+r 22 E 3 130.0 1.3
+r 22 L 2 130.0 1.3
+r 23 E 5 130.0 1.3
+r 23 L 3 130.0 1.3
+r 24 E 4 130.0 1.3
+r 24 L 4 130.0 1.3
+r 25 E 4 130.0 1.3
+r 25 L 6 130.0 1.3
+r 26 E 4 130.0 1.3
+r 26 L 4 130.0 1.3
+r 27 E 4 130.0 1.3
+r 27 L 21 130.0 1.3

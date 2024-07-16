@@ -1,0 +1,45 @@
+diapo 12
+
+Calcul de G
+
+G(Match gagné) = 1 - (4/6)² - (2/6)²
+i = represente la variable
+k = nombre des cas possible
+
+///// match a domicile ///////
+G[feuilleG] = 1 - (2/3)² - (1/3)² = 4/9
+G[feuilleD] = 1 - (2/3)² - (1/3)² = 4/9
+
+G(match a domicile) = (3/6) * G[feuilleG] + (3/6) * G[feuilleD] = 24/36 = 4/6 pas de progression
+
+
+///// Ciel ////////
+
+G[feuilleSol] = 1 - (2/3)² - (1/3)² = 4/9
+G[feuillePlu] = 1 - (1/2)² - (1/2)² = 1/2
+G[feuilleCouv] = 1 - 1 = 0
+
+G(Ciel) = (3/6) * G[feuilleSol] + (2/6) * G[feuillePlu] + (1/6) * G[feuilleCouv] = 2/9 + 2/12 = 0.38888889
+
+
+///// Match Préc Gagné /////// 
+
+G[feuilleG] = 1 - 1 = 0
+G[feuilleD) = 1 - (1/3)² - (2/3)² = 4/9
+
+G(Match pré gagné) = (3/6) * G[feuilleG] + (3/6) * G[feuilleD] = 0 + 2/9 = 0.22222222
+
+
+
+proba a posteriori
+proba  vraisemblance "liklihood"
+
+sigma-¹ : matrice cov inversé
+log g¹(x) = log(p(x|c1) * p(c1) )
+          = log( (1 / (2pi racine(det(sigma-¹)))) ) + log( exp( (-1/2) (x - m¹)^t (sigma-¹) (x - m¹)) ) + log(p(c1))
+          -(1/2) * log(2pi)  - (1/2) log(det(sigma-¹)) - (1/2) * (x - m¹)^t (sigma-¹) (x - m¹) + log(p(c1))
+          
+ 
+          
+
+

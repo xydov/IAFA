@@ -1,0 +1,557 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Autocell V1.0</title>
+
+	<style type="text/css" media="screen">
+		#console {
+			width: 98%;
+			height: 16em;
+			background-color: #FFFFE0;
+			padding: .5em .5em .5em .5em;
+			overflow: scroll;
+		}
+
+		.part {
+			border-style: none none solid none;
+			margin-top: 1em;
+		}
+		.title {
+			color: blue;
+			text-shadow: 2px 2px 2px #AAAAAA;
+			font-weight: bold;
+			font-size: x-large;
+			margin-bottom: 1em;
+		}
+		.title span {
+			font-size: medium;
+			color: black;
+			text-shadow: none;
+		}
+		.column {
+			float: left;
+			width: 45%;
+		}
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		#map {
+			margin-right: 2em;
+		}
+		#disasm {
+			margin-left: 2em;
+		}
+		#quads {
+			height: 20em;
+			overflow-y: scroll;
+		}
+		#canvas-container {
+			overflow: scroll;
+			width: 100%;
+			height: 40%;
+		}
+		#quads div span {
+			vertical-align: 25%;			
+			font-size: 50%;
+			color: #EEEEEE;
+			background-color: white;
+			font-weight: bold;
+			margin-right: .5em;
+			padding: 2px;
+			border-radius: 6px;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10 and IE 11 */
+			user-select: none; /* standard */
+		}
+		#regs {
+			margin-top: .5em;
+			display: none;
+		}
+		#regs div {
+			display: inline-block;
+		}
+		#regs div span {
+			padding: 2px;
+			border: 1px solid;
+			width: 8em;
+			margin-left: 1em;
+			margin-right: 1em;
+			display: inline-block;
+			text-align: right;
+			border: 1px solid;
+		}
+		.hide {
+			width: 1em;
+			height: 1em;
+			display: inline-block;
+			text-align: center;
+			border: 1px solid;
+			font-weight: bold;
+			margin-bottom: 2px;
+			margin-right: 4px;
+			font-size: small;
+			-webkit-user-select: none; /* Safari */
+			-ms-user-select: none; /* IE 10 and IE 11 */
+			user-select: none; /* standard */
+			padding-bottom: 4px;
+		}
+	</style>
+
+	<script>
+
+		const exec_buttons = [
+			"run-but",
+			"reset-but",
+			"next-but",
+			"step-but",
+			"cont-but"
+		]
+
+		// style
+		const select_color = "lightcyan";
+		const select_none = "#FFFFFF";
+		const select_cell = "cyan";
+		const bp_enable = "red";
+		const bp_disable = "white";
+		const bg_color = "#CCCCCC";
+		const reg_bg = "#FFFFFF";
+		const reg_changed = "pink";
+
+		// configuration
+		var box_size = 20;
+		var colors = [
+			"#FFFFFF",
+			"#000000"
+		];
+		var quantum = 250;
+
+		// state
+		var map_info;
+		var map;
+		var running = false;
+		var select_line = -1;
+		var old_x = -1;
+		var old_y = -1;
+		var ips = []
+		var regs_hidden = false;
+
+		function get_map_info() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					map_info = JSON.parse(xhttp.responseText);
+					canvas = document.getElementById("map-canvas");
+					canvas.width = box_size * map_info.width + 1;
+					canvas.height = box_size * map_info.height + 1;
+					write_console("size: " + map_info.width + "x" + map_info.height);
+				}
+			}
+			xhttp.open("GET", "map", true);
+			xhttp.send();			
+		}
+
+		function get_colors() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					colors = JSON.parse(xhttp.responseText);
+				}
+			}
+			xhttp.open("GET", "colors", true);
+			xhttp.send();			
+		}
+
+		function in_map(x, y) {
+			return x >= 0 && x < map_info.width
+				&& y >= 0 && y < map_info.height;
+		}
+
+		function clip(x1, y1, x2, y2) {
+			x1 = Math.max(0, x1);
+			y1 = Math.max(0, y1);
+			x2 = Math.min(x2, map_info.width-1);
+			y2 = Math.min(y2, map_info.height-1);
+			return {x: x1, y: y1, w: x2-x1+1, h: y2-y1+1 };
+		}
+
+		function draw_cell(x, y, color) {
+			ctx.fillStyle = color;
+			ctx.fillRect(x * box_size + 1, y * box_size + 1, box_size - 1, box_size - 1);
+		}
+
+		function draw_border(x, y, color) {
+			ctx.strokeStyle = color;
+			ctx.strokeRect(x * box_size, y * box_size, box_size, box_size);
+		}
+
+		function redraw_cell(x, y, w, h) {
+
+			// re-display the back
+			ctx.fillStyle = bg_color;
+			ctx.fillRect(x * box_size, y * box_size, w * box_size + 1, h * box_size + 1);
+			for(var i = 0; i < w; i++)
+				for(var j = 0; j < h; j++)
+					draw_cell(x + i, y + j, colors[map[y + j][x + i]]);
+
+			// redisplay IPs
+			x -= 1;
+			y -= 1;
+			w += 2;
+			h += 2;
+			for(var ip of ips)
+				if(x <= ip.x && y <= ip.y && ip.x < x+w && ip.y < y+h)
+					draw_border(ip.x, ip.y, bp_enable);
+
+			// redisplay current cell
+			if(x <= old_x && y <= old_y && old_x < x+w && old_y < y+h)
+				draw_border(old_x, old_y, select_cell);
+		}
+
+		function clear_border(x, y) {
+			r = clip(x-1, y-1, x+1, y+1);
+			redraw_cell(r.x, r.y, r.w, r.h);
+		}
+
+		function draw_map() {
+			canvas = document.getElementById("map-canvas");
+			ctx = canvas.getContext("2d");
+			redraw_cell(0, 0, map_info.width, map_info.height);
+		}
+
+		function get_map() {
+
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					map = JSON.parse(xhttp.responseText);
+					draw_map();
+				}
+			}
+			xhttp.open("GET", "state", true);
+			xhttp.send();						
+		}
+
+		function disassemble() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					var qs = JSON.parse(xhttp.responseText);
+					node = document.getElementById("quads");
+					node.innerHTML = "";
+					var i = 0;
+					for(const q of qs) {
+						node.innerHTML += "<div><span ondblclick=\"javascript:set_bp("+i+")\">B</span>" + q + "</div>";
+						i++;
+					}
+				}
+			}
+			xhttp.open("GET", "quads", true);
+			xhttp.send();
+		}
+
+		function write_console(t) {
+			document.getElementById("console").innerHTML += "<div>" + t + "</div>";
+			console.log(t);
+		}
+
+		function update_regs() {
+			if(regs_hidden)
+				return;
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					var ans = JSON.parse(xhttp.responseText);
+					var regs = document.getElementById("regs");
+					for(var i = regs.children.length; i < ans.length; i++) {
+						div = document.createElement("div");
+						div.innerHTML = "R" + i + "<span>0</span>";
+						regs.appendChild(div);		
+					}
+					for(var i = 0; i < ans.length; i++) {
+						span = regs.children[i].getElementsByTagName("span")[0];
+						val = "" + ans[i];
+						if(val == span.innerHTML)
+							span.style.backgroundColor = reg_bg;
+						else {
+							span.innerHTML = val;
+							span.style.backgroundColor = reg_changed;
+						}
+					}
+				}
+			}
+			xhttp.open("GET", "regs", true);
+			xhttp.send();			
+		}
+
+		function set_bp(a) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					var ans = JSON.parse(xhttp.responseText);
+					node = document.getElementById("quads");
+					if(ans)
+						node.children[a].children[0].style.backgroundColor = bp_enable;
+					else
+						node.children[a].children[0].style.backgroundColor = bp_disable;
+				}
+			}
+			xhttp.open("GET", "bp?num=" + a, true);
+			xhttp.send();
+		}
+
+		function before_unload() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+				}
+			}
+			xhttp.open("GET", "quit", true);
+			xhttp.send();
+			now = (new Date()).getTime();
+			while(((new Date()).getTime() - now) < 250);
+		}
+		
+		function do_quit() {
+			write_console("Quitting!")
+			window.open('','_self').close();
+		}
+
+		function update_after_exec(ans) {
+
+			// update console
+			for(const m of ans.messages)
+				write_console(m);
+
+			// update map and current cell
+			if(ans.status == 1) {
+				old_x = ans.x;
+				old_y = ans.y;
+				get_map();
+				draw_map();
+				document.getElementById("gen").innerHTML = ans.gen;
+			}
+			else if(old_x != ans.x || old_y != ans.y) {
+				var xp = old_x;
+				var yp = old_y;
+				old_x = ans.x;
+				old_y = ans.y;
+				if(in_map(xp, yp))
+					clear_border(xp, yp);
+				if(in_map(old_x, old_y))
+					draw_border(old_x, old_y, select_cell);
+			}
+
+			// update the current line
+			dnode = document.getElementById("quads");
+			if(select_line >= 0)
+				dnode.childNodes[select_line].style.backgroundColor = select_none;
+			select_line = ans.pc;
+			dnode.childNodes[select_line].style.backgroundColor = select_color;
+
+			// update registers
+			update_regs();
+		}
+
+		function do_next() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					var ans = JSON.parse(xhttp.responseText);
+					update_after_exec(ans);
+				}
+			}
+			xhttp.open("GET", "next", true);
+			xhttp.send();			
+		}
+
+		function do_step() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					var ans = JSON.parse(xhttp.responseText);
+					update_after_exec(ans);
+				}
+			}
+			xhttp.open("GET", "step", true);
+			xhttp.send();			
+		}
+
+		function do_reset() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4 && this.status == 200) {
+					var ans = JSON.parse(xhttp.responseText);
+					update_after_exec(ans);
+				}
+			}
+			xhttp.open("GET", "reset", true);
+			xhttp.send();			
+		}
+
+		function again() {
+			do_next();
+			if(running)
+				setTimeout(again, quantum);
+		}
+
+		function enable_buttons(except, dis, label = "") {
+			for(var b of exec_buttons) {
+				if(b != except)
+					document.getElementById(b).disabled = dis;
+				else if(dis)
+					document.getElementById(b).value = "Stop";
+				else
+					document.getElementById(b).value = label;
+			}
+		}
+
+		function do_run() {
+			if(running) {
+				running = false
+				enable_buttons("run-but", false, "Run")
+			}
+			else {
+				running = true;
+				enable_buttons("run-but", true);
+				again();
+			}
+		}
+
+		function complete_continue() {
+			running = false;
+			enable_buttons("cont-but", false, "Continue");
+		}
+
+		function repeat_continue() {
+			if(!running) {
+				complete_continue();
+				return;
+			}
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if(this.readyState == 4) {
+					if(this.status != 200)
+						complete_continue();
+					else {
+						var ans = JSON.parse(xhttp.responseText);
+						update_after_exec(ans);
+						if(ans.status != 2)
+							repeat_continue();
+						else
+							complete_continue();
+					}
+				}
+			}
+			xhttp.timeout = 400;
+			xhttp.open("GET", "continue", true);
+			xhttp.send();			
+		}
+
+		function do_continue() {
+			if(running)
+				running = false;
+			else {
+				running = true;
+				enable_buttons("cont-but", true);
+				repeat_continue();				
+			}
+		}
+
+		function dblclick_map(event) {
+			var x = Math.trunc((event.offsetX - 1) / box_size);
+			var y = Math.trunc((event.offsetY - 1) / box_size);
+			if(in_map(x, y)) {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if(this.readyState == 4 && this.status == 200) {
+						var ans = JSON.parse(xhttp.responseText);
+						if(ans) {
+							draw_border(x, y, bp_enable);
+							ips.push({x: x, y: y});
+						}
+						else {
+							for(var i in ips)
+								if(ips[i].x == x && ips[i].y == y)
+									break;
+							ips.splice(i, 1);
+							clear_border(x, y);
+						}
+					}
+				}
+				xhttp.open("GET", "ip?x=" + x + "&y=" + y, true);
+				xhttp.send();
+			}
+		};
+
+	function show_regs() {
+		regs = document.getElementById("regs");
+		but = document.getElementById("show-regs");
+		if(regs_hidden) {
+			regs_hidden = false;
+			regs.style.display = "flow";
+			but.innerHTML = "-";
+			update_regs();
+		}
+		else {
+			regs_hidden = true;
+			regs.style.display = "none";			
+			but.innerHTML = "+";
+		}
+		
+	}
+
+	</script>
+
+</head>
+<body onbeforeunload="before_unload()">
+
+	<div class="title">AutoCell V1.0 <span>Cellular Automata Simulator</span></div>
+
+	<form>
+		<input type="button" value="Reset" onclick="javascript:do_reset();"  id="reset-but"/>
+		<input type="button" value="Next" onclick="javascript:do_next();" id="next-but"/>
+		<input type="button" value="Step" onclick="javascript:do_step();" id="step-but"/>
+		<input type="button" value="Continue" onclick="javascript:do_continue();" id="cont-but"/>
+		<input type="button" value="Run" onclick="javascript:do_run();" id="run-but"/>
+		<input type="button" value="About" onclick="javascript:do_about();"/>
+		<input type="button" value="Quit" onclick="javascript:do_quit();"/>
+	</form>
+
+	<div class="row">
+		<div id="map" class="column">
+			<div class="part">Map</div>
+			<div class="status">Generation: <span id="gen">0</span></div>
+			<div id="canvas-container">
+				<canvas id="map-canvas">
+			</div>
+			</canvas>
+		</div>
+		<div id="disasm" class="column">
+			<div class="part">Quadruplets</div>
+			<div id="quads">
+			</div>
+		</div>
+	</div>
+
+	<div class="part"><span id="show-regs" class="hide" onclick="javascript:show_regs();">+</span>Registers</div>
+	<div id="regs">
+		<div>R0<span>0</span></div><div>R1<span>0</span></div>
+	</div>
+
+	<div class="part">Console</div>
+	<div id="console">
+		<div>Welcome in AutoCell!</div>	
+	</div>
+
+	<script>
+		get_map_info();
+		get_colors();
+		get_map();
+		disassemble();
+		document.getElementById("map-canvas").addEventListener("dblclick", dblclick_map)
+	</script>
+
+</body>
+</html>
