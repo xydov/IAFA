@@ -31,10 +31,17 @@ ce Répertoire reste tout de meme une proprieté privé et donc veuillez me dema
 - [] Retrieve the exams from moodle at the end of the uni year
 
 ## Installation
+
 ```bash
+
 # Clone the repository
+  
+```
 git clone https://github.com/xydov/IAFA.git
-cd IAFA
+
+```
+
+```cd IAFA
 
 
 
