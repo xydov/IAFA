@@ -30,18 +30,15 @@ ce Répertoire reste tout de meme une proprieté privé et donc veuillez me dema
 - [] Keep updating the master2 directory
 - [] Retrieve the exams from moodle at the end of the uni year
 
-## Installation
 
-```bash
 
 # Clone the repository
   
-```
-git clone https://github.com/xydov/IAFA.git
 
-```
 
-```cd IAFA
+```git clone https://github.com/xydov/IAFA.git
+
+
 
 
 
