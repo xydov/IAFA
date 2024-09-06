@@ -1,0 +1,9 @@
+quill bot pour les résumés.
+PARAPHRASING
+AI DETECTOR 
+PLAGIAT CHECK
+GRAMMAR 
+
+
+
+premiere tache : réperer les entité ( noms propres ect)
