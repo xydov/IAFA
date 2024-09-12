@@ -1,0 +1,304 @@
+
+@misc{yin_survey_2023,
+	title = {A {Survey} on {Multimodal} {Large} {Language} {Models}},
+	url = {http://arxiv.org/abs/2306.13549},
+	abstract = {Multimodal Large Language Model (MLLM) recently has been a new rising research hotspot, which uses powerful Large Language Models (LLMs) as a brain to perform multimodal tasks. The surprising emergent capabilities of MLLM, such as writing stories based on images and OCR-free math reasoning, are rare in traditional methods, suggesting a potential path to artificial general intelligence. In this paper, we aim to trace and summarize the recent progress of MLLM. First of all, we present the formulation of MLLM and delineate its related concepts. Then, we discuss the key techniques and applications, including Multimodal Instruction Tuning (M-IT), Multimodal In-Context Learning (M-ICL), Multimodal Chain of Thought (M-CoT), and LLM-Aided Visual Reasoning (LAVR). Finally, we discuss existing challenges and point out promising research directions. In light of the fact that the era of MLLM has only just begun, we will keep updating this survey and hope it can inspire more research. An associated GitHub link collecting the latest papers is available at https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models.},
+	urldate = {2024-02-26},
+	publisher = {arXiv},
+	author = {Yin, Shukang and Fu, Chaoyou and Zhao, Sirui and Li, Ke and Sun, Xing and Xu, Tong and Chen, Enhong},
+	month = jun,
+	year = {2023},
+	note = {arXiv:2306.13549 [cs]},
+	keywords = {Références de base},
+	annote = {Cette étude propose une enquête sur les MLLM. Elle décrit les principales techniques et applications telles que l'Ajustement Multimodal des Instructions (M-IT), l'Apprentissage Multimodal en Contexte (M-ICL), la Chaîne de Pensée Multimodale (M-CoT) et le Raisonnement Visuel Assisté par LLM (LAVR). L'enquête identifie les défis actuels et suggère des orientations de recherche prometteuses.
+},
+	file = {arXiv.org Snapshot:/home/hajar/Zotero/storage/TGEM54WN/2306.html:text/html;Full Text PDF:/home/hajar/Zotero/storage/S5S2SPP7/Yin et al. - 2023 - A Survey on Multimodal Large Language Models.pdf:application/pdf},
+}
+
+@inproceedings{kiros_multimodal_2014,
+	title = {Multimodal {Neural} {Language} {Models}},
+	url = {https://proceedings.mlr.press/v32/kiros14.html},
+	abstract = {We introduce two multimodal neural language models: models of natural language that can be conditioned on other modalities. An image-text multimodal neural language model can be used to retrieve images given complex sentence queries, retrieve phrase descriptions given image queries, as well as generate text conditioned on images. We show that in the case of image-text modelling we can jointly learn word representations and image features by training our models together with a convolutional network. Unlike many of the existing methods, our approach can generate sentence descriptions for images without the use of templates, structured prediction, and/or syntactic trees. While we focus on image-text modelling, our algorithms can be easily applied to other modalities such as audio.},
+	language = {en},
+	urldate = {2024-02-26},
+	booktitle = {Proceedings of the 31st {International} {Conference} on {Machine} {Learning}},
+	publisher = {PMLR},
+	author = {Kiros, Ryan and Salakhutdinov, Ruslan and Zemel, Rich},
+	month = jun,
+	year = {2014},
+	note = {ISSN: 1938-7228},
+	keywords = {Références de base},
+	pages = {595--603},
+	annote = {Cette étude présente des modèles de langage neuronal multimodaux capables d'intégrer différents types de modalités en plus du langage naturel. Les modèles proposés permettent notamment de récupérer des images en fonction de requêtes de phrases complexes, de récupérer des descriptions de phrases à partir de requêtes d'images, et de générer du texte conditionné par des images. Les résultats montrent une amélioration significative par rapport aux approches existantes en matière de génération de phrases. L'étude ouvre la voie à de futures recherches visant à améliorer la syntaxe et à intégrer des algorithmes de détection pour des améliorations supplémentaires.
+
+},
+	file = {Full Text PDF:/home/hajar/Zotero/storage/MKUULL7P/Kiros et al. - 2014 - Multimodal Neural Language Models.pdf:application/pdf},
+}
+
+@misc{driess_palm-e_2023,
+	title = {{PaLM}-{E}: {An} {Embodied} {Multimodal} {Language} {Model}},
+	shorttitle = {{PaLM}-{E}},
+	url = {http://arxiv.org/abs/2303.03378},
+	doi = {10.48550/arXiv.2303.03378},
+	abstract = {Large language models excel at a wide range of complex tasks. However, enabling general inference in the real world, e.g., for robotics problems, raises the challenge of grounding. We propose embodied language models to directly incorporate real-world continuous sensor modalities into language models and thereby establish the link between words and percepts. Input to our embodied language model are multi-modal sentences that interleave visual, continuous state estimation, and textual input encodings. We train these encodings end-to-end, in conjunction with a pre-trained large language model, for multiple embodied tasks including sequential robotic manipulation planning, visual question answering, and captioning. Our evaluations show that PaLM-E, a single large embodied multimodal model, can address a variety of embodied reasoning tasks, from a variety of observation modalities, on multiple embodiments, and further, exhibits positive transfer: the model benefits from diverse joint training across internet-scale language, vision, and visual-language domains. Our largest model, PaLM-E-562B with 562B parameters, in addition to being trained on robotics tasks, is a visual-language generalist with state-of-the-art performance on OK-VQA, and retains generalist language capabilities with increasing scale.},
+	urldate = {2024-02-26},
+	publisher = {arXiv},
+	author = {Driess, Danny and Xia, Fei and Sajjadi, Mehdi S. M. and Lynch, Corey and Chowdhery, Aakanksha and Ichter, Brian and Wahid, Ayzaan and Tompson, Jonathan and Vuong, Quan and Yu, Tianhe and Huang, Wenlong and Chebotar, Yevgen and Sermanet, Pierre and Duckworth, Daniel and Levine, Sergey and Vanhoucke, Vincent and Hausman, Karol and Toussaint, Marc and Greff, Klaus and Zeng, Andy and Mordatch, Igor and Florence, Pete},
+	month = mar,
+	year = {2023},
+	note = {arXiv:2303.03378 [cs]},
+	keywords = {Références de base},
+	annote = {L'étude présente PaLM-E, un modèle de langage incarné conçu pour combler le fossé entre le langage et la perception du monde réel dans les applications robotiques. En intégrant des entrées multi-modales et en se formant sur des tâches diverses, PaLM-E démontre sa compétence dans les tâches de raisonnement incarné, atteignant des performances de pointe à la fois dans la planification de la manipulation robotique et dans les tâches générales de vision-langage telles que la réponse à des questions visuelles et la légende d'images. La capacité du modèle à transférer efficacement les connaissances entre les domaines et les embodiments met en lumière son potentiel pour faire progresser la compréhension du langage incarné et l'intelligence robotique.
+},
+	file = {arXiv Fulltext PDF:/home/hajar/Zotero/storage/NU22DASF/Driess et al. - 2023 - PaLM-E An Embodied Multimodal Language Model.pdf:application/pdf;arXiv.org Snapshot:/home/hajar/Zotero/storage/E4NACYX4/2303.html:text/html},
+}
+
+@misc{zhao_survey_2023,
+	title = {A {Survey} of {Large} {Language} {Models}},
+	url = {http://arxiv.org/abs/2303.18223},
+	doi = {10.48550/arXiv.2303.18223},
+	abstract = {Language is essentially a complex, intricate system of human expressions governed by grammatical rules. It poses a significant challenge to develop capable AI algorithms for comprehending and grasping a language. As a major approach, language modeling has been widely studied for language understanding and generation in the past two decades, evolving from statistical language models to neural language models. Recently, pre-trained language models (PLMs) have been proposed by pre-training Transformer models over large-scale corpora, showing strong capabilities in solving various NLP tasks. Since researchers have found that model scaling can lead to performance improvement, they further study the scaling effect by increasing the model size to an even larger size. Interestingly, when the parameter scale exceeds a certain level, these enlarged language models not only achieve a significant performance improvement but also show some special abilities that are not present in small-scale language models. To discriminate the difference in parameter scale, the research community has coined the term large language models (LLM) for the PLMs of significant size. Recently, the research on LLMs has been largely advanced by both academia and industry, and a remarkable progress is the launch of ChatGPT, which has attracted widespread attention from society. The technical evolution of LLMs has been making an important impact on the entire AI community, which would revolutionize the way how we develop and use AI algorithms. In this survey, we review the recent advances of LLMs by introducing the background, key findings, and mainstream techniques. In particular, we focus on four major aspects of LLMs, namely pre-training, adaptation tuning, utilization, and capacity evaluation. Besides, we also summarize the available resources for developing LLMs and discuss the remaining issues for future directions.},
+	urldate = {2024-02-28},
+	publisher = {arXiv},
+	author = {Zhao, Wayne Xin and Zhou, Kun and Li, Junyi and Tang, Tianyi and Wang, Xiaolei and Hou, Yupeng and Min, Yingqian and Zhang, Beichen and Zhang, Junjie and Dong, Zican and Du, Yifan and Yang, Chen and Chen, Yushuo and Chen, Zhipeng and Jiang, Jinhao and Ren, Ruiyang and Li, Yifan and Tang, Xinyu and Liu, Zikang and Liu, Peiyu and Nie, Jian-Yun and Wen, Ji-Rong},
+	month = nov,
+	year = {2023},
+	note = {arXiv:2303.18223 [cs]},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language},
+	annote = {Dans ce document, les auteurs présentent une enquête détaillée sur les modèles de langage de grande envergure. Ils examinent l’évolution récente de ces modèles, en mettant en évidence leurs applications, leurs architectures, leurs méthodes d’entraînement et d’évaluation, ainsi que les défis et les opportunités associés. Les auteurs de l’article ont pour objectif d’effectuer une analyse approfondie de l’état actuel des modèles de langage de grande envergure. Pour ce faire, ils ont procédé à une recherche systématique des publications pertinentes dans ce domaine. Les méthodes de recherche comprennent la collecte de données à partir de sources telles que des articles académiques, des rapports techniques et des publications de conférences, ainsi que l’analyse critique de ces données pour identifier les tendances, les innovations et les défis dans le domaine des modèles de langage. L’étude couvre un large éventail de sujets liés aux modèles de langage de grande envergure, notamment leurs applications dans des domaines tels que la traduction automatique, la génération de texte, la compréhension du langage naturel et l’analyse de sentiment. Les auteurs examinent également les architectures de modèle les plus couramment utilisées, telles que les réseaux de neurones transformer, ainsi que les méthodes d’entraînement et d’évaluation des modèles de langage.
+
+Cette enquête offre une vue d’ensemble complète et actualisée de l’état de la recherche sur les modèles de langage de grande envergure. Les résultats de cette étude sont utiles pour les chercheurs, les praticiens et les décideurs dans le domaine du traitement automatique du langage naturel et de l’intelligence artificielle, car ils fournissent des informations précieuses sur les tendances actuelles, les meilleures pratiques et les défis à venir dans ce domaine en pleine croissance. Cette enquête sera d’ailleurs régulièrement mise à jour par les auteurs, permettant un état de l’art à jour des larges modèles de données. Cette mise à jour continue garantira que les lecteurs auront accès aux dernières avancées et découvertes dans ce domaine en constante évolution, ce qui en fera une ressource précieuse pour tous ceux qui s’intéressent aux modèles de langage de grande envergure. Bien que l’étude soit exhaustive, elle présente certaines limitations. Par exemple, la sélection des études examinées peut ne pas être exhaustive, ce qui pourrait limiter la représentativité des résultats. De plus, cette étude se concentre principalement sur une vue d’ensemble des modèles de langage de grande envergure, sans plonger dans les détails de leur mise en œuvre concrète. Par conséquent, elle pourrait ne pas fournir des informations approfondies sur les défis spécifiques liés à la mise en œuvre pratique de ces modèles dans différents contextes d’application. Une analyse plus détaillée des aspects techniques et des considérations pratiques de l’utilisation des modèles de langage de grande envergure pourrait être nécessaire pour les chercheurs et les praticiens qui cherchent à les mettre en œuvre dans des projets concrets. En conclusion, les auteurs mettent en évidence l’importance croissante des modèles de langage de grande envergure dans le domaine du traitement automatique du langage naturel et de l’intelligence artificielle. Ils soulignent également les défis et les opportunités associés à l’utilisation de ces modèles, ainsi que les implications potentielles pour la recherche future dans ce domaine.
+J’ai trouvé ce document très profitable. Il permet de se mettre à jour sur les modèles de langage de grande envergure, et l’état actuel de l’industrie. Il aborde également chaque aspect du développement d’un langage de grande envergure. Le fait que chaque aspect ne soit pas dans le détail technique permet de faire nos recherches de notre coté sur chaque point nécessaire. En conclusion, les auteurs mettent en évidence l’importance croissante des modèles de langage de grande envergure dans le domaine du traitement automatique du langage naturel et de l’intelligence artificielle. Ils soulignent également les défis et les opportunités associés à l’utilisation de ces modèles, ainsi que les implications potentielles pour la recherche future dans ce domaine.
+
+},
+	file = {arXiv Fulltext PDF:/home/hajar/Zotero/storage/HC7MVEBT/Zhao et al. - 2023 - A Survey of Large Language Models.pdf:application/pdf;arXiv.org Snapshot:/home/hajar/Zotero/storage/TEGGEPHN/2303.html:text/html},
+}
+
+@article{huang_language_2024,
+	title = {Language is not all you need: {Aligning} perception with language models},
+	volume = {36},
+	shorttitle = {Language is not all you need},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/e425b75bac5742a008d643826428787c-Abstract-Conference.html},
+	urldate = {2024-02-26},
+	journal = {Advances in Neural Information Processing Systems},
+	author = {Huang, Shaohan and Dong, Li and Wang, Wenhui and Hao, Yaru and Singhal, Saksham and Ma, Shuming and Lv, Tengchao and Cui, Lei and Mohammed, Owais Khan and Patra, Barun},
+	year = {2024},
+	annote = {Les modèles vision-langage suscitent un intérêt croissant. Cependant, ils rencontrent toujours des limitations dans le suivi des instructions, la compréhension du contexte et la capacité à généraliser pour aborder de nouvelles tâches. Pour remédier à ces problèmes, les chercheurs explorent des modèles de langage multimodaux (MLLM) plus robustes.
+Cette étude présente KOSMOS-1, un MLLM entraîné sur divers ensembles de données multimodaux comprenant du texte, des images, des paires image-légende et des données textuelles. Les auteurs évaluent les performances de KOSMOS-1 sur diverses tâches linguistiques, y compris la compréhension et la génération de texte, en le comparant aux LLM traditionnels. De plus, ils évaluent ses performances dans les tâches de perception-langage telles que le dialogue multimodal, la légende d'image et la réponse à des questions visuelles.
+KOSMOS-1 démontre des performances comparables ou supérieures à celles des LLM, ce qui indique le potentiel des MLLM dans les tâches à la fois linguistiques et multimodales. L'étude met en avant les avantages du transfert intermodal, suggérant que les connaissances peuvent être efficacement transférées entre les domaines linguistiques et multimodaux.
+Cependant, KOSMOS-1 rencontre encore des défis dans le raisonnement non verbal.
+},
+}
+
+@misc{zhang_mm-llms_2024,
+	title = {{MM}-{LLMs}: {Recent} {Advances} in {MultiModal} {Large} {Language} {Models}},
+	shorttitle = {{MM}-{LLMs}},
+	url = {http://arxiv.org/abs/2401.13601},
+	abstract = {In the past year, MultiModal Large Language Models (MM-LLMs) have undergone substantial advancements, augmenting off-the-shelf LLMs to support MM inputs or outputs via cost-effective training strategies. The resulting models not only preserve the inherent reasoning and decision-making capabilities of LLMs but also empower a diverse range of MM tasks. In this paper, we provide a comprehensive survey aimed at facilitating further research of MM-LLMs. Initially, we outline general design formulations for model architecture and training pipeline. Subsequently, we introduce a taxonomy encompassing \$122\$ MM-LLMs, each characterized by its specific formulations. Furthermore, we review the performance of selected MM-LLMs on mainstream benchmarks and summarize key training recipes to enhance the potency of MM-LLMs. Finally, we explore promising directions for MM-LLMs while concurrently maintaining a real-time tracking website for the latest developments in the field. We hope that this survey contributes to the ongoing advancement of the MM-LLMs domain.},
+	urldate = {2024-02-26},
+	publisher = {arXiv},
+	author = {Zhang, Duzhen and Yu, Yahan and Li, Chenxing and Dong, Jiahua and Su, Dan and Chu, Chenhui and Yu, Dong},
+	month = feb,
+	year = {2024},
+	note = {Issue: arXiv:2401.13601
+Issue: arXiv:2401.13601
+arXiv:2401.13601 [cs]},
+	keywords = {Computer Science - Computation and Language},
+	annote = {Au cours de 2023, les MM-LLM ont considérablement progressé, améliorant les capacités des LLM standard à traiter efficacement des entrées multimodales. Ces modèles préservent les capacités de raisonnement et de prise de décision des LLM tout en permettant diverses tâches multimodales. Cet article présente une enquête complète dans le domaine des MM-LLM.
+L'enquête couvre les progrès récents dans les MM-LLM, offrant des informations sur l'architecture des modèles et les stratégies d'entraînement. Elle introduit une taxonomie comprenant 122 MM-LLM, chacun caractérisé par des formulations spécifiques, et passe en revue les performances des MM-LLM sélectionnés sur des benchmarks populaires. De plus, un site web dédié suit les développements en cours.
+
+},
+}
+
+@misc{wang_exploring_2024,
+	title = {Exploring the {Reasoning} {Abilities} of {Multimodal} {Large} {Language} {Models} ({MLLMs}): {A} {Comprehensive} {Survey} on {Emerging} {Trends} in {Multimodal} {Reasoning}},
+	shorttitle = {Exploring the {Reasoning} {Abilities} of {Multimodal} {Large} {Language} {Models} ({MLLMs})},
+	url = {http://arxiv.org/abs/2401.06805},
+	abstract = {Strong Artificial Intelligence (Strong AI) or Artificial General Intelligence (AGI) with abstract reasoning ability is the goal of next-generation AI. Recent advancements in Large Language Models (LLMs), along with the emerging field of Multimodal Large Language Models (MLLMs), have demonstrated impressive capabilities across a wide range of multimodal tasks and applications. Particularly, various MLLMs, each with distinct model architectures, training data, and training stages, have been evaluated across a broad range of MLLM benchmarks. These studies have, to varying degrees, revealed different aspects of the current capabilities of MLLMs. However, the reasoning abilities of MLLMs have not been systematically investigated. In this survey, we comprehensively review the existing evaluation protocols of multimodal reasoning, categorize and illustrate the frontiers of MLLMs, introduce recent trends in applications of MLLMs on reasoning-intensive tasks, and finally discuss current practices and future directions. We believe our survey establishes a solid base and sheds light on this important topic, multimodal reasoning.},
+	urldate = {2024-02-26},
+	publisher = {arXiv},
+	author = {Wang, Yiqi and Chen, Wentao and Han, Xiaotian and Lin, Xudong and Zhao, Haiteng and Liu, Yongfei and Zhai, Bohan and Yuan, Jianbo and You, Quanzeng and Yang, Hongxia},
+	month = jan,
+	year = {2024},
+	note = {Issue: arXiv:2401.06805
+Issue: arXiv:2401.06805
+arXiv:2401.06805 [cs]},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language},
+	annote = {Les progrès récents dans les LLM et les MLLM mettent en lumière les capacités impressionnantes des MLLM dans diverses tâches multimodales, mais les capacités de raisonnement des MLLM restent largement inexplorées.
+Cette étude passe en revue de manière exhaustive les protocoles d'évaluation existants du raisonnement multimodal, catégorise et illustre les limites des MLLM, explore les tendances récentes dans les applications des MLLM sur des tâches de raisonnement, et discute des pratiques actuelles et des orientations futures.
+Les principaux défis identifiés comprennent la gestion des images de résolutions variées, les phénomènes hallucinatoires, la compréhension du contexte, et la nécessité de développer des bancs d'évaluation complets.
+},
+}
+
+@misc{sonkar_visual_2022,
+	title = {A {Visual} {Tour} {Of} {Current} {Challenges} {In} {Multimodal} {Language} {Models}},
+	url = {http://arxiv.org/abs/2210.12565},
+	doi = {10.48550/arXiv.2210.12565},
+	abstract = {Transformer models trained on massive text corpora have become the de facto models for a wide range of natural language processing tasks. However, learning effective word representations for function words remains challenging. Multimodal learning, which visually grounds transformer models in imagery, can overcome the challenges to some extent; however, there is still much work to be done. In this study, we explore the extent to which visual grounding facilitates the acquisition of function words using stable diffusion models that employ multimodal models for text-to-image generation. Out of seven categories of function words, along with numerous subcategories, we find that stable diffusion models effectively model only a small fraction of function words -- a few pronoun subcategories and relatives. We hope that our findings will stimulate the development of new datasets and approaches that enable multimodal models to learn better representations of function words.},
+	urldate = {2024-03-18},
+	publisher = {arXiv},
+	author = {Sonkar, Shashank and Liu, Naiming and Baraniuk, Richard G.},
+	month = oct,
+	year = {2022},
+	note = {Issue: arXiv:2210.12565
+arXiv:2210.12565 [cs]},
+	annote = {Les modèles basés sur les Transformers sont très populaires, mais ils rencontrent des difficultés à représenter efficacement les mots-outils, tels que les articles, les prépositions, les pronoms, etc. Pourtant, ces mots jouent un rôle critique dans la construction de phrases grammaticalement correctes et dans l’expression des relations entre concepts. L'apprentissage multimodal, qui intègre l'ancrage visuel à travers des images naturelles, offre une approche alternative pour apprendre les représentations de ces mots. Les modèles de diffusion stable (SDM) ont gagné en popularité pour la génération d’images à partir du texte, mais ils échouent à capturer efficacement le sens des mots-outils. Cette étude vise à explorer l'impact de l'ancrage visuel sur l'acquisition des mots-outils, mettant en évidence l'insuffisance des modèles de langage multimodal actuels pour saisir la sémantique des mots-outils. Elle appelle à des recherches supplémentaires pour remédier à ces lacunes, suggérant des améliorations potentielles grâce à des ensembles de données spécialisés sur les mots-outils et en soulignant la nécessité d'améliorer l'apprentissage de la représentation dans les modèles multimodaux.
+},
+}
+
+@misc{petroni_language_2019,
+	title = {Language {Models} as {Knowledge} {Bases}?},
+	url = {http://arxiv.org/abs/1909.01066},
+	doi = {10.48550/arXiv.1909.01066},
+	abstract = {Recent progress in pretraining language models on large textual corpora led to a surge of improvements for downstream NLP tasks. Whilst learning linguistic knowledge, these models may also be storing relational knowledge present in the training data, and may be able to answer queries structured as "fill-in-the-blank" cloze statements. Language models have many advantages over structured knowledge bases: they require no schema engineering, allow practitioners to query about an open class of relations, are easy to extend to more data, and require no human supervision to train. We present an in-depth analysis of the relational knowledge already present (without fine-tuning) in a wide range of state-of-the-art pretrained language models. We find that (i) without fine-tuning, BERT contains relational knowledge competitive with traditional NLP methods that have some access to oracle knowledge, (ii) BERT also does remarkably well on open-domain question answering against a supervised baseline, and (iii) certain types of factual knowledge are learned much more readily than others by standard language model pretraining approaches. The surprisingly strong ability of these models to recall factual knowledge without any fine-tuning demonstrates their potential as unsupervised open-domain QA systems. The code to reproduce our analysis is available at https://github.com/facebookresearch/LAMA.},
+	urldate = {2024-03-19},
+	publisher = {arXiv},
+	author = {Petroni, Fabio and Rocktäschel, Tim and Lewis, Patrick and Bakhtin, Anton and Wu, Yuxiang and Miller, Alexander H. and Riedel, Sebastian},
+	month = sep,
+	year = {2019},
+	note = {Issue: arXiv:1909.01066
+Issue: arXiv:1909.01066
+arXiv:1909.01066 [cs]
+version: 2},
+	keywords = {Computer Science - Computation and Language},
+	annote = {Cet article analyse en profondeur les connaissances factuelles et de bon sens intégrées dans les modèles de langage pré-entraînés accessibles publiquement, mettant en avant les performances remarquables de BERT-Large. À travers la sonde LAMA (Analyse des Modèles de Langage), l’étude évalue la capacité de ces modèles, incluant BERT, ELMo et Transformer-XL, à emmagasiner et à récupérer des connaissances sans ajustements spécifiques. BERT-Large se distingue particulièrement, dépassant les bases de connaissances traditionnelles et autres modèles neuronaux. Toutefois, l’article reconnaît la difficulté d’extraire des informations précises des bases de connaissances textuelles. Les résultats suggèrent qu’augmenter la quantité de données traitées par BERT-Large n’améliore pas significativement sa performance, indiquant une limite à l’apprentissage basé sur la quantité de données. Des défis tels que la variation de l’efficacité de rappel avec différents modèles de langage naturel et l’évaluation des réponses multi-mots demeurent, indiquant des directions pour la recherche future. Cette recherche souligne le potentiel des modèles de langage pour remplacer éventuellement les bases de connaissances traditionnelles et met en lumière l’importance des cadres tels que AllenNLP, fairseq et les transformers PyTorch de Hugging Face, qui ont été essentiels à ces découvertes.
+},
+}
+
+@misc{devlin_bert_2019,
+	title = {{BERT}: {Pre}-training of {Deep} {Bidirectional} {Transformers} for {Language} {Understanding}},
+	shorttitle = {{BERT}},
+	url = {http://arxiv.org/abs/1810.04805},
+	doi = {10.48550/arXiv.1810.04805},
+	abstract = {We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5\% (7.7\% point absolute improvement), MultiNLI accuracy to 86.7\% (4.6\% absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).},
+	urldate = {2024-03-19},
+	publisher = {arXiv},
+	author = {Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+	month = may,
+	year = {2019},
+	note = {Issue: arXiv:1810.04805
+Issue: arXiv:1810.04805
+arXiv:1810.04805 [cs]},
+	keywords = {Computer Science - Computation and Language},
+	annote = {L’article présente BERT, une nouvelle méthode de pré-apprentissage pour le traitement du langage naturel. L’innovation de BERT réside dans son architecture bidirectionnelle profonde qui, grâce à un apprentissage non supervisé sur un corpus étendu, capture des représentations contextuelles riches. BERT se distingue par son entraînement sur les contextes gauche et droit en utilisant un modèle de langage masqué et la prédiction de la prochaine phrase, ce qui améliore sa compréhension du langage. Il surpasse les modèles unidirectionnels dans divers tests, y compris GLUE et SQuAD, et se montre compétent tant dans l’approche de fine-tuning que dans les méthodes basées sur les caractéristiques, démontrant une adaptabilité et des performances remarquables, même pour les tâches avec peu de ressources. La conception de BERT souligne l’importance de la bidirectionnalité et de la profondeur du pré-apprentissage, le positionnant comme un modèle fondamental qui établit de nouvelles normes d’excellence dans le domaine du NLP.
+},
+}
+
+@misc{howard_universal_2018,
+	title = {Universal {Language} {Model} {Fine}-tuning for {Text} {Classification}},
+	url = {http://arxiv.org/abs/1801.06146},
+	doi = {10.48550/arXiv.1801.06146},
+	abstract = {Inductive transfer learning has greatly impacted computer vision, but existing approaches in NLP still require task-specific modifications and training from scratch. We propose Universal Language Model Fine-tuning (ULMFiT), an effective transfer learning method that can be applied to any task in NLP, and introduce techniques that are key for fine-tuning a language model. Our method significantly outperforms the state-of-the-art on six text classification tasks, reducing the error by 18-24\% on the majority of datasets. Furthermore, with only 100 labeled examples, it matches the performance of training from scratch on 100x more data. We open-source our pretrained models and code.},
+	urldate = {2024-03-19},
+	publisher = {arXiv},
+	author = {Howard, Jeremy and Ruder, Sebastian},
+	month = may,
+	year = {2018},
+	note = {Issue: arXiv:1801.06146
+Issue: arXiv:1801.06146
+arXiv:1801.06146 [cs, stat]},
+	keywords = {Computer Science - Computation and Language, Computer Science - Machine Learning, Statistics - Machine Learning},
+	annote = {ULMFiT (Universal Language Model Fine-tuning) est une méthode innovante de transfert d’apprentissage pour le traitement du langage naturel (NLP), qui surpasse les techniques actuelles en adaptant un modèle de langue pré-entraîné à des tâches spécifiques de classification de texte. Au 1 lieu de reconstruire des modèles à partir de zéro, ULMFiT utilise un apprentissage discriminatif et des taux d’apprentissage triangulaires pour affiner les modèles de langue sur des tâches ciblées, en préservant la connaissance antérieure tout en s’adaptant aux nouvelles tâches. Cette approche démontre des performances exceptionnelles même avec un nombre limité d’exemples étiquetés, réduisant de manière significative les erreurs de classification à travers une variété de jeux de données. ULMFiT est particulièrement prometteur pour les langues autres que l’anglais, les nouvelles tâches de NLP, et les situations où les données étiquetées sont rares. L’article suggère des directions futures, comme l’amélioration de la pré-formation du modèle de langue et l’extension à des tâches de NLP plus complexes, en espérant que ULMFiT puisse catalyser de nouveaux développements dans le transfert d’apprentissage pour le NLP.
+},
+}
+
+@inproceedings{xu_show_2015,
+	title = {Show, {Attend} and {Tell}: {Neural} {Image} {Caption} {Generation} with {Visual} {Attention}},
+	shorttitle = {Show, {Attend} and {Tell}},
+	url = {https://proceedings.mlr.press/v37/xuc15.html},
+	abstract = {Inspired by recent work in machine translation and object detection, we introduce an attention based model that automatically learns to describe the content of images. We describe how we can train this model in a deterministic manner using standard backpropagation techniques and stochastically by maximizing a variational lower bound. We also show through visualization how the model is able to automatically learn to fix its gaze on salient objects while generating the corresponding words in the output sequence. We validate the use of attention with state-of-the-art performance on three benchmark datasets: Flickr8k, Flickr30k and MS COCO.},
+	language = {en},
+	urldate = {2024-03-25},
+	booktitle = {Proceedings of the 32nd {International} {Conference} on {Machine} {Learning}},
+	publisher = {PMLR},
+	author = {Xu, Kelvin and Ba, Jimmy and Kiros, Ryan and Cho, Kyunghyun and Courville, Aaron and Salakhudinov, Ruslan and Zemel, Rich and Bengio, Yoshua},
+	month = jun,
+	year = {2015},
+	note = {ISSN: 1938-7228},
+	pages = {2048--2057},
+	annote = {Cette étude présente un modèle basé sur l'attention pour la génération de légendes d'images, apprenant à décrire le contenu des images en se concentrant dynamiquement sur les parties saillantes. Elle remet en question les approches traditionnelles en automatisant la compréhension visuelle et la synthèse de descriptions, marquant une progression significative dans la compréhension de scène et la capacité de l'IA à imiter les aptitudes de description humaines.
+L'objectif de la recherche est d'intégrer l'attention visuelle dans les réseaux de neurones pour la génération de légendes d'images, offrant une innovation méthodologique par rapport à la représentation statique d'images. En employant des réseaux de mémoire à long terme (LSTM) avec un nouveau mécanisme d'attention, le modèle se concentre sélectivement sur des parties d'une image pour générer des légendes, inspiré par les avancées dans la traduction automatique et la détection d'objets.
+En se concentrant sur la génération automatique de légendes descriptives pour les images, l'article fait progresser l'intersection de la vision par ordinateur et du traitement du langage naturel. Il exploite les réseaux LSTM pour la génération de texte, guidé par des mécanismes d'attention qui mettent en lumière les caractéristiques pertinentes de l'image, facilitant ainsi une synthèse visuelle-textuelle plus profonde
+Dans le domaine des Modèles de Langage Neuronaux Multimodaux, ce texte souligne de manière significative l'aptitude du modèle à améliorer la perception machine et la synthèse de descriptions en langage naturel. En intégrant un mécanisme d'attention visuelle, il réalise des progrès notables en permettant aux systèmes d'IA de se concentrer dynamiquement sur les aspects pertinents de l'image pour générer des légendes précises et contextuellement pertinentes. Cette percée ne fixe pas seulement de nouveaux repères sur les principaux jeux de données, mais fournit également des informations inestimables sur la façon dont l'IA peut être davantage affinée pour traiter et interpréter des données multimodales avec un niveau de détail et de sensibilité sans précédent.
+Bien que le modèle atteigne des résultats à la pointe de la technologie, sa dépendance à la qualité et à la diversité des données d'entraînement, ainsi que ses exigences en matière de calcul, présentent des limites. De plus, l'interprétabilité du mécanisme d'attention, bien qu'instructive, soulève des questions sur le processus de prise de décision du modèle dans la concentration sur des régions spécifiques de l'image.
+L'article présente une approche pionnière de la génération de légendes d'images, en exploitant l'attention visuelle pour améliorer considérablement la richesse et la précision des légendes générées. Il ne se contente pas d'obtenir des performances supérieures sur les jeux de données de référence, mais propose également un modèle qui imite plus étroitement les capacités d'attention et de description humaines, marquant une avancée substantielle dans la compréhension multimodale de l'IA.
+La recherche sur la génération de légendes d'images avec attention visuelle met en lumière l'importance cruciale de l'attention dans les modèles de langage multimodaux. Elle révèle comment l'attention dirigée permet une analyse plus fine et contextualisée des images, enrichissant ainsi la synthèse entre la vision par ordinateur et le traitement du langage naturel. Cette avancée représente non seulement une étape significative dans la modélisation de la perception et de la description automatiques mais ouvre également la voie à des applications plus intuitives et interactives en intelligence artificielle, reflétant une compréhension plus profonde et nuancée du monde visuel.
+
+},
+}
+
+@misc{kiros_unifying_2014,
+	title = {Unifying {Visual}-{Semantic} {Embeddings} with {Multimodal} {Neural} {Language} {Models}},
+	url = {http://arxiv.org/abs/1411.2539},
+	doi = {10.48550/arXiv.1411.2539},
+	abstract = {Inspired by recent advances in multimodal learning and machine translation, we introduce an encoder-decoder pipeline that learns (a): a multimodal joint embedding space with images and text and (b): a novel language model for decoding distributed representations from our space. Our pipeline effectively unifies joint image-text embedding models with multimodal neural language models. We introduce the structure-content neural language model that disentangles the structure of a sentence to its content, conditioned on representations produced by the encoder. The encoder allows one to rank images and sentences while the decoder can generate novel descriptions from scratch. Using LSTM to encode sentences, we match the state-of-the-art performance on Flickr8K and Flickr30K without using object detections. We also set new best results when using the 19-layer Oxford convolutional network. Furthermore we show that with linear encoders, the learned embedding space captures multimodal regularities in terms of vector space arithmetic e.g. *image of a blue car* - "blue" + "red" is near images of red cars. Sample captions generated for 800 images are made available for comparison.},
+	urldate = {2024-03-25},
+	publisher = {arXiv},
+	author = {Kiros, Ryan and Salakhutdinov, Ruslan and Zemel, Richard S.},
+	month = nov,
+	year = {2014},
+	note = {Issue: arXiv:1411.2539
+arXiv:1411.2539 [cs]},
+	keywords = {Computer Science - Computation and Language, Computer Science - Computer Vision and Pattern Recognition, Computer Science - Machine Learning},
+	annote = {L'article présente une approche encodeur-décodeur qui apprend un espace d'intégration conjointe multimodal pour les images et le texte, ainsi qu'un nouveau modèle de langage pour le décodage. Il représente une étape significative vers le comblement de l'écart entre les données visuelles et textuelles, visant des modèles qui peuvent non seulement associer des images avec des descriptions, mais aussi générer des textes descriptifs à partir d'entrées visuelles.
+En se concentrant sur la génération de légendes d'images et la construction d'un espace d'intégration conjointe, l'étude utilise des réseaux de mémoire à long terme (LSTM) pour l'encodage des phrases et propose le modèle de langage neuronal Structure-Content (SC-NLM) pour le décodage, une nouvelle approche dans la gestion de la dichotomie de la structure et du contenu de la phrase.
+À travers des expériences avec des jeux de données comme Flickr8K et Flickr30K, l'article évalue les capacités du modèle proposé dans le classement des images-phrases et la génération de légendes d'images, mettant en évidence son utilité dans la compréhension et la génération de descriptions en langage naturel pour les données visuelles.
+Cette étude réalise des progrès significatifs dans les Modèles de Langage Neuronaux Multimodaux en intégrant les données visuelles et textuelles dans un seul cadre. Elle montre comment ces modèles approfondissent notre compréhension des images et du texte, ouvrant la voie à des systèmes d'IA aux capacités d'interprétation et de description améliorées. En combinant les réseaux LSTM pour les données textuelles et le SC-NLM innovant pour le décodage, l'étude progresse vers des modèles capables de comprendre et d'articuler des récits visuels complexes en langage naturel. Cette avancée est cruciale pour des tâches telles que la génération de légendes d'images précises et conscientes du contexte, élargissant le potentiel de l'IA dans l'accessibilité numérique, la création de contenu et les médias interactifs.
+Bien que le modèle atteigne des réussites notables, ses performances dépendent de la qualité des données visuelles et textuelles, de la profondeur des jeux de données d'entraînement, et de la complexité inhérente à la capture et à la traduction précises des nuances des scènes visuelles en descriptions textuelles.
+L'étude démontre avec succès la faisabilité d'utiliser les réseaux LSTM et un modèle de langage neuronal structuré pour créer un espace d'intégration visuel-sémantique unifié. Cette avancée ne contribue pas seulement au domaine de l'apprentissage multimodal, mais ouvre également des voies pour des recherches ultérieures sur des intégrations plus fluides des données visuelles et du langage naturel.
+Le développement du modèle encodeur-décodeur pour l'apprentissage d'espaces d'intégration visuels-sémantiques unifiés illustre une avancée notable dans la compréhension multimodale, soulignant l'importance de modèles capables de traduire efficacement entre le visuel et le textuel, et marquant un pas vers des interactions homme-machine plus intuitives et expressives.
+},
+}
+
+@article{tong_mass-producing_2024,
+	title = {Mass-producing failures of multimodal systems with language models},
+	volume = {36},
+	url = {https://proceedings.neurips.cc/paper_files/paper/2023/hash/5d570ed1708bbe19cb60f7a7aff60575-Abstract-Conference.html},
+	urldate = {2024-02-26},
+	journal = {Advances in Neural Information Processing Systems},
+	author = {Tong, Shengbang and Jones, Erik and Steinhardt, Jacob},
+	year = {2024},
+	annote = {Face aux échecs récurrents des systèmes multimodaux basés sur le texte lors de leur mise en service, MULTIMON émerge comme une avancée significative. Ces systèmes, destinés à transmuter le texte en images, en scènes 3D, ou en vidéos, rencontrent de multiples obstacles en conditions réelles, malgré des essais exhaustifs. MULTIMON se présente comme une solution novatrice à cette problématique, agissant en tant que système d’évaluation systématique et adapté aux exigences humaines. Il débusque les défaillances systémiques en exploitant les erreurs d’accord et en se servant de modèles de langage tels que GPT-4 pour élaborer des explications compréhensibles, ce qui s’avère précieux pour les concepteurs de systèmes.
+L’impact de MULTIMON sur le développement des modèles neuronaux de langage multimodaux est remarquable, proposant une méthode évolutive pour détecter les défaillances systématiques tôt et améliorer ainsi la fiabilité et la sécurité avant leur déploiement. Cependant, l’utilisation de MULTIMON révèle également les risques liés à l’utilisation répétée de composants comme CLIP dans différents systèmes, en montrant comment les défaillances peuvent se propager d’un système à l’autre. MULTIMON se distingue par sa capacité à découvrir et catégoriser de nouvelles défaillances grâce à l’utilisation de modèles de langage, ouvrant la voie à des applications IA plus robustes et alignées sur les complexités du monde réel. Cette innovation suggère un avenir où les modèles de langage transcendent leur rôle traditionnel de générateurs de texte pour devenir de véritables bases de connaissances dynamiques
+},
+}
+
+@misc{zeng_what_2023,
+	title = {What {Matters} in {Training} a {GPT4}-{Style} {Language} {Model} with {Multimodal} {Inputs}?},
+	url = {http://arxiv.org/abs/2307.02469},
+	doi = {10.48550/arXiv.2307.02469},
+	abstract = {Recent advancements in Large Language Models (LLMs) such as GPT4 have displayed exceptional multi-modal capabilities in following open-ended instructions given images. However, the performance of these models heavily relies on design choices such as network structures, training data, and training strategies, and these choices have not been extensively discussed in the literature, making it difficult to quantify progress in this field. To address this issue, this paper presents a systematic and comprehensive study, quantitatively and qualitatively, on training such models. We implement over 20 variants with controlled settings. Concretely, for network structures, we compare different LLM backbones and model designs. For training data, we investigate the impact of data and sampling strategies. For instructions, we explore the influence of diversified prompts on the instruction-following ability of the trained models. For benchmarks, we contribute the first, to our best knowledge, comprehensive evaluation set including both image and video tasks through crowd-sourcing. Based on our findings, we present Lynx, which performs the most accurate multi-modal understanding while keeping the best multi-modal generation ability compared to existing open-sourced GPT4-style models.},
+	urldate = {2024-02-28},
+	publisher = {arXiv},
+	author = {Zeng, Yan and Zhang, Hanbo and Zheng, Jiani and Xia, Jiangnan and Wei, Guoqiang and Wei, Yang and Zhang, Yuchen and Kong, Tao},
+	month = jul,
+	year = {2023},
+	note = {Issue: arXiv:2307.02469
+Issue: arXiv:2307.02469
+Issue: arXiv:2307.02469
+Issue: arXiv:2307.02469
+arXiv:2307.02469 [cs]
+version: 2},
+	keywords = {Computer Science - Computation and Language, Computer Science - Computer Vision and Pattern Recognition},
+	annote = {Cette étude se penche sur les choix de conception essentiels pour entraîner des modèles de langage à la manière de GPT-4, utilisant des entrées multimodales. Elle fournit une analyse à la fois quantitative et qualitative sur la formation de ces modèles, examinant les fondements des modèles de langage à grande échelle, l’impact des stratégies de données et d’échantillonnage, ainsi que l’influence de prompts variés. Un modèle nommé LYNX est introduit, se distinguant par sa compréhension multimodale précise et sa capacité robuste de génération multimodale, évaluée sur divers benchmarks pour approfondir notre compréhension de ses performances dans des tâches de perception, cognition et action.
+Les résultats des expériences menées avec LYNX offrent des aperçus précieux pour la recherche future sur les modèles de langage multimodaux, influençant potentiellement les choix architecturaux et les stratégies d’entraînement. Cependant, l’étude reconnaît certaines limites, notamment dans les métriques d’évaluation pour les modèles multimodaux et les défis de trouver la combinaison de données optimale pour l’entraînement. Malgré ces obstacles, LYNX surpasse les modèles existants en compréhension et génération multimodales, mettant en lumière l’importance d’équilibrer correctement ces capacités. Cette recherche illustre l’importance de parvenir à un équilibre entre l’interprétation de données variées et la production de textes significatifs. Elle prépare le terrain pour le développement futur de modèles linguistiques capables de naviguer à travers un éventail d’informations tout en capturant l’essence et la finesse de la communication humaine.
+},
+}
+
+@misc{chang_survey_2023,
+	title = {A {Survey} on {Evaluation} of {Large} {Language} {Models}},
+	url = {http://arxiv.org/abs/2307.03109},
+	doi = {10.48550/arXiv.2307.03109},
+	abstract = {Large language models (LLMs) are gaining increasing popularity in both academia and industry, owing to their unprecedented performance in various applications. As LLMs continue to play a vital role in both research and daily use, their evaluation becomes increasingly critical, not only at the task level, but also at the society level for better understanding of their potential risks. Over the past years, significant efforts have been made to examine LLMs from various perspectives. This paper presents a comprehensive review of these evaluation methods for LLMs, focusing on three key dimensions: what to evaluate, where to evaluate, and how to evaluate. Firstly, we provide an overview from the perspective of evaluation tasks, encompassing general natural language processing tasks, reasoning, medical usage, ethics, educations, natural and social sciences, agent applications, and other areas. Secondly, we answer the `where' and `how' questions by diving into the evaluation methods and benchmarks, which serve as crucial components in assessing performance of LLMs. Then, we summarize the success and failure cases of LLMs in different tasks. Finally, we shed light on several future challenges that lie ahead in LLMs evaluation. Our aim is to offer invaluable insights to researchers in the realm of LLMs evaluation, thereby aiding the development of more proficient LLMs. Our key point is that evaluation should be treated as an essential discipline to better assist the development of LLMs. We consistently maintain the related open-source materials at: https://github.com/MLGroupJLU/LLM-eval-survey.},
+	urldate = {2024-03-25},
+	publisher = {arXiv},
+	author = {Chang, Yupeng and Wang, Xu and Wang, Jindong and Wu, Yuan and Yang, Linyi and Zhu, Kaijie and Chen, Hao and Yi, Xiaoyuan and Wang, Cunxiang and Wang, Yidong and Ye, Wei and Zhang, Yue and Chang, Yi and Yu, Philip S. and Yang, Qiang and Xie, Xing},
+	month = dec,
+	year = {2023},
+	note = {arXiv:2307.03109 [cs]},
+	keywords = {Computer Science - Artificial Intelligence, Computer Science - Computation and Language},
+	annote = {L’article expose le besoin croissant d'évaluer les grands modèles de langage (LLMs) et met en évidence l'importance de cette évaluation pour comprendre leurs capacités et leurs limites. Elle pose également la question de savoir comment l'évaluation peut être effectuée de manière efficace et exhaustive, ce qui prépare le terrain pour les discussions approfondies qui suivent.Les objectifs de la recherche sont clairement définis, avec une intention claire de fournir une synthèse complète des travaux sur l'évaluation des LLMs. Les méthodes de recherche semblent consister en une analyse systématique et une synthèse des publications existantes dans ce domaine, ce qui est une approche appropriée pour atteindre les objectifs définis. La portée de l'article est vaste, couvrant un large éventail de sujets liés à l'évaluation des LLMs, y compris les protocoles d'évaluation, les métriques utilisées, les succès et les échecs des LLMs dans différents domaines, les défis futurs et les opportunités de recherche. Cela garantit que les lecteurs bénéficieront d'une compréhension holistique de ce domaine en pleine expansion.
+Ce document est extrêmement utile pour les chercheurs, les praticiens et les décideurs qui s'intéressent aux LLMs et à leur évaluation. Il fournit une ressource complète pour comprendre les défis et les opportunités dans ce domaine, ce qui peut guider la prise de décision et la planification de la recherche future. Bien que l'article soit exhaustif dans sa couverture, il pourrait être confronté à certaines limitations inhérentes à l'analyse des travaux existants. Par exemple, il est possible que toutes les publications pertinentes n'aient pas été incluses, ce qui pourrait entraîner un biais potentiel dans les conclusions tirées. De plus, étant donné la nature en constante évolution de ce domaine, certaines informations pourraient devenir obsolètes relativement rapidement. Les conclusions tirées dans cet article mettent en évidence les réussites et les lacunes des LLMs dans divers domaines, ainsi que les défis futurs à relever pour améliorer leur évaluation. Ces conclusions offrent une perspective précieuse pour orienter la recherche future et le développement de ces modèles. En examinant cet article je le trouve utile et complet concernant l'évolution des modèles,  car il est clair qu'une réflexion approfondie a été menée sur les défis et les opportunités liés à l'évaluation des LLMs. L'auteur démontre une compréhension profonde du sujet et offre des insights précieux qui stimuleront probablement davantage la recherche dans ce domaine en pleine expansion.
+},
+	file = {arXiv Fulltext PDF:/home/hajar/Zotero/storage/T7AV6EKH/Chang et al. - 2023 - A Survey on Evaluation of Large Language Models.pdf:application/pdf;arXiv.org Snapshot:/home/hajar/Zotero/storage/QBYBVASG/2307.html:text/html},
+}
