@@ -1,0 +1,6 @@
+session 1 : -> suivre tp à la lettre 
+puis COMMIT;
+session 2 : -> suivre tp à la lettre
+
+fahd a fait un changement mais a pas commité : rien ne change , 
+aprés commit : table changed.
