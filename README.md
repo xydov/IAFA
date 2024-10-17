@@ -1,16 +1,15 @@
-#IAFA
 
 
 
 
 ```markdown
-# Études IAFA université PAUL SABATIER TOULOUSE III
+# Études Master IAFA université PAUL SABATIER TOULOUSE III
 
-## Description
 
-le dossier master contient tout les TPS des deux semestres S7 et S8 avec des notes >=16. il contient aussi des dossiers d'examens avec enfin des notes personnelles et des corrigés de TDs.
-ce Répertoire reste tout de meme une proprieté privé et donc veuillez me demander la permission par mail sur noahchelgham@gmail.com àfin de pouvoir déposer ces TPs.
-
+Le dossier "Master" regroupe l'ensemble des TPs des semestres S7 et S8 avec des notes égales ou supérieures à 16.
+Il inclut également des dossiers d'examens, des notes personnelles, ainsi que des corrigés de TDs.
+Ce répertoire reste néanmoins une propriété privée. Par conséquent, veuillez me demander l'autorisation par e-mail à l'adresse noahchelgham@gmail.com
+avant de pouvoir déposer ces TPs
 
 
 
@@ -32,11 +31,6 @@ ce Répertoire reste tout de meme une proprieté privé et donc veuillez me dema
 
 
 
-# Clone the repository
-  
-
-
-```git clone https://github.com/xydov/IAFA.git
 
 
 
