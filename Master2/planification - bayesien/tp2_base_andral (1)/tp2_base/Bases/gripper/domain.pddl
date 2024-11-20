@@ -22,11 +22,15 @@
                  (not (at-robby ?start))))
 
    (:action pick
-     ;; Compléter le corps de l'action
+    :parameters (?b - ball ?r - room)
+    :precondition (and (at-robby ?r) (at-ball ?b ?r))
+    :effect (and (carry ?b) not(hand-free) not(at-ball ?b ?r))
    )
 
    (:action drop
-     ;; Compléter le corps de l'action
+    :parameters (?b - ball ?r - (at-robby ?r - room))
+    :precondition (and not(hand-free) (carry ?b))
+    :effect (and (hand-free) not(carry ?b) (at-ball ?b ?r))
    )
 
 )

@@ -1,0 +1,179 @@
+;;
+;; DESCRIPTION DU PROBLEME
+;;
+
+;; Horizon
+$length = 2
+
+;; Fluents, etats initiaux et finaux
+$F = [
+F_at_ball_ballA_roomG, F_at_ball_ballA_roomD, F_at_ball_ballB_roomG, F_at_ball_ballB_roomD, F_at_ball_ballC_roomG, F_at_ball_ballC_roomD, 
+F_at_robby_roomG, F_at_robby_roomD,
+F_carry_ballA, F_carry_ballB, F_carry_ballC, 
+F_hand_free
+]
+
+$I = [F_hand_free, F_at_robby_roomG, F_at_ball_ballA_roomG, F_at_ball_ballB_roomG, F_at_ball_ballC_roomG]
+$G = [F_at_ballB_roomD]
+
+;; Operateurs et definitions
+$O = [
+A_pick_ballA_roomG, A_pick_ballB_roomG, A_pick_ballC_roomG, A_pick_ballA_roomD, A_pick_ballB_roomD, A_pick_ballC_roomD,
+A_drop_ballA_roomG, A_drop_ballB_roomG, A_drop_ballC_roomG, A_drop_ballA_roomD, A_drop_ballB_roomD, A_drop_ballC_roomD,
+A_move_roomD_roomG, A_move_roomG_roomD
+]
+
+$Cond(A_pick_ballA_roomG) = [F_hand_free, F_at_ball_ballA_roomG,
+                             F_at_robby_roomG]
+$Add(A_pick_ballA_roomG) = [F_carry_ballA]
+$Del(A_pick_ballA_roomG) = [F_hand_free, F_at_ball_ballA_roomG]
+
+$Cond(A_drop_ballA_roomG) = [F_carry_ballA, F_at_robby_roomG]
+$Add(A_drop_ballA_roomG) = [F_hand_free, F_at_ball_ballA_roomG]
+$Del(A_drop_ballA_roomG) = [F_carry_ballA]
+
+$Cond(A_pick_ballA_roomD) = [F_hand_free, F_at_ball_ballA_roomD,
+                             F_at_robby_roomD]
+$Add(A_pick_ballA_roomD) = [F_carry_ballA]
+$Del(A_pick_ballA_roomD) = [F_hand_free, F_at_ball_ballA_roomD]
+
+$Cond(A_drop_ballA_roomD) = [F_carry_ballA, F_at_robby_roomD]
+$Add(A_drop_ballA_roomD) = [F_hand_free, F_at_ball_ballA_roomD]
+$Del(A_drop_ballA_roomD) = [F_carry_ballA]
+
+
+
+
+
+
+
+$Cond(A_pick_ballB_roomG) = [F_hand_free, F_at_ball_ballB_roomG,
+                             F_at_robby_roomG]
+$Add(A_pick_ballB_roomG) = [F_carry_ballB]
+$Del(A_pick_ballB_roomG) = [F_hand_free, F_at_ball_ballB_roomG]
+
+$Cond(A_drop_ballB_roomG) = [F_carry_ballB, F_at_robby_roomG]
+$Add(A_drop_ballB_roomG) = [F_hand_free, F_at_ball_ballB_roomG]
+$Del(A_drop_ballB_roomG) = [F_carry_ballB]
+
+$Cond(A_pick_ballB_roomD) = [F_hand_free, F_at_ball_ballB_roomD,
+                             F_at_robby_roomD]
+$Add(A_pick_ballB_roomD) = [F_carry_ballB]
+$Del(A_pick_ballB_roomD) = [F_hand_free, F_at_ball_ballA_roomD]
+
+$Cond(A_drop_ballB_roomD) = [F_carry_ballB, F_at_robby_roomD]
+$Add(A_drop_ballB_roomD) = [F_hand_free, F_at_ball_ballB_roomD]
+$Del(A_drop_ballB_roomD) = [F_carry_ballB]
+
+
+
+
+
+$Cond(A_pick_ballC_roomG) = [F_hand_free, F_at_ball_ballB_roomG,
+                             F_at_robby_roomG]
+$Add(A_pick_ballC_roomG) = [F_carry_ballB]
+$Del(A_pick_ballC_roomG) = [F_hand_free, F_at_ball_ballB_roomG]
+
+$Cond(A_drop_ballC_roomG) = [F_carry_ballB, F_at_robby_roomG]
+$Add(A_drop_ballC_roomG) = [F_hand_free, F_at_ball_ballB_roomG]
+$Del(A_drop_ballC_roomG) = [F_carry_ballC]
+
+$Cond(A_pick_ballC_roomD) = [F_hand_free, F_at_ball_ballC_roomD,
+                             F_at_robby_roomD]
+$Add(A_pick_ballC_roomD) = [F_carry_ballC]
+$Del(A_pick_ballC_roomD) = [F_hand_free, F_at_ball_ballC_roomD]
+
+$Cond(A_drop_ballC_roomD) = [F_carry_ballC, F_at_robby_roomD]
+$Add(A_drop_ballC_roomD) = [F_hand_free, F_at_ball_ballC_roomD]
+$Del(A_drop_ballC_roomD) = [F_carry_ballC]
+
+
+$Cond(A_move_roomG_roomD) = [F_at_robby_roomG]
+$Add(A_move_roomG_roomD) = [F_at_robby_roomD]
+$Del(A_move_roomG_roomD) = [F_at_robby_roomG]
+
+$Cond(A_move_roomD_roomG) = [F_at_robby_roomD]
+$Add(A_move_roomD_roomG) = [F_at_robby_roomG]
+$Del(A_move_roomD_roomG) = [F_at_robby_roomD]
+
+
+
+;;
+;; REGLES D'ENCODAGE
+;;
+
+;; a) Les fluents de l'état initial à t = 0 sont forcément à T, tous les autres à F, à l'instant t = length, les fluents de G sont à T
+;;
+bigand $f in $I:
+	$f(0)
+end
+bigand $f in $F diff $I:
+	not $f(0)
+end
+bigand $f in $G:
+	$f($length)
+end
+
+
+;; b) Si l'action a est appliquée à la i-ème étape, alors ses préconditions
+;; sont satisfaites à l'état précédent, et ses effets sont appliqués
+;;
+bigand $i in [1..$length]:
+	bigand $a in $O:
+		$a($i) 
+		=> (
+		(bigand $f in $Cond($a):
+			$f($i-1)
+		end)
+		and
+		(bigand $f in $Add($a):
+			$f($i)
+		end)
+		and
+		(bigand $f in $Del($a):
+			not $f($i)
+		end)
+		)
+	end
+end
+
+
+;; c) Un fluent ne peut être établi à la i-ème étape que si une action l'a établi
+;;
+bigand $i in [1..$length]:
+	bigand $f in $F: 
+		(not $f($i-1) and $f($i)) =>
+		(bigor $a in $O when $f in $Add($a):
+			$a($i)
+		end)
+	end
+end
+
+
+
+;; d) Un fluent ne peut être supprimé à la i-ème étape que si une action l'a supprimé
+;;
+bigand $i in [1..$length]:
+	bigand $f in $F:
+		($f($i-1) and not $f($i)) =>
+		(bigor $a in $O when $f in $Del($a):
+			$a($i)
+		end)
+	end
+end
+
+;; e) Deux actions effectuées à la même étape du plan ne sont pas en concurrence
+;; sur leur préconditions et effets négatifs.
+;;
+bigand $i in [1..$length]: 
+	bigand $a1 in $O:
+		bigand $f in $Cond($a1): 
+			bigand $a2 in $O when ($a1 != $a2) and ($f in $Del($a2)): 
+				not($a1(i)) or not($a2(i))
+			end
+		end
+	end
+end
+
+
+
