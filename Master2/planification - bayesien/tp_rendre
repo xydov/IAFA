@@ -1,0 +1,191 @@
+// ~->[DNET-1]->~
+
+// File created by an unlicensed user using Netica 7.01 on Dec 12, 2024 at 11:08:46 UTC.
+
+bnet tp_rendre {
+autoupdate = TRUE;
+whenchanged = 1734001718;
+
+visual V1 {
+	defdispform = BELIEFBARS;
+	nodelabeling = TITLE;
+	NodeMaxNumEntries = 50;
+	nodefont = font {shape= "Arial"; size= 9;};
+	linkfont = font {shape= "Arial"; size= 9;};
+	ShowLinkStrengths = 1;
+	windowposn = (220, 220, 1324, 888);
+	resolution = 72;
+	drawingbounds = (1833, 960);
+	showpagebreaks = FALSE;
+	usegrid = TRUE;
+	gridspace = (6, 6);
+	NodeSet Node {BuiltIn = 1; Color = 0x00e1e1e1;};
+	NodeSet Nature {BuiltIn = 1; Color = 0x00f8eed2;};
+	NodeSet Deterministic {BuiltIn = 1; Color = 0x00d3caa6;};
+	NodeSet Finding {BuiltIn = 1; Color = 0x00c8c8c8;};
+	NodeSet Constant {BuiltIn = 1; Color = 0x00ffffff;};
+	NodeSet ConstantValue {BuiltIn = 1; Color = 0x00ffffb4;};
+	NodeSet Utility {BuiltIn = 1; Color = 0x00ffbdbd;};
+	NodeSet Decision {BuiltIn = 1; Color = 0x00dee8ff;};
+	NodeSet Documentation {BuiltIn = 1; Color = 0x00f0fafa;};
+	NodeSet Title {BuiltIn = 1; Color = 0x00ffffff;};
+	PrinterSetting A {
+		margins = (1270, 1270, 1270, 1270);
+		};
+	};
+
+node zone {
+	discrete = TRUE;
+	states = (prioritaire, non);
+	kind = NATURE;
+	chance = CHANCE;
+	parents = ();
+	probs = 
+		// prioritaire  non          
+		  (0.554,       0.446);
+	whenchanged = 1734001530;
+	evidence = prioritaire;
+	belief = (1, 0);
+	visual V1 {
+		center = (744, 60);
+		height = 8;
+		};
+	};
+
+node subvention {
+	discrete = TRUE;
+	states = (oui, non);
+	kind = NATURE;
+	chance = CHANCE;
+	parents = ();
+	probs = 
+		// oui          non          
+		  (0.428,       0.572);
+	whenchanged = 1734001533;
+	visual V1 {
+		center = (1140, 270);
+		height = 7;
+		};
+	};
+
+node Amenagement {
+	discrete = TRUE;
+	states = (oui, non);
+	kind = NATURE;
+	chance = CHANCE;
+	parents = (zone, subvention);
+	probs = 
+		// oui          non           // zone        subvention 
+		  (0.831,       0.169,        // prioritaire oui        
+		   0.831,       0.169,        // prioritaire non        
+		   0.341,       0.659,        // non         oui        
+		   0.341,       0.659);       // non         non        ;
+	whenchanged = 1734001251;
+	visual V1 {
+		center = (912, 372);
+		height = 4;
+		};
+	};
+
+node densite {
+	discrete = TRUE;
+	states = (forte, moyenne, faible);
+	kind = NATURE;
+	chance = CHANCE;
+	parents = (zone);
+	probs = 
+		// forte        moyenne      faible        // zone        
+		  (0.001,       0.366,       0.633,        // prioritaire 
+		   0.001,       0.366,       0.633);       // non         ;
+	whenchanged = 1733999196;
+	visual V1 {
+		center = (528, 144);
+		height = 9;
+		};
+	};
+
+node incendie {
+	discrete = TRUE;
+	states = (oui, non);
+	kind = NATURE;
+	parents = (Amenagement, densite);
+	probs = 
+		// oui          non           // Amenagement densite 
+		  (0.572,       @undef,       // oui         forte   
+		   0.286,       @undef,       // oui         moyenne 
+		   @undef,      @undef,       // oui         faible  
+		   0.718,       @undef,       // non         forte   
+		   0.533,       @undef,       // non         moyenne 
+		   0.103,       @undef);      // non         faible  ;
+	whenchanged = 1734001142;
+	visual V1 {
+		center = (738, 606);
+		height = 5;
+		};
+	};
+
+node structures {
+	discrete = TRUE;
+	states = (oui, non);
+	kind = NATURE;
+	parents = (subvention);
+	probs = 
+		// oui          non           // subvention 
+		  (0.128,       @undef,       // oui        
+		   @undef,      @undef);      // non        ;
+	whenchanged = 1734001062;
+	visual V1 {
+		center = (1338, 432);
+		height = 2;
+		};
+	};
+
+node Tourisme {
+	discrete = TRUE;
+	states = (oui, non);
+	kind = NATURE;
+	chance = CHANCE;
+	parents = (structures);
+	probs = 
+		// oui          non           // structures 
+		  (0.677,       0.323,        // oui        
+		   0.1,         0.9);         // non        ;
+	whenchanged = 1734000601;
+	visual V1 {
+		center = (1476, 648);
+		height = 3;
+		};
+	};
+
+node U {
+	discrete = FALSE;
+	measure = RATIO;
+	kind = UTILITY;
+	chance = DETERMIN;
+	parents = (densite, Tourisme);
+	whenchanged = 1734001718;
+	visual V1 {
+		center = (1512, 156);
+		height = 6;
+		};
+	};
+
+node dense_faune {
+	discrete = TRUE;
+	states = (forte, moyen, faible);
+	kind = NATURE;
+	chance = CHANCE;
+	parents = (incendie, structures);
+	probs = 
+		// forte        moyen        faible        // incendie structures 
+		  (0.177,       0.559,       0.264,        // oui      oui        
+		   0.177,       0.559,       0.264,        // oui      non        
+		   0.145,       0.519,       0.336,        // non      oui        
+		   0.145,       0.519,       0.336);       // non      non        ;
+	whenchanged = 1734001538;
+	visual V1 {
+		center = (1182, 642);
+		height = 1;
+		};
+	};
+};
