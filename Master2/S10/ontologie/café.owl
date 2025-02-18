@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasBase"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféBase"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasIngredient"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasTemperature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasTemperature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#HasIngredient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Température"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CountainsAlcohol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CountainsAlcohol">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Alcool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Alcool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café"/>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféArabica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféArabica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféDécafeiné -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféDécafeiné">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféGlacé -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféGlacé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféNoir -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféNoir">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféRobusta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféRobusta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféViennois -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféViennois">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Capuccino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Capuccino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Chaud -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Chaud">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Température"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Crème -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Crème">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Expresso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Expresso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Froid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Froid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Température"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Glacé -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Glacé">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Température"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#IrishCoffe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#IrishCoffe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Lait -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Lait">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#LatteMacchiato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#LatteMacchiato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Café"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Miel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Miel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Sirop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Sirop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Sucre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Sucre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Température -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Température"/>
+    
+
+
+    <!-- http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Épices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Épices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Alcool"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Crème"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Lait"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Miel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Sirop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Sucre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Épices"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféArabica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféDécafeiné"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféNoir"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféRobusta"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféGlacé"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#CaféViennois"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Capuccino"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Expresso"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#IrishCoffe"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#LatteMacchiato"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Chaud"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Froid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/deptinfo/ontologies/2025/1/untitled-ontology-5#Glacé"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
