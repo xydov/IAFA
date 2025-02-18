@@ -1,38 +1,45 @@
+# 🎓 **Master IAFA - Université Paul Sabatier Toulouse III** 
 
+Welcome to the repository for the **Master in Artificial Intelligence and Data Science (IAFA)** at the **Université Paul Sabatier Toulouse III**. This repository contains valuable study materials, including TPs, exams, and notes, from the **Master's program**.
 
+**Important**: This repository is for **personal use only**. To request access or permission to use the contents, please email me at [noahchelgham@gmail.com](mailto:noahchelgham@gmail.com).
 
+---
 
-```markdown
-# Études Master IAFA université PAUL SABATIER TOULOUSE III
+## 📂 **Folder Contents** 
 
+- **Licence(1~3)**: Contains some of my Tps and works, not necessarily good works but it could be used as a good lead
+- **Master1**: Contains all projects and TPs from semesters **S7 and S8** with grades **16 or higher**.
+- **Master2**: Contains all projects and TPs from semesters **S9 only so far** with  **potentially good grades**.
+- **Exams**: Includes scanned copies of **exam papers** and **personal notes**.
+- **TD Solutions**: the S7 folderContains solutions to **TDs**, i have no right to it and credit goes to **Elena.git**.
 
-Le dossier "Master" regroupe l'ensemble des TPs des semestres S7 et S8 avec des notes égales ou supérieures à 16.
-Il inclut également des dossiers d'examens, des notes personnelles, ainsi que des corrigés de TDs.
-Ce répertoire reste néanmoins une propriété privée. Par conséquent, veuillez me demander l'autorisation par e-mail à l'adresse noahchelgham@gmail.com
-avant de pouvoir déposer ces TPs
+---
 
+## ✅ **Project Status**
 
+### **Completed Tasks** ✔️
+- ✅ Created **initial project structure**.
+- ✅ Set up **version control** with **Git**.
+- ✅ Configured **continuous integration** using **GitHub Actions**.
+- ✅ Wrote **basic documentation**.
+- ✅ Finished **readME** file.
+- ✅ Continued **updating the Master directory**.
+- ✅ Added **license information**.
 
+---
 
-## Done 
-- [x] Create the initial project structure.
-- [x] Set up version control with Git.
-- [x] Implement continuous integration with GitHub Actions.
-- [x] Write basic documentation.
-- [x] Finish readME
-- [x] keep updating Master directory
-- [x] ADD license
+### **To-Do Tasks** 📝
+- [~] Keep updating the **master2** directory with new materials.
+- [x] Retrieve and upload **exams** from **Moodle** at the end of the university year.
 
+---
 
-## TO DO 
+## 📜 **License** ⚖️
+This repository is **private** and for **personal use** only. All contents are protected by **copyright law**. **Do not redistribute** without permission.
 
-- [] Keep updating the master2 directory
-- [] Retrieve the exams from moodle at the end of the uni year
+For any inquiries or permission requests, please contact me at [noahchelgham@gmail.com](mailto:noahchelgham@gmail.com).
 
+---
 
-
-
-
-
-
-
+✨ *Made with passion and dedication to the IAFA program!* ✨
