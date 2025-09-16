@@ -1,4 +1,4 @@
-# 🎓 **Master IAFA - Université Paul Sabatier Toulouse III** 
+#  **Master IAFA - Université Paul Sabatier Toulouse III** 
 
 Welcome to the repository for the **Master in Artificial Intelligence and Data Science (IAFA)** at the **Université Paul Sabatier Toulouse III**. This repository contains valuable study materials, including TPs, exams, and notes, from the **Master's program**.
 
@@ -6,7 +6,7 @@ Welcome to the repository for the **Master in Artificial Intelligence and Data S
 
 ---
 
-## 📂 **Folder Contents** 
+## **Folder Contents** 
 
 - **Licence(1~3)**: Contains some of my Tps and works, not necessarily good works but it could be used as a good lead
 - **Master1**: Contains all projects and TPs from semesters **S7 and S8** with grades **16 or higher**.
@@ -16,30 +16,26 @@ Welcome to the repository for the **Master in Artificial Intelligence and Data S
 
 ---
 
-## ✅ **Project Status**
-
-### **Completed Tasks** ✔️
-- ✅ Created **initial project structure**.
-- ✅ Set up **version control** with **Git**.
-- ✅ Configured **continuous integration** using **GitHub Actions**.
+## **Repository Status**
+ 
+### **Completed Tasks** 
 - ✅ Wrote **basic documentation**.
 - ✅ Finished **readME** file.
-- ✅ Continued **updating the Master directory**.
+- ✅ finished **updating the Master 2 directory**.
 - ✅ Added **license information**.
 
----
 
-### **To-Do Tasks** 📝
-- [~] Keep updating the **master2** directory with new materials.
+### **To-Do Tasks** 
+- [x] Keep updating the **master2** directory with new materials.
 - [x] Retrieve and upload **exams** from **Moodle** at the end of the university year.
 
 ---
 
-## 📜 **License** ⚖️
+## **License** 
 This repository is **private** and for **personal use** only. All contents are protected by **copyright law**. **Do not redistribute** without permission.
 
 For any inquiries or permission requests, please contact me at [noahchelgham@gmail.com](mailto:noahchelgham@gmail.com).
 
 ---
 
-✨ *Made with passion and dedication to the IAFA program!* ✨
+*Made with dedication to the IAFA program!* 
